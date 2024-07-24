@@ -23,24 +23,25 @@
 <body>
 
     <?php
-        if ($_SERVER['REQUEST_URI'] == '/' || $_SERVER['REQUEST_URI'] == '/index.php?p=home') {
-            include 'src/home.php';
-        } elseif ($_SERVER['REQUEST_URI'] == '/index.php?p=wallets') {
-            include 'src/wallets.php';
-        } elseif ($_SERVER['REQUEST_URI'] == '/index.php?p=mining') {
-            include 'src/mining.php';
-        } elseif ($_SERVER['REQUEST_URI'] == '/index.php?p=getpepecoin') {
-            include 'src/getpepecoin.php';
-        } elseif ($_SERVER['REQUEST_URI'] == '/index.php?p=bots') {
-            include 'src/bots.php';
-        } elseif ($_SERVER['REQUEST_URI'] == '/index.php?p=roadmap') {
-            include 'src/roadmap.php';
-        } elseif ($_SERVER['REQUEST_URI'] == '/index.php?p=history') {
-            include 'src/history.php';
-        } elseif ($_SERVER['REQUEST_URI'] == '/index.php?p=about') {
-            include 'src/about.php';
-        }
-    ?>
+            $uri = $_SERVER['REQUEST_URI'];
+            if ($uri == '/' || $uri == '/index.php?p=home' || $uri == '/?p=home') {
+                include 'src/home.php';
+            } elseif ($uri == '/index.php?p=wallets' || $uri == '/?p=wallets') {
+                include 'src/wallets.php';
+            } elseif ($uri == '/index.php?p=mining' || $uri == '/?p=mining') {
+                include 'src/mining.php';
+            } elseif ($uri == '/index.php?p=getpepecoin' || $uri == '/?p=getpepecoin') {
+                include 'src/getpepecoin.php';
+            } elseif ($uri == '/index.php?p=bots' || $uri == '/?p=bots') {
+                include 'src/bots.php';
+            } elseif ($uri == '/index.php?p=roadmap' || $uri == '/?p=roadmap') {
+                include 'src/roadmap.php';
+            } elseif ($uri == '/index.php?p=history' || $uri == '/?p=history') {
+                include 'src/history.php';
+            } elseif ($uri == '/index.php?p=about' || $uri == '/?p=about') {
+                include 'src/about.php';
+            }
+        ?>
 
     <script src="libs/bootstrap/bootstrap.bundle.min.js"></script>
 </body>
