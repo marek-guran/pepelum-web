@@ -40,6 +40,8 @@
                 include 'src/history.php';
             } elseif ($uri == '/index.php?p=about' || $uri == '/?p=about') {
                 include 'src/about.php';
+            } elseif ($uri == '/index.php?p=electrumX' || $uri == '/?p=electrumX') {
+                include 'src/electrumX.php';
             }
         ?>
 

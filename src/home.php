@@ -1,20 +1,4 @@
 <style>
-    body {
-        background-color: #212121;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
-    }
-
-    .container {
-        background-color: #3b3b3b;
-        padding: 20px;
-        border-radius: 20px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
     .row {
         display: flex;
         justify-content: center;
@@ -35,7 +19,7 @@
         color: white;
     }
 
-    .mining, .wallet, .buy, .bot, .roadmap, .about, .history {
+    .mining, .wallet, .buy, .bot, .roadmap, .about, .server {
         position: relative;
         overflow: hidden;
         background-color: black;
@@ -46,11 +30,11 @@
         transition: background-image 0.5s ease;
     }
     
-    .mining span, .wallet span, .buy span, .bot span, .roadmap span, .about span, .history span {
+    .mining span, .wallet span, .buy span, .bot span, .roadmap span, .about span, .server span {
         transition: opacity 0.5s ease;
     }
     
-    .mining:hover span, .wallet:hover span, .buy:hover span, .bot:hover span, .roadmap:hover span, .about:hover span, .history:hover span {
+    .mining:hover span, .wallet:hover span, .buy:hover span, .bot:hover span, .roadmap:hover span, .about:hover span, .server:hover span {
         opacity: 0;
     }
 
@@ -102,8 +86,8 @@
         background-color: black;
     }
 
-    .history:hover {
-        background-image: url('/images/home/history.png');
+    .server:hover {
+        background-image: url('/images/home/server.png');
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
@@ -134,8 +118,7 @@
             <a href="?p=roadmap" class="btn btn-primary w-100 mb-4 roadmap"><span><i class="fa-solid fa-map"></i> Roadmap</span></a>
         </div>
         <div class="col-md-3">
-            <a href="?p=history" class="btn btn-primary w-100 mb-4 history"><span><i class="fa-solid fa-clock-rotate-left"></i>
-                History</span></a>
+            <a href="?p=electrumX" class="btn btn-primary w-100 mb-4 server"><span><i class="fa-solid fa-circle-info"></i> ElectrumX Server</span></a>
         </div>
         <div class="col-md-3">
             <a href="?p=about" class="btn btn-primary w-100 mb-4 about"><span><i class="fa-solid fa-circle-info"></i> About this
