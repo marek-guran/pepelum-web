@@ -32,6 +32,7 @@
             min-height: 100vh;
             padding: 20px;
             margin: 0;
+            height: 100%;
         }
 
         .raleway {
