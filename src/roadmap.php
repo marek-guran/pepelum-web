@@ -2,18 +2,8 @@
     @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
 
     :root {
-        --red: #f45b69;
-        --dark-blue: #227c9d;
-        --turquoise: #17c3b2;
-        --white: #fff;
-    }
-
-    *,
-    *::before,
-    *::after {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
+        --text: #83f2a9;
+        --timeline: #0b722e;
     }
 
     a {
@@ -22,15 +12,14 @@
 
     body {
         font: normal 16px/1.5 "Inter", sans-serif;
-        padding-bottom: 50px;
+        height: 100%;
     }
 
     /* TIMELINE
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
     .timeline {
-        margin: 0 auto;
         max-width: 1000px;
-        color: var(--dark-blue);
+        color: var(--text);
     }
 
     .timeline ol {
@@ -43,19 +32,19 @@
         position: absolute;
         top: 0;
         left: 0;
-        width: 3px;
+        width: 8px;
         height: 100%;
-        background: var(--turquoise);
+        background: var(--timeline);
     }
 
     .timeline ol li .item-inner {
         padding: 20px 180px;
-        margin-bottom: 8vh;
+        margin-bottom: 50px;
     }
 
     .timeline ol li .time-wrapper {
         position: relative;
-        font-size: 4.5rem;
+        font-size: 4rem;
         font-weight: bold;
         line-height: 0.9;
     }
@@ -64,7 +53,7 @@
     .timeline ol li .time-wrapper::after {
         content: "";
         position: absolute;
-        background: var(--turquoise);
+        background: var(--timeline);
     }
 
     .timeline ol li .time-wrapper::before {
@@ -72,7 +61,7 @@
         left: -210px;
         transform: translateY(-50%);
         width: 0;
-        height: 3px;
+        height: 8px;
         transition: width 0.8s linear;
     }
 

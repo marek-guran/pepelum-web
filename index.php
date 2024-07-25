@@ -34,6 +34,7 @@
             cursor: pointer;
             font-size: 32px;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            z-index: 9999;
         }
         .close-btn:hover {
             background-color: #e9ecef;
