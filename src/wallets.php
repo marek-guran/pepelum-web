@@ -34,17 +34,20 @@
 </style>
 
 <body>
-    <div class="container mt-5">
+    <div class="container mt-5 mb-3">
         <h2>Wallets</h2>
         <div class="row centered-row mb-3">
             <div class="col">
-                <button class="btn btn-primary w-100 mb-1" onclick="showGuide('core')">Pepecoin Core</button>
+                <button class="btn btn-primary w-100 mb-1" onclick="showGuide('core')">Pepecoin Core <i
+                        class="fa-brands fa-windows"></i> <i class="fa-brands fa-linux"></i></button>
             </div>
             <div class="col">
-                <button class="btn btn-primary w-100 mb-1" onclick="showGuide('pepeblocks')">PepeBlocks</button>
+                <button class="btn btn-primary w-100 mb-1" onclick="showGuide('pepeblocks')">PepeBlocks <i
+                        class="fa-solid fa-globe"></i></button>
             </div>
             <div class="col">
-                <button class="btn btn-primary w-100 mb-1" onclick="showGuide('mrtwallet')">MrtWallet</button>
+                <button class="btn btn-primary w-100 mb-1" onclick="showGuide('mrtwallet')">MrtWallet <i
+                        class="fa-brands fa-android"></i></button>
             </div>
         </div>
         <style>
@@ -242,13 +245,187 @@
         <div id="mrtwallet" class="wallet-guide">
             <h1>MrtWallet</h1>
             <h4>About wallet</h4>
-            <p>Android app..</p>
+            <p>
+                MrtWallet is a mobile wallet for Pepecoin. It is available for Android devices.
+            </p>
             <h4>Installation</h4>
+            <p>
+                Head to <a href="https://github.com/mrtnetwork/mrtwallet/releases" target="_blank">GitHub</a> and
+                download MrtWallet app for your device. On android device enable installation from unknown sources and
+                install app.
             <h4>Setting up wallet</h4>
+            <p>
+                On first screen you have multiple options on recovering of old wallet made inside of app. We will create
+                new wallet and we will setup encryption password for our wallet.<br>
+            <div class="row centered-row">
+                <div class="col-sm-4 text-center">
+                    <a href="/images/wallets/mrtwallet/1.png" target="_blank">
+                        <img src="/images/wallets/mrtwallet/1.png" class="mb-2 border">
+                    </a>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <a href="/images/wallets/mrtwallet/2.png" target="_blank">
+                        <img src="/images/wallets/mrtwallet/2.png" class="mb-2 border">
+                    </a>
+                </div>
+            </div>
+            <br>
+            <p>Now we will need to setup mnemonic phrase. Write these words on safe place! You will need them if you
+                will be recovering your wallet by this phrase! After that we will need to confirm that we have right
+                words in right order.</p>
+            <div class="row centered-row">
+                <div class="col-sm-4 text-center">
+                    <a href="/images/wallets/mrtwallet/3.png" target="_blank">
+                        <img src="/images/wallets/mrtwallet/3.png" class="mb-2 border">
+                    </a>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <a href="/images/wallets/mrtwallet/4.png" target="_blank">
+                        <img src="/images/wallets/mrtwallet/4.png" class="mb-2 border">
+                    </a>
+                </div>
+            </div>
+            <br>
+            <p>We will name our wallet and choose if we want to be asked for password every time we launch the app. Once
+                you are ready to use our wallet, click on this last button on bottom right menu of app and list through
+                list of cryptos and find and select Pepecoin.</p>
+            <div class="row centered-row">
+                <div class="col-sm-4 text-center">
+                    <a href="/images/wallets/mrtwallet/5.png" target="_blank">
+                        <img src="/images/wallets/mrtwallet/5.png" class="mb-2 border">
+                    </a>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <a href="/images/wallets/mrtwallet/6.png" target="_blank">
+                        <img src="/images/wallets/mrtwallet/6.png" class="mb-2 border">
+                    </a>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <a href="/images/wallets/mrtwallet/7.png" target="_blank">
+                        <img src="/images/wallets/mrtwallet/7.png" class="mb-2 border">
+                    </a>
+                </div>
+            </div>
+            <br>
+            <p>You will be asked to create wallet, create it and keep all default settings.</p>
+            <div class="row centered-row">
+                <div class="col-sm-4 text-center">
+                    <a href="/images/wallets/mrtwallet/8.png" target="_blank">
+                        <img src="/images/wallets/mrtwallet/8.png" class="mb-2 border">
+                    </a>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <a href="/images/wallets/mrtwallet/9.png" target="_blank">
+                        <img src="/images/wallets/mrtwallet/9.png" class="mb-2 border">
+                    </a>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <a href="/images/wallets/mrtwallet/10.png" target="_blank">
+                        <img src="/images/wallets/mrtwallet/10.png" class="mb-2 border">
+                    </a>
+                </div>
+            </div>
+            <br>
+            <p>Congrats! Now you have Pepecoin wallet! Click at the top left corner arrow button.</p>
+            <div class="row centered-row">
+                <div class="col-sm-4 text-center">
+                    <a href="/images/wallets/mrtwallet/11.png" target="_blank">
+                        <img src="/images/wallets/mrtwallet/11.png" class="mb-2 border">
+                    </a>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <a href="/images/wallets/mrtwallet/12.png" target="_blank">
+                        <img src="/images/wallets/mrtwallet/12.png" class="mb-2 border">
+                    </a>
+                </div>
+            </div>
+            <br>
+            <p>If you see on bottom bar some error, change your server.</p>
+            <div class="row centered-row">
+                <div class="col-sm-4 text-center">
+                    <a href="/images/wallets/mrtwallet/13.png" target="_blank">
+                        <img src="/images/wallets/mrtwallet/13.png" class="mb-2 border">
+                    </a>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <a href="/images/wallets/mrtwallet/14.png" target="_blank">
+                        <img src="/images/wallets/mrtwallet/14.png" class="mb-2 border">
+                    </a>
+                </div>
+            </div>
+            <br>
             <h4>Sending transactions</h4>
+            <p>Sending transactions is little complex process, but once you know how to do it, it is pretty simple.
+                Click on send button. After that select from which address you will be sending from Pepe. Once you get
+                past this screen, select choose all and continue to setup recipients, where you will put destination
+                address and amount of how much Pepe you are sending. When you are done, scroll all the way down and send
+                transaction where it will ask you for your wallet password.</p>
+            <div class="row centered-row">
+                <div class="col-sm-4 text-center">
+                    <a href="/images/wallets/mrtwallet/16.png" target="_blank">
+                        <img src="/images/wallets/mrtwallet/16.png" class="mb-2 border">
+                    </a>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <a href="/images/wallets/mrtwallet/17.png" target="_blank">
+                        <img src="/images/wallets/mrtwallet/17.png" class="mb-2 border">
+                    </a>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <a href="/images/wallets/mrtwallet/18.png" target="_blank">
+                        <img src="/images/wallets/mrtwallet/18.png" class="mb-2 border">
+                    </a>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <a href="/images/wallets/mrtwallet/19.png" target="_blank">
+                        <img src="/images/wallets/mrtwallet/19.png" class="mb-2 border">
+                    </a>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <a href="/images/wallets/mrtwallet/20.png" target="_blank">
+                        <img src="/images/wallets/mrtwallet/20.png" class="mb-2 border">
+                    </a>
+                </div>
+            </div>
+            <br>
+            <p>Congrats! Now you have sent your first transaction! Click arrow button to get back to main page of app.
+            </p>
+            <div class="row centered-row">
+                <div class="col-sm-4 text-center">
+                    <a href="/images/wallets/mrtwallet/21.png" target="_blank">
+                        <img src="/images/wallets/mrtwallet/21.png" class="mb-2 border">
+                    </a>
+                </div>
+            </div>
+            <br>
             <h4>Accepting transactions</h4>
+            <p>Accepting transactions is very simple, simply click on accept button and copy your address or share your
+                QR code.</p>
+            <div class="row centered-row">
+                <div class="col-sm-4 text-center">
+                    <a href="/images/wallets/mrtwallet/15.png" target="_blank">
+                        <img src="/images/wallets/mrtwallet/15.png" class="mb-2 border">
+                    </a>
+                </div>
+            </div>
             <h4>Backing up wallet</h4>
+            <p>Backing your wallet is simple process, click in top right corner settings icon and create backup of your
+                wallet. Keep this file! Since you can use it to restore your wallet!</p>
+            <div class="row centered-row">
+                <div class="col-sm-4 text-center">
+                    <a href="/images/wallets/mrtwallet/22.png" target="_blank">
+                        <img src="/images/wallets/mrtwallet/22.png" class="mb-2 border">
+                    </a>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <a href="/images/wallets/mrtwallet/23.png" target="_blank">
+                        <img src="/images/wallets/mrtwallet/23.png" class="mb-2 border">
+                    </a>
+                </div>
+            </div>
             <h4>Restoring wallet</h4>
+            <p>Restoring wallet is straightforward process, you can restore your wallet from mnemonic phrase or your
+                backed up wallet file.</p>
         </div>
     </div>
 
