@@ -1,35 +1,6 @@
 <style>
-    .mining-guide {
-        display: none;
-    }
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    p,
-    a {
-        color: white;
-    }
-
     body {
         height: 100%;
-    }
-
-    img {
-        width: 300px;
-    }
-
-    .img-centered {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .centered-row>div {
-        float: none;
-        margin: 0 auto;
     }
 </style>
 
@@ -45,7 +16,7 @@
             </div>
         </div>
 
-        <div id="asic" class="mining-guide">
+        <div id="asic" class="guide">
             <h1>Asic Miners</h1>
             <h4>Connecting to pool</h4>
             <p>Pick one of the pools listed on <a href="https://miningpoolstats.stream/pepecoin" target="_blank">Mining
@@ -55,7 +26,7 @@
 
         </div>
 
-        <div id="pc" class="mining-guide">
+        <div id="pc" class="guide">
             <h1>PC miners</h1>
             <h4>Mining software</h4>
             <p>It is highly not recommended to mine Pepecoin on computers. You would be competing against ASIC miners,
@@ -68,7 +39,7 @@
                     Pool Stats</a> (recommended Mining Dutch).<br><br>
                 Once you have downloaded the miner software, you need to configure it.<br><br>
 
-                Open the "cgminer.conf" file and set the first pool URL to Mining-Dutch.
+                Open the "cgminer.conf" file and set the first pool URL to Dutch.
                 Set the user as your username to your Mining Dutch login.
                 Password is not needed, but it will greatly improve your hashrate. This will basically define the
                 difficulty of the work your PC does. Mining Dutch has calculator at this <a
@@ -106,7 +77,7 @@
 
         <script>
             function showGuide(guideId) {
-                document.querySelectorAll('.mining-guide').forEach(function (guide) {
+                document.querySelectorAll('.guide').forEach(function (guide) {
                     guide.style.display = 'none';
                 });
 

@@ -1,35 +1,6 @@
 <style>
-    .bots-guide {
-        display: none;
-    }
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    p,
-    a {
-        color: white;
-    }
-
     body {
         height: 100%;
-    }
-
-    img {
-        width: 300px;
-    }
-
-    .img-centered {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .centered-row>div {
-        float: none;
-        margin: 0 auto;
     }
 </style>
 
@@ -47,7 +18,7 @@
             </div>
         </div>
 
-        <div id="discord" class="bots-guide">
+        <div id="discord" class="guide">
             <h1>Discord bot</h1>
             <h4>Withdrawing</h4>
             <p>Private message ℙ𝔼ℙ𝔼 𝔻𝕀𝕊ℙ𝔼ℕ𝕊𝔼ℝ (tip.cc) bot and follow steps like in sample conversation:<br><br>
@@ -69,7 +40,7 @@
             </p>
         </div>
 
-        <div id="reddit" class="bots-guide">
+        <div id="reddit" class="guide">
         <h1>Reddit bot</h1>
             <h4>Withdrawing</h4>
             <p>Private message <a href="https://www.reddit.com/message/compose/?to=pepetipbot" target="_blank">pepetipbot</a> and follow steps like in sample conversation:<br><br>
@@ -87,7 +58,7 @@
 
         <script>
             function showGuide(guideId) {
-                document.querySelectorAll('.bots-guide').forEach(function (guide) {
+                document.querySelectorAll('.guide').forEach(function (guide) {
                     guide.style.display = 'none';
                 });
 

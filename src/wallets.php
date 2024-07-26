@@ -1,35 +1,6 @@
 <style>
-    .wallet-guide {
-        display: none;
-    }
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    p,
-    a {
-        color: white;
-    }
-
     body {
         height: 100%;
-    }
-
-    img {
-        width: 300px;
-    }
-
-    .img-centered {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .centered-row>div {
-        float: none;
-        margin: 0 auto;
     }
 </style>
 
@@ -50,14 +21,8 @@
                         class="fa-brands fa-android"></i></button>
             </div>
         </div>
-        <style>
-            .centered-row>div {
-                float: none;
-                margin: 0 auto;
-            }
-        </style>
 
-        <div id="core" class="wallet-guide">
+        <div id="core" class="guide">
             <h1>Pepecoin Core Wallet</h1>
             <h4>About wallet</h4>
             <p>This is native very first wallet which serves also as full node for Pepecoin.</p>
@@ -168,7 +133,7 @@
             </p>
         </div>
 
-        <div id="pepeblocks" class="wallet-guide">
+        <div id="pepeblocks" class="guide">
             <h1>Pepeblocks wallet</h1>
             <h4>About wallet</h4>
             <p>Pepeblocks is a lightweight wallet for Pepecoin. It is a web wallet with really simple user interface.
@@ -242,7 +207,7 @@
             </div>
         </div>
 
-        <div id="mrtwallet" class="wallet-guide">
+        <div id="mrtwallet" class="guide">
             <h1>MrtWallet</h1>
             <h4>About wallet</h4>
             <p>
@@ -431,7 +396,7 @@
 
     <script>
         function showGuide(guideId) {
-            document.querySelectorAll('.wallet-guide').forEach(function (guide) {
+            document.querySelectorAll('.guide').forEach(function (guide) {
                 guide.style.display = 'none';
             });
 

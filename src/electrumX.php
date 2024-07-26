@@ -102,6 +102,10 @@
             width: 100%;
             height: auto;
         }
+
+        p {
+            color: black;
+        }
     </style>
 </head>
 

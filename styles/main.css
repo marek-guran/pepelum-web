@@ -52,3 +52,31 @@ body {
 	margin-left: 10px!important;
 }
 
+.guide {
+	display: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+a {
+	color: white;
+}
+
+img {
+	width: 300px;
+}
+
+.img-centered {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.centered-row>div {
+	float: none;
+	margin: 0 auto;
+}
