@@ -10,16 +10,21 @@
         color: inherit;
     }
 
+    li, p, h3 {
+        color: var(--text)!important;
+    }
+
     body {
         font: normal 16px/1.5 "Inter", sans-serif;
         height: 100%;
+        overflow-x: hidden;
     }
 
     /* TIMELINE
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
     .timeline {
         max-width: 1000px;
-        color: var(--text);
+        color: var(--text)!important;
     }
 
     .timeline ol {
@@ -166,30 +171,6 @@
         <li>
             <div class="item-inner">
                 <div class="time-wrapper">
-                    <time>30. JANUARY 2024</time>
-                </div>
-                <div class="details">
-                    <h3>Release</h3>
-                    <p>Fairly launched without pre-mining, with option to store Pepecoin on Pepecoin Core wallet.
-                        Pepecoin is also available on Discord and Reddit using tip bots.</p>
-                </div>
-            </div>
-        </li>
-        <li>
-            <div class="item-inner">
-                <div class="time-wrapper">
-                    <time>17. MAY 2024</time>
-                </div>
-                <div class="details">
-                    <h3>Hard Fork (Merge mining)</h3>
-                    <p>17th May happend hard fork which enabled at block 42,000 merge mining allowing Pepecoin to take
-                        advantage from whole SCRYPT network security</p>
-                </div>
-            </div>
-        </li>
-        <li>
-            <div class="item-inner">
-                <div class="time-wrapper">
                     <time>Coming Soon</time>
                 </div>
                 <div class="details">
@@ -210,7 +191,24 @@
         <li>
             <div class="item-inner">
                 <div class="time-wrapper">
-                    <time>And more!</time>
+                    <time>17. MAY 2024</time>
+                </div>
+                <div class="details">
+                    <h3>Hard Fork (Merge mining)</h3>
+                    <p>17th May happend hard fork which enabled at block 42,000 merge mining allowing Pepecoin to take
+                        advantage from whole SCRYPT network security</p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="item-inner">
+                <div class="time-wrapper">
+                    <time>30. JANUARY 2024</time>
+                </div>
+                <div class="details">
+                    <h3>Release</h3>
+                    <p>Fairly launched without pre-mining, with option to store Pepecoin on Pepecoin Core wallet.
+                        Pepecoin is also available on Discord and Reddit using tip bots.</p>
                 </div>
             </div>
         </li>
