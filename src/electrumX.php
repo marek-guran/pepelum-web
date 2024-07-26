@@ -23,27 +23,32 @@
     <meta property="og:image" content="https://www.pepecoin.com/pepecoin-logo.png">
     <style>
         body {
-            background-color: #f0f2f5;
+            background-color: #212121;
             font-family: 'Roboto', sans-serif;
             color: #333;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            padding: 20px;
+            padding: 10px;
             margin: 0;
             height: 100%;
         }
 
         .raleway {
             font-family: 'Raleway';
+            color: white;
         }
 
         .container {
-            background: white;
+            background: #3b3b3b;
             padding: 2rem;
             border-radius: 15px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-left: 10px;
+            margin-right: 10px;
             max-width: 700px;
             text-align: center;
             word-wrap: break-word;
@@ -53,8 +58,9 @@
             font-weight: 700;
         }
 
+
         a {
-            color: #0b722e;
+            color: #169441!important;
             text-decoration: none;
         }
 
@@ -63,20 +69,21 @@
         }
 
         .btn-outline-primary {
-            border-color: #0b722e;
-            color: #0b722e;
+            border-color: #169441;
+            color: #169441;
             border-radius: 20px;
             outline: none;
         }
 
-        .btn-outline-primary:hover, .btn-outline-primary:active {
-            background-color: #0b722e !important;
+        .btn-outline-primary:hover,
+        .btn-outline-primary:active {
+            background-color: #169441 !important;
             color: white !important;
             border-radius: 20px;
         }
 
         ::selection {
-            background-color: #0b722e;
+            background-color: #169441;
             color: white;
         }
 
@@ -102,10 +109,6 @@
             width: 100%;
             height: auto;
         }
-
-        p {
-            color: black;
-        }
     </style>
 </head>
 
@@ -117,11 +120,13 @@
         <hr>
         <p class="lead raleway"><strong>Connect to server using:</strong></p>
         <ul class="list-unstyled">
-            <li class="mb-3"><strong>TCP:</strong> <span id="tcpAddress">tcp://electrum.pepelum.site:50001</span> <button
-                    class="btn btn-sm btn-outline-primary copy-button" data-clipboard-target="#tcpAddress">Copy</button>
+            <li class="mb-3"><strong>TCP:</strong> <span id="tcpAddress">tcp://electrum.pepelum.site:50001</span>
+                <button class="btn btn-sm btn-outline-primary copy-button"
+                    data-clipboard-target="#tcpAddress">Copy</button>
             </li>
-            <li class="mb-3"><strong>SSL:</strong> <span id="sslAddress">ssl://electrum.pepelum.site:50002</span> <button
-                    class="btn btn-sm btn-outline-primary copy-button" data-clipboard-target="#sslAddress">Copy</button>
+            <li class="mb-3"><strong>SSL:</strong> <span id="sslAddress">ssl://electrum.pepelum.site:50002</span>
+                <button class="btn btn-sm btn-outline-primary copy-button"
+                    data-clipboard-target="#sslAddress">Copy</button>
             </li>
             <li class="mb-3"><strong>WebSocket (WSS):</strong> <span
                     id="wssAddress">wss://electrum.pepelum.site:50004</span> <button
@@ -178,7 +183,8 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body text-center">
-                    <img src="/images/qr/qr-DMAsT9YJgUEz6WryFTtvhWX19VAzVGiZ14.png" alt="Donation QR Code" class="modal-img">
+                    <img src="/images/qr/qr-DMAsT9YJgUEz6WryFTtvhWX19VAzVGiZ14.png" alt="Donation QR Code"
+                        class="modal-img">
                 </div>
             </div>
         </div>

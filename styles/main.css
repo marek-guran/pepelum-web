@@ -62,8 +62,11 @@ h3,
 h4,
 h5,
 p,
+ul,
+li,
+span,
 a {
-	color: white;
+	color: white!important;
 }
 
 img {
@@ -79,4 +82,8 @@ img {
 .centered-row>div {
 	float: none;
 	margin: 0 auto;
+}
+
+.modal {
+    --bs-modal-bg: #3b3b3b!important;
 }
