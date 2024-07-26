@@ -24,7 +24,7 @@
             <p>Private message ℙ𝔼ℙ𝔼 𝔻𝕀𝕊ℙ𝔼ℕ𝕊𝔼ℝ (tip.cc) bot and follow steps like in sample conversation:<br><br>
                 <i class="fa-solid fa-user user-icon"></i> $withdraw pepe<br>
                 <i class="fa-solid fa-robot bot-icon"></i>❔ Enter your Pepecoin (PEPE) destination address<br>
-                <i class="fa-solid fa-user user-icon"></i> Pudye4nXpSfiMnwjuNRsAQ8dxeKPBQpQff<br>
+                <i class="fa-solid fa-user user-icon"></i> YOUR-WALLET-ADDRESS<br>
                 <i class="fa-solid fa-robot bot-icon"></i>❔ How much Pepecoin (PEPE) do you want to withdraw? You have
                 308,387.25850331 PEPE. Reply with all to withdraw all.<br>
                 <i class="fa-solid fa-user user-icon"></i> all or for example 300000<br>
@@ -35,7 +35,7 @@
             <h4>Depositing</h4>
             <p>Private message ℙ𝔼ℙ𝔼 𝔻𝕀𝕊ℙ𝔼ℕ𝕊𝔼ℝ (tip.cc) bot and follow steps like in sample conversation:<br><br>
                 <i class="fa-solid fa-user user-icon"></i> $deposit pepe<br>
-                <i class="fa-solid fa-robot bot-icon"></i>⤵ Deposit Pepecoin. Deposits need at least 10 confirmations to be credited to your account. Your deposit address: Pudye4nXpSfiMnwjuNRsAQ8dxeKPBQpQff<br>
+                <i class="fa-solid fa-robot bot-icon"></i>⤵ Deposit Pepecoin. Deposits need at least 10 confirmations to be credited to your account. Your deposit address: YOUR-WALLET-ADDRESS<br>
                 <i class="fa-solid fa-robot bot-icon"></i>⤵ Pepecoin deposit confirmed
             </p>
         </div>
@@ -45,7 +45,7 @@
             <h4>Withdrawing</h4>
             <p>Private message <a href="https://www.reddit.com/message/compose/?to=pepetipbot" target="_blank">pepetipbot</a> and follow steps like in sample conversation:<br><br>
                 <strong>Subject:</strong> withdraw<br>
-                <strong>Message:</strong> withdraw Pudye4nXpSfiMnwjuNRsAQ8dxeKPBQpQff all PEPE
+                <strong>Message:</strong> withdraw YOUR-WALLET-ADDRESS all PEPE
             </p>
             <h4>Depositing</h4>
             <p>Private message <a href="https://www.reddit.com/message/compose/?to=pepetipbot" target="_blank">pepetipbot</a> and follow steps like in sample conversation:<br><br>
