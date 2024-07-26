@@ -82,11 +82,6 @@
             border-radius: 20px;
         }
 
-        ::selection {
-            background-color: #169441;
-            color: white;
-        }
-
         .copy-button {
             cursor: pointer;
             margin-left: 10px;

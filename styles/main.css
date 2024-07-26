@@ -96,3 +96,25 @@ img {
 	margin-left: 3px;
 }
 
+::selection {
+	background-color: #169441;
+	color: white;
+}
+
+::-webkit-scrollbar {
+	width: 16px;
+}
+
+::-webkit-scrollbar-track {
+	background: transparent;
+	margin: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #3b3b3b;
+	border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #3b3b3b;
+}
