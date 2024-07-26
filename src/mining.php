@@ -9,10 +9,12 @@
         <h2>Mining</h2>
         <div class="row centered-row mb-3">
             <div class="col">
-                <button class="btn btn-primary w-100 mb-1" onclick="showGuide('asic')">Asic Miners <i class="fa-solid fa-server"></i></button>
+                <button class="btn btn-primary w-100 mb-1" onclick="showGuide('asic')">Asic Miners <i
+                        class="fa-solid fa-server"></i></button>
             </div>
             <div class="col">
-                <button class="btn btn-primary w-100 mb-1" onclick="showGuide('pc')">Computers <i class="fa-solid fa-computer"></i></button>
+                <button class="btn btn-primary w-100 mb-1" onclick="showGuide('pc')">Computers <i
+                        class="fa-solid fa-computer"></i></button>
             </div>
         </div>
 
@@ -22,8 +24,28 @@
             <p>Pick one of the pools listed on <a href="https://miningpoolstats.stream/pepecoin" target="_blank">Mining
                     Pool Stats</a> and connect your miner to the pool. Pepecoin uses SCRYPT algorithm like Dogecoin and
                 Litecoin and can be merge mined alongside many other SCRYPT coins, so you are never directly mining
-                Pepecoin, but multiple coins at the same time.</p>
-
+                Pepecoin, but multiple coins at the same time.<br><br>
+                Example how to connect your miner to pool and dashboard where you can see your miner stats:
+            </p>
+            <div class="row centered-row">
+                <div class="col-sm-6 text-center">
+                    <a href="/images/mining/1.png" target="_blank">
+                        <img src="/images/mining/1.png" class="mb-2">
+                    </a>
+                </div>
+                <div class="col-sm-6 text-center">
+                    <a href="/images//mining/2.png" target="_blank">
+                        <img src="/images//mining/2.png" class="mb-2">
+                    </a>
+                </div>
+            </div>
+            <h4>Renting Miner</h4>
+            <p>Renting ASIC (SCRYPT) miner is hit or miss. You will never make profit if you are mining as PPS (Pay Per
+                Share). Instead you should mine as PPLNS, Prop or SOLO (PPLNS recommended). As for PPLNS, you should rent at least for 6 days.<br>
+                <br>
+                You can rent miner at <a href="https://www.miningrigrentals.com/rigs/scrypt" target="_blank">Mining
+                Rig Rentals</a> or <a href="https://www.nicehash.com/" target="_blank">NiceHash</a> (each service has own way of connecting to pools).
+            </p>
         </div>
 
         <div id="pc" class="guide">
