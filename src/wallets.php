@@ -10,7 +10,8 @@
         <div class="row centered-row mb-3">
             <div class="col">
                 <button class="btn btn-primary w-100 mb-1" onclick="showGuide('core')">Pepecoin Core <i
-                        class="fa-brands fa-windows"></i> <i class="fa-brands fa-linux"></i></button>
+                        class="fa-brands fa-windows"></i> <i class="fa-brands fa-linux"></i> <i
+                        class="fa-brands fa-apple"></i></button>
             </div>
             <div class="col">
                 <button class="btn btn-primary w-100 mb-1" onclick="showGuide('pepeblocks')">PepeBlocks <i
@@ -29,7 +30,12 @@
             <h4>Installation</h4>
             <p>As first thing head to <a href="https://github.com/pepecoinppc/pepecoin/releases"
                     target="_blank">GitHub</a> and download wallet for your system.<br><br>
-                Once you have downloaded wallet installer double click it and follow installer steps.
+                There are 2 types of wallets: installer and portable wallet (portable wallets are with .zip
+                extension).<br>
+                Once you have downloaded wallet installer double click it and follow installer steps, if you have chosen
+                to go with portable wallet, extract the files and start wallet by:<br>
+                <strong><i class="fa-brands fa-windows"></i> Windows:</strong> /pepecoin-1.0.1/bin/pepecoin-qt.exe<br>
+                <strong><i class="fa-brands fa-linux"></i> Linux:</strong> /pepecoin-1.0.1/bin/pepecoin-qt
             </p>
             <h4>Setting up wallet</h4>
             <p>
@@ -42,6 +48,48 @@
                 To back up the wallet.dat file, click on the File menu (top left) then click on Backup Wallet and choose
                 the location to save the file to. You will need this file to restore your wallet in the future and not
                 lose your funds. So store it in a very safe place.<br><br>
+            </p>
+            <h4>Common issues during installation</h4>
+            <p>
+                <strong>MacOS:</strong> not verified developer can be fixed by this <a
+                    href="https://www.lifewire.com/fix-developer-cannot-be-verified-error-5183898"
+                    target="_blank">guide</a>.<br>
+                <strong>Windows:</strong> wrong architecture installer. You might have chosen 64-bit installer instead
+                of 32-bit for your system. On 64-bit system should work 32-bit too, but it is not recommended.
+            </p>
+            <h4>Encrypting wallet</h4>
+            <p>
+                To encrypt the wallet, click on the Settings menu (top left) then click on Encrypt Wallet. You will be
+                asked to enter a passphrase. This passphrase will be needed to unlock the wallet and when you send new
+                transactions in the future. So store
+                it in a very safe place.<br><br>
+                <i class="fa-solid fa-triangle-exclamation"></i> If you had previosly backed up wallet.dat that was not
+                encrypted, the old wallet.dat wont get magically new encryption password!<br><br>
+            <div class="row centered-row">
+                <div class="col-sm-4 text-center">
+                    <a href="/images/wallets/pepecore/3.png" target="_blank">
+                        <img src="/images/wallets/pepecore/3.png" class="mb-2">
+                    </a>
+                </div>
+            </div>
+            </p>
+            <h4>Backing up wallet</h4>
+            <p>
+                To back up the wallet.dat file, click on the File menu (top left) then click on Backup Wallet and choose
+                the location to save the file to. You will need this file to restore your wallet in the future. So store
+                it in a very safe place.<br><br>
+            <div class="row centered-row">
+                <div class="col-sm-4 text-center">
+                    <a href="/images/wallets/pepecore/1.png" target="_blank">
+                        <img src="/images/wallets/pepecore/1.png" class="mb-2">
+                    </a>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <a href="/images/wallets/pepecore/2.png" target="_blank">
+                        <img src="/images/wallets/pepecore/2.png" class="mb-2">
+                    </a>
+                </div>
+            </div>
             </p>
             <h4>Sending transactions</h4>
             <p>
@@ -81,38 +129,6 @@
                 <div class="col-sm-6 text-center">
                     <a href="/images/wallets/pepecore/5.png" target="_blank">
                         <img src="/images/wallets/pepecore/5.png" class="mb-2">
-                    </a>
-                </div>
-            </div>
-            </p>
-            <h4>Encrypting wallet</h4>
-            <p>
-                To encrypt the wallet, click on the Settings menu (top left) then click on Encrypt Wallet. You will be
-                asked to enter a passphrase. This passphrase will be needed to unlock the wallet and when you send new
-                transactions in the future. So store
-                it in a very safe place.<br><br>
-            <div class="row centered-row">
-                <div class="col-sm-4 text-center">
-                    <a href="/images/wallets/pepecore/3.png" target="_blank">
-                        <img src="/images/wallets/pepecore/3.png" class="mb-2">
-                    </a>
-                </div>
-            </div>
-            </p>
-            <h4>Backing up wallet</h4>
-            <p>
-                To back up the wallet.dat file, click on the File menu (top left) then click on Backup Wallet and choose
-                the location to save the file to. You will need this file to restore your wallet in the future. So store
-                it in a very safe place.<br><br>
-            <div class="row centered-row">
-                <div class="col-sm-4 text-center">
-                    <a href="/images/wallets/pepecore/1.png" target="_blank">
-                        <img src="/images/wallets/pepecore/1.png" class="mb-2">
-                    </a>
-                </div>
-                <div class="col-sm-4 text-center">
-                    <a href="/images/wallets/pepecore/2.png" target="_blank">
-                        <img src="/images/wallets/pepecore/2.png" class="mb-2">
                     </a>
                 </div>
             </div>
