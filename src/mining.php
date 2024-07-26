@@ -65,7 +65,7 @@
                 Set the user as your username to your Mining Dutch login.
                 Password is not needed, but it will greatly improve your hashrate. This will basically define the
                 difficulty of the work your PC does. Mining Dutch has calculator at this <a
-                    href="https://miningpoolstats.stream/pepecoin" target="_blank">link</a>, it will provide you also
+                    href="https://www.mining-dutch.nl/?page=gettingstarted" target="_blank">link</a>, it will provide you also
                 all neccesarry info you need to put into your mining software.
                 Since you are GPU mining, use Kawpow algorithm (this is specific for GPUs which is ASIC
                 resistant).<br><br>
