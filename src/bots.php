@@ -22,21 +22,21 @@
             <h1>Discord bot</h1>
             <h4>Withdrawing</h4>
             <p>Private message ℙ𝔼ℙ𝔼 𝔻𝕀𝕊ℙ𝔼ℕ𝕊𝔼ℝ (tip.cc) bot and follow steps like in sample conversation:<br><br>
-                <i class="fa-solid fa-user"></i> $withdraw pepe<br>
-                <i class="fa-solid fa-robot"></i> ❔ Enter your Pepecoin (PEPE) destination address<br>
-                <i class="fa-solid fa-user"></i> Pudye4nXpSfiMnwjuNRsAQ8dxeKPBQpQff<br>
-                <i class="fa-solid fa-robot"></i> ❔ How much Pepecoin (PEPE) do you want to withdraw? You have
+                <i class="fa-solid fa-user user-icon"></i> $withdraw pepe<br>
+                <i class="fa-solid fa-robot bot-icon"></i>❔ Enter your Pepecoin (PEPE) destination address<br>
+                <i class="fa-solid fa-user user-icon"></i> Pudye4nXpSfiMnwjuNRsAQ8dxeKPBQpQff<br>
+                <i class="fa-solid fa-robot bot-icon"></i>❔ How much Pepecoin (PEPE) do you want to withdraw? You have
                 308,387.25850331 PEPE. Reply with all to withdraw all.<br>
-                <i class="fa-solid fa-user"></i> all or for example 300000<br>
-                <i class="fa-solid fa-robot"></i> Please confirm withdrawal by click approval button<br>
-                <i class="fa-solid fa-user"></i> You click confirm button<br>
-                <i class="fa-solid fa-robot"></i> ⤴ Pepecoin sent
+                <i class="fa-solid fa-user user-icon"></i> all or for example 300000<br>
+                <i class="fa-solid fa-robot bot-icon"></i>Please confirm withdrawal by click approval button<br>
+                <i class="fa-solid fa-user user-icon"></i> You should click confirm button<br>
+                <i class="fa-solid fa-robot bot-icon"></i>⤴ Pepecoin sent
             </p>
             <h4>Depositing</h4>
             <p>Private message ℙ𝔼ℙ𝔼 𝔻𝕀𝕊ℙ𝔼ℕ𝕊𝔼ℝ (tip.cc) bot and follow steps like in sample conversation:<br><br>
-                <i class="fa-solid fa-user"></i> $deposit pepe<br>
-                <i class="fa-solid fa-robot"></i> ⤵ Deposit Pepecoin. Deposits need at least 10 confirmations to be credited to your account. Your deposit address: Pudye4nXpSfiMnwjuNRsAQ8dxeKPBQpQff<br>
-                <i class="fa-solid fa-robot"></i> ⤵ Pepecoin deposit confirmed
+                <i class="fa-solid fa-user user-icon"></i> $deposit pepe<br>
+                <i class="fa-solid fa-robot bot-icon"></i>⤵ Deposit Pepecoin. Deposits need at least 10 confirmations to be credited to your account. Your deposit address: Pudye4nXpSfiMnwjuNRsAQ8dxeKPBQpQff<br>
+                <i class="fa-solid fa-robot bot-icon"></i>⤵ Pepecoin deposit confirmed
             </p>
         </div>
 

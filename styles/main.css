@@ -85,5 +85,14 @@ img {
 }
 
 .modal {
-    --bs-modal-bg: #3b3b3b!important;
+	--bs-modal-bg: #3b3b3b!important;
 }
+
+.user-icon, .bot-icon {
+	margin-right: 10px; /* Adjust the value as needed */
+}
+
+.user-icon{
+	margin-left: 3px;
+}
+
