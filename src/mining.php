@@ -9,8 +9,12 @@
         <h2>Mining</h2>
         <div class="row centered-row mb-3">
             <div class="col">
-                <button class="btn btn-primary w-100 mb-1" onclick="showGuide('asic')">Asic Miners <i
-                        class="fa-solid fa-server"></i></button>
+                <button class="btn btn-primary w-100 mb-1" onclick="showGuide('asic')">Asic Miners <svg
+                        xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                        <path fill="currentColor"
+                            d="M14.79 10.62L3.5 21.9l-1.4-1.4L13.38 9.21zm4.48-2.89l.59-.59l-.79-.79l.64-.64l-1.42-1.42l-.64.64l-.79-.79l-.59.59c-1.74-1.42-3.7-2.56-5.8-3.36l-.83 1.79c1.75.92 3.36 2.03 4.86 3.34L14 7l3 3l.5-.5c1.31 1.5 2.42 3.11 3.34 4.86l1.79-.83c-.8-2.1-1.94-4.06-3.36-5.8">
+                        </path>
+                    </svg></button>
             </div>
             <div class="col">
                 <button class="btn btn-primary w-100 mb-1" onclick="showGuide('pc')">Computers <i
@@ -41,10 +45,12 @@
             </div>
             <h4>Renting Miner</h4>
             <p>Renting ASIC (SCRYPT) miner is hit or miss. You will never make profit if you are mining as PPS (Pay Per
-                Share). Instead you should mine as PPLNS, Prop or SOLO (PPLNS recommended). As for PPLNS, you should rent at least for 6 days.<br>
+                Share). Instead you should mine as PPLNS, Prop or SOLO (PPLNS recommended). As for PPLNS, you should
+                rent at least for 6 days.<br>
                 <br>
                 You can rent miner at <a href="https://www.miningrigrentals.com/rigs/scrypt" target="_blank">Mining
-                Rig Rentals</a> or <a href="https://www.nicehash.com/" target="_blank">NiceHash</a> (each service has own way of connecting to pools).
+                    Rig Rentals</a> or <a href="https://www.nicehash.com/" target="_blank">NiceHash</a> (each service
+                has own way of connecting to pools).
             </p>
         </div>
 
@@ -65,7 +71,8 @@
                 Set the user as your username to your Mining Dutch login.
                 Password is not needed, but it will greatly improve your hashrate. This will basically define the
                 difficulty of the work your PC does. Mining Dutch has calculator at this <a
-                    href="https://www.mining-dutch.nl/?page=gettingstarted" target="_blank">link</a>, it will provide you also
+                    href="https://www.mining-dutch.nl/?page=gettingstarted" target="_blank">link</a>, it will provide
+                you also
                 all neccesarry info you need to put into your mining software.
                 Since you are GPU mining, use Kawpow algorithm (this is specific for GPUs which is ASIC
                 resistant).<br><br>

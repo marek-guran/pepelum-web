@@ -149,8 +149,7 @@
         </div>
         <div class="col-md-3">
             <a href="?p=about" class="btn btn-primary w-100 mb-4 about"><span><i class="fa-solid fa-circle-info"></i>
-                    About this
-                    website</span></a>
+                    About Pepecoin</span></a>
         </div>
     </div>
 </div>

@@ -118,3 +118,27 @@ img {
 ::-webkit-scrollbar-thumb:hover {
 	background: #3b3b3b;
 }
+
+.pepelogo {
+	width: 50px;
+	animation: rotate 5s linear infinite;
+}
+
+@keyframes rotate {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.cmc-widget {
+	color: white; /* Set text color to white */
+}
+
+.no-style-link {
+	text-decoration: none!important;
+	color: inherit!important;
+}
+
