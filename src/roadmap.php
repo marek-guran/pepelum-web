@@ -3,15 +3,11 @@
 
     :root {
         --text: #83f2a9;
-        --timeline: #0b722e;
+        --timeline: #3b3b3b;
     }
 
     a {
         color: inherit;
-    }
-
-    li, p, h3 {
-        color: var(--text)!important;
     }
 
     body {
@@ -24,7 +20,7 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
     .timeline {
         max-width: 1000px;
-        color: var(--text)!important;
+        color: var(--text);
     }
 
     .timeline ol {
