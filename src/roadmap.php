@@ -140,8 +140,7 @@
         }
 
         .timeline ol li .time-wrapper::after {
-            left: -45px;
-            transform-origin: center;
+            display: none;
         }
 
         .timeline ol li.in-view .time-wrapper::after {
@@ -187,7 +186,7 @@
         <li>
             <div class="item-inner">
                 <div class="time-wrapper">
-                    <time>17. MAY 2024</time>
+                    <time>17.05.2024</time>
                 </div>
                 <div class="details">
                     <h3>Hard Fork (Merge mining)</h3>
@@ -199,7 +198,7 @@
         <li>
             <div class="item-inner">
                 <div class="time-wrapper">
-                    <time>30. JANUARY 2024</time>
+                    <time>30.01.2024</time>
                 </div>
                 <div class="details">
                     <h3>Release</h3>
