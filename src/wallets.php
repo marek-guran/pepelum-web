@@ -138,7 +138,7 @@
                 To restore the wallet, open in windows by search bar %appdata% folder, find Pepecoin folder or go to
                 C:\Users\your-user\AppData\Roaming\Pepecoin, here
                 replace wallet.dat file with your wallet. On linux it is same, but instead of %appdata% you can find
-                wallet.dat in /home/your-user/.pepecoin.<br><br>
+                wallet.dat in /home/your-user/.pepecoin. In both scenarios replace wallet.dat file with your backup.<br><br>
             <div class="row centered-row">
                 <div class="col-sm-4 text-center">
                     <a href="/images/wallets/pepecore/6.png" target="_blank">
