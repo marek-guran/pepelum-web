@@ -9,10 +9,10 @@
         <h2>Mining</h2>
         <div class="row centered-row mb-3">
             <div class="col">
-                <button class="btn btn-primary w-100 mb-1" onclick="showGuide('asic')">Asic Miners</button>
+                <button class="btn btn-primary w-100 mb-1" onclick="showGuide('asic')">Asic Miners <i class="fa-solid fa-server"></i></button>
             </div>
             <div class="col">
-                <button class="btn btn-primary w-100 mb-1" onclick="showGuide('pc')">Computers</button>
+                <button class="btn btn-primary w-100 mb-1" onclick="showGuide('pc')">Computers <i class="fa-solid fa-computer"></i></button>
             </div>
         </div>
 

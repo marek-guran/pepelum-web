@@ -6,7 +6,7 @@
 
 <body>
     <div class="container mt-5 mb-3">
-        <h2>buy</h2>
+        <h2>Get Pepecoin</h2>
         <div class="row centered-row mb-3">
             <div class="col">
                 <button class="btn btn-primary w-100 mb-1" onclick="showGuide('xeggex')">Xeggex</button>
