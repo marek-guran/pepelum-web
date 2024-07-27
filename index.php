@@ -18,6 +18,17 @@
 
     <link rel="stylesheet" href="styles/main.css">
 
+    <meta name="theme-color" content="#212121" />
+	<link rel="manifest" href="manifest.json">
+
+    <script>
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('/service-worker.js');
+		} else {
+			console.log("Service worker nie je podporovaný");
+		}
+	</script>
+
     <style>
         .close-btn {
             position: fixed;

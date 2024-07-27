@@ -7,7 +7,7 @@
 
     a {
         color: #169441 !important;
-        text-decoration: none;
+        text-decoration: none !important;
     }
 
     a:hover {
@@ -144,8 +144,8 @@
                     Roadmap</span></a>
         </div>
         <div class="col-md-3">
-            <a href="?p=electrumX" class="btn btn-primary w-100 mb-4 server"><span><i
-                        class="fa-solid fa-circle-info"></i> ElectrumX Server</span></a>
+            <a href="?p=electrumX" class="btn btn-primary w-100 mb-4 server"><span><i class="fa-solid fa-server"></i>
+                    ElectrumX Server</span></a>
         </div>
         <div class="col-md-3">
             <a href="?p=about" class="btn btn-primary w-100 mb-4 about"><span><i class="fa-solid fa-circle-info"></i>

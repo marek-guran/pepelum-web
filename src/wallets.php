@@ -41,13 +41,6 @@
             <p>
                 On first run, the wallet will need to sync with the blockchain (this could take a while so be patient).
                 Once completed, you are ready to interact with the wallet.<br><br>
-
-                After the sync is complete be sure to backup yur wallet.dat file. This file will be needed to recover
-                the wallet. Store this file in a very safe place and never share it with anyone.<br><br>
-
-                To back up the wallet.dat file, click on the File menu (top left) then click on Backup Wallet and choose
-                the location to save the file to. You will need this file to restore your wallet in the future and not
-                lose your funds. So store it in a very safe place.<br><br>
             </p>
             <h4>Common issues during installation</h4>
             <p>
