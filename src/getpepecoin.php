@@ -119,9 +119,90 @@
 
         <div id="stakecube" class="guide">
             <h1>Stakecube</h1>
+            <h4>Set up</h4>
+            <p>Register at <a href="https://stakecube.net/" target="_blank">stakecube.net</a> and follow further steps.
+            </p>
+            <h4>Enabling Pepecoin</h4>
+            <p>Go to the wallet section and search for Pepecoin. Once you find it, click on the button ENABLE. This will
+                enable Pepecoin on your account. Once you have this enabled, you can continue to next step.</p>
+            <div class="row centered-row">
+                <div class="col-sm-4 text-center">
+                    <a href="/images/getpepecoin/stakecube/1.png" target="_blank">
+                        <img src="/images/getpepecoin/stakecube/1.png" class="mb-2">
+                    </a>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <a href="/images/getpepecoin/stakecube/2.png" target="_blank">
+                        <img src="/images/getpepecoin/stakecube/2.png" class="mb-2">
+                    </a>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <a href="/images/getpepecoin/stakecube/3.png" target="_blank">
+                        <img src="/images/getpepecoin/stakecube/3.png" class="mb-2">
+                    </a>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <a href="/images/getpepecoin/stakecube/4.png" target="_blank">
+                        <img src="/images/getpepecoin/stakecube/4.png" class="mb-2">
+                    </a>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <a href="/images/getpepecoin/stakecube/5.png" target="_blank">
+                        <img src="/images/getpepecoin/stakecube/5.png" class="mb-2">
+                    </a>
+                </div>
+            </div>
             <h4>Depositing USDT</h4>
+            <p>To buy Pepecoin, you will need USDT. In your wallet find USDT, if you are unable to find it, enable it as
+                previously Pepecoin and deposit your USDT.</p>
+            <div class="row centered-row">
+                <div class="col-sm-4 text-center">
+                    <a href="/images/getpepecoin/stakecube/6.png" target="_blank">
+                        <img src="/images/getpepecoin/stakecube/6.png" class="mb-2">
+                    </a>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <a href="/images/getpepecoin/stakecube/7.png" target="_blank">
+                        <img src="/images/getpepecoin/stakecube/7.png" class="mb-2">
+                    </a>
+                </div>
+            </div>
             <h4>Buying Pepecoin</h4>
+            <p>To buy Pepecoin, open exchange tab. Here select USDT and find Pepecoin. Once you open it, input how much
+                and what price you want to pay per coin. Here we selected lowest price per coin on RED book (If you pick
+                price that is not on this RED book, it may take longer to fill your order).</p>
+            <div class="row centered-row">
+                <div class="col-sm-4 text-center">
+                    <a href="/images/getpepecoin/stakecube/8.png" target="_blank">
+                        <img src="/images/getpepecoin/stakecube/8.png" class="mb-2">
+                    </a>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <a href="/images/getpepecoin/stakecube/9.png" target="_blank">
+                        <img src="/images/getpepecoin/stakecube/9.png" class="mb-2">
+                    </a>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <a href="/images/getpepecoin/stakecube/10.png" target="_blank">
+                        <img src="/images/getpepecoin/stakecube/10.png" class="mb-2">
+                    </a>
+                </div>
+            </div>
             <h4>Withdrawing Pepecoin</h4>
+            <p>To withdraw your Pepecoin, go to the wallet section and find Pepecoin. Click on the button WITHDRAW and
+                fill all information like amount, address, confirm transaction and input 2-FA to send transaction.</p>
+                <div class="row centered-row">
+                <div class="col-sm-4 text-center">
+                    <a href="/images/getpepecoin/stakecube/11.png" target="_blank">
+                        <img src="/images/getpepecoin/stakecube/11.png" class="mb-2">
+                    </a>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <a href="/images/getpepecoin/stakecube/12.png" target="_blank">
+                        <img src="/images/getpepecoin/stakecube/12.png" class="mb-2">
+                    </a>
+                </div>
+            </div>
         </div>
 
         <script>
