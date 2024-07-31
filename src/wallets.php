@@ -13,6 +13,12 @@
                         class="fa-brands fa-windows"></i> <i class="fa-brands fa-linux"></i> <i
                         class="fa-brands fa-apple"></i></button>
             </div>
+            <div class="col d-none">
+                <button class="btn btn-primary w-100 mb-1" onclick="showGuide('komodo')">Komodo <i
+                        class="fa-brands fa-windows"></i> <i class="fa-brands fa-linux"></i> <i
+                        class="fa-brands fa-apple"></i> <i class="fa-brands fa-android"></i> <i
+                        class="fa-solid fa-globe"></i> </button>
+            </div>
             <div class="col">
                 <button class="btn btn-primary w-100 mb-1" onclick="showGuide('pepeblocks')">PepeBlocks <i
                         class="fa-solid fa-globe"></i></button>
@@ -131,7 +137,8 @@
                 To restore the wallet, open in windows by search bar %appdata% folder, find Pepecoin folder or go to
                 C:\Users\your-user\AppData\Roaming\Pepecoin, here
                 replace wallet.dat file with your wallet. On linux it is same, but instead of %appdata% you can find
-                wallet.dat in /home/your-user/.pepecoin. In both scenarios replace wallet.dat file with your backup.<br><br>
+                wallet.dat in /home/your-user/.pepecoin. In both scenarios replace wallet.dat file with your
+                backup.<br><br>
             <div class="row centered-row">
                 <div class="col-sm-4 text-center">
                     <a href="/images/wallets/pepecore/6.png" target="_blank">
@@ -142,13 +149,177 @@
             </p>
         </div>
 
+        <div id="komodo" class="guide">
+            <h1>Komodo</h1>
+            <h4>About wallet</h4>
+            <p>Komodo wallet is a multi-coin non-custodial wallet which supports multipe coins including Pepecoin. It is
+                available on multiple platforms like Windows, Linux, MacOS, Android and iOS. You can get Komodo Wallet
+                at this <a href="https://komodoplatform.com/en/wallets.html" target="_blank">link</a> (this guide uses
+                official Android app).</p>
+            <h4>Setting up wallet</h4>
+            <p>After you have installed wallet, you will need to create a new wallet. Click on Create New Wallet and
+                write
+                down your seed phrase. This seed phrase gives you access to your wallet, so store it on secure place
+                (anyone with this phrase can access your wallet! Secure it privately!!! It is the only possible recovery
+                method for your wallet if you dont back up separately private keys for each coin manually). The app will
+                make sure you
+                have written it up on some paper for example. (if you will be printing the phrase on paper, it is
+                recommended to turn off internet connection for both PC (or phone) and printer).<br>
+                Once you are done with mnemonic phrase (seed phrase), you will set password for your wallet, then accept
+                EULA and TOS. Finally last thing is to setup a PIN, which will be asked by an app on each start.</p>
+            <div class="row centered-row">
+                <div class="col-sm-4 text-center">
+                    <a href="/images/wallets/komodo/1.png" target="_blank">
+                        <img src="/images/wallets/komodo/1.png" class="mb-2 border">
+                    </a>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <a href="/images/wallets/komodo/2.png" target="_blank">
+                        <img src="/images/wallets/komodo/2.png" class="mb-2 border">
+                    </a>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <a href="/images/wallets/komodo/3.png" target="_blank">
+                        <img src="/images/wallets/komodo/3.png" class="mb-2 border">
+                    </a>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <a href="/images/wallets/komodo/4.png" target="_blank">
+                        <img src="/images/wallets/komodo/4.png" class="mb-2 border">
+                    </a>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <a href="/images/wallets/komodo/5.png" target="_blank">
+                        <img src="/images/wallets/komodo/5.png" class="mb-2 border">
+                    </a>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <a href="/images/wallets/komodo/6.png" target="_blank">
+                        <img src="/images/wallets/komodo/6.png" class="mb-2 border">
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-4 text-center">
+                <a href="/images/wallets/komodo/7.png" target="_blank">
+                    <img src="/images/wallets/komodo/7.png" class="mb-2 border">
+                </a>
+            </div>
+            <h4>Enabling Pepecoin</h4>
+            <p>After you have created wallet, you will need to enable Pepecoin. Click on the bottom right plus
+                button. Here find and select Pepecoin.</p>
+            <div class="row centered-row">
+                <div class="col-sm-4 text-center">
+                    <a href="/images/wallets/komodo/8.png" target="_blank">
+                        <img src="/images/wallets/komodo/8.png" class="mb-2 border">
+                    </a>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <a href="/images/wallets/komodo/9.png" target="_blank">
+                        <img src="/images/wallets/komodo/9.png" class="mb-2 border">
+                    </a>
+                </div>
+            </div>
+            <h4>Sending transactions</h4>
+            <p>To send transactions, click on Pepecoin and on send button. Here you will need to input amount of
+                Pepecoin and destination
+                address you want to send. Once you are done, click on send withdraw button and confirm it.</p>
+            <div class="row centered-row">
+                <div class="col-sm-4 text-center">
+                    <a href="/images/wallets/komodo/10.png" target="_blank">
+                        <img src="/images/wallets/komodo/10.png" class="mb-2 border">
+                    </a>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <a href="/images/wallets/komodo/11.png" target="_blank">
+                        <img src="/images/wallets/komodo/11.png" class="mb-2 border">
+                    </a>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <a href="/images/wallets/komodo/12.png" target="_blank">
+                        <img src="/images/wallets/komodo/12.png" class="mb-2 border">
+                    </a>
+                </div>
+            </div>
+            <h4>Accepting transactions</h4>
+            <p>To receive transactions, click on Pepecoin and on receive button. Here you will get QR code and under QR
+                code you will find your wallet address.</p>
+            <div class="row centered-row">
+                <div class="col-sm-4 text-center">
+                    <a href="/images/wallets/komodo/12.png" target="_blank">
+                        <img src="/images/wallets/komodo/12.png" class="mb-2 border">
+                    </a>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <a href="/images/wallets/komodo/13.png" target="_blank">
+                        <img src="/images/wallets/komodo/13.png" class="mb-2 border">
+                    </a>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <a href="/images/wallets/komodo/14.png" target="_blank">
+                        <img src="/images/wallets/komodo/14.png" class="mb-2 border">
+                    </a>
+                </div>
+            </div>
+            <h4>Backing up wallet</h4>
+            <p>If you have not backed up wallet on setup, you can do it even now. Go to bottom right corner and select
+                more, here open settings and find Seed and private keys setting. To get access to this setting, input
+                your wallet password and once you are successfull, there is on top your seed phrase and under seed
+                phrase you have all your enabled coins that are stored on your wallet and by clicking on each of them
+                gives you your private key to access funds for that particular coin.</p>
+            <div class="row centered-row">
+                <div class="col-sm-4 text-center">
+                    <a href="/images/wallets/komodo/15.png" target="_blank">
+                        <img src="/images/wallets/komodo/15.png" class="mb-2 border">
+                    </a>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <a href="/images/wallets/komodo/16.png" target="_blank">
+                        <img src="/images/wallets/komodo/16.png" class="mb-2 border">
+                    </a>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <a href="/images/wallets/komodo/17.png" target="_blank">
+                        <img src="/images/wallets/komodo/17.png" class="mb-2 border">
+                    </a>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <a href="/images/wallets/komodo/18.png" target="_blank">
+                        <img src="/images/wallets/komodo/18.png" class="mb-2 border">
+                    </a>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <a href="/images/wallets/komodo/19.png" target="_blank">
+                        <img src="/images/wallets/komodo/19.png" class="mb-2 border">
+                    </a>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <a href="/images/wallets/komodo/20.png" target="_blank">
+                        <img src="/images/wallets/komodo/20.png" class="mb-2 border">
+                    </a>
+                </div>
+            </div>
+            <h4>Restoring wallet</h4>
+            <p>Restoring wallet is simple process, you can restore your wallet from mnemonic phrase (seed phrase) you
+                got earlier from setting up wallet or by manually getting it through settings. Simpy go to Restore your
+                wallet and here input your seed phrase.</p>
+            <div class="row centered-row">
+                <div class="col-sm-4 text-center">
+                    <a href="/images/wallets/komodo/21.png" target="_blank">
+                        <img src="/images/wallets/komodo/21.png" class="mb-2 border">
+                    </a>
+                </div>
+            </div>
+        </div>
+
         <div id="pepeblocks" class="guide">
             <h1>Pepeblocks wallet</h1>
             <h4>About wallet</h4>
-            <p>Pepeblocks is a lightweight wallet for Pepecoin. It is a web wallet with really simple user interface.
+            <p>Pepeblocks is a lightweight wallet for Pepecoin. It is a web wallet with really simple user
+                interface.
             </p>
             <h4>Setting up wallet</h4>
-            <p>Head to <a href="https://wallet.pepeblocks.com/" target="_blank">Pepeblocks.com</a> and open wallet tab
+            <p>Head to <a href="https://wallet.pepeblocks.com/" target="_blank">Pepeblocks.com</a> and open wallet
+                tab
                 at top of
                 page.
                 Here you have 2 options, either create or import wallet (private key).<br><br>
@@ -162,7 +333,8 @@
             </div>
             </p>
             <h4>Encrypting wallet</h4>
-            <p>After you have created wallet, you can encrypt it with password. This password will be needed to unlock
+            <p>After you have created wallet, you can encrypt it with password. This password will be needed to
+                unlock
                 wallet and send transactions.<br><br>
             <div class="row centered-row">
                 <div class="col-sm-4 text-center">
@@ -190,7 +362,8 @@
                 </div>
             </div>
             <h4>Backing up wallet</h4>
-            <p>To backup wallet, click on 3 dots and click on view private key. This key is access to your wallet, so
+            <p>To backup wallet, click on 3 dots and click on view private key. This key is access to your wallet,
+                so
                 store it on secure place.<br><br>
             <div class="row centered-row">
                 <div class="col-sm-4 text-center">
@@ -225,11 +398,13 @@
             <h4>Installation</h4>
             <p>
                 Head to <a href="https://github.com/mrtnetwork/mrtwallet/releases" target="_blank">GitHub</a> and
-                download MrtWallet app for your device. On android device enable installation from unknown sources and
+                download MrtWallet app for your device. On android device enable installation from unknown sources
+                and
                 install app.
             <h4>Setting up wallet</h4>
             <p>
-                On first screen you have multiple options on recovering of old wallet made inside of app. We will create
+                On first screen you have multiple options on recovering of old wallet made inside of app. We will
+                create
                 new wallet and we will setup encryption password for our wallet.<br>
             <div class="row centered-row">
                 <div class="col-sm-4 text-center">
@@ -260,8 +435,10 @@
                 </div>
             </div>
             <br>
-            <p>We will name our wallet and choose if we want to be asked for password every time we launch the app. Once
-                you are ready to use our wallet, click on this last button on bottom right menu of app and list through
+            <p>We will name our wallet and choose if we want to be asked for password every time we launch the app.
+                Once
+                you are ready to use our wallet, click on this last button on bottom right menu of app and list
+                through
                 list of cryptos and find and select Pepecoin.</p>
             <div class="row centered-row">
                 <div class="col-sm-4 text-center">
@@ -330,9 +507,11 @@
             <br>
             <h4>Sending transactions</h4>
             <p>Sending transactions is little complex process, but once you know how to do it, it is pretty simple.
-                Click on send button. After that select from which address you will be sending from Pepe. Once you get
+                Click on send button. After that select from which address you will be sending from Pepe. Once you
+                get
                 past this screen, select choose all and continue to setup recipients, where you will put destination
-                address and amount of how much Pepe you are sending. When you are done, scroll all the way down and send
+                address and amount of how much Pepe you are sending. When you are done, scroll all the way down and
+                send
                 transaction where it will ask you for your wallet password.</p>
             <div class="row centered-row">
                 <div class="col-sm-4 text-center">
@@ -362,7 +541,8 @@
                 </div>
             </div>
             <br>
-            <p>Congrats! Now you have sent your first transaction! Click arrow button to get back to main page of app.
+            <p>Congrats! Now you have sent your first transaction! Click arrow button to get back to main page of
+                app.
             </p>
             <div class="row centered-row">
                 <div class="col-sm-4 text-center">
@@ -373,7 +553,8 @@
             </div>
             <br>
             <h4>Accepting transactions</h4>
-            <p>Accepting transactions is very simple, simply click on accept button and copy your address or share your
+            <p>Accepting transactions is very simple, simply click on accept button and copy your address or share
+                your
                 QR code.</p>
             <div class="row centered-row">
                 <div class="col-sm-4 text-center">
@@ -383,7 +564,8 @@
                 </div>
             </div>
             <h4>Backing up wallet</h4>
-            <p>Backing your wallet is simple process, click in top right corner settings icon and create backup of your
+            <p>Backing your wallet is simple process, click in top right corner settings icon and create backup of
+                your
                 wallet. Keep this file! Since you can use it to restore your wallet!</p>
             <div class="row centered-row">
                 <div class="col-sm-4 text-center">
