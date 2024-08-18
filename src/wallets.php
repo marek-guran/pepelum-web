@@ -154,7 +154,7 @@
             <h4>About wallet</h4>
             <p>Komodo wallet is a multi-coin non-custodial wallet which supports multipe coins including Pepecoin. It is
                 available on multiple platforms like Windows, Linux, MacOS, Android and iOS. You can get Komodo Wallet
-                at this <a href="https://komodoplatform.com/en/wallets.html" target="_blank">link</a> (this guide uses
+                at this <a href="https://atomicdex.io/en/downloads/" target="_blank">link</a> (this guide uses
                 official Android app).</p>
             <h4>Setting up wallet</h4>
             <p>After you have installed wallet, you will need to create a new wallet. Click on Create New Wallet and

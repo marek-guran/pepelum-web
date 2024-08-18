@@ -186,6 +186,17 @@
         <li>
             <div class="item-inner">
                 <div class="time-wrapper">
+                    <time>08.08.2024</time>
+                </div>
+                <div class="details">
+                    <h3>Telegram Tip Bot</h3>
+                    <p>This day was Pepecoin listed on Telegram bot called UltimateTipBot with also special branding as PepecoinTipBot. Thanks to this now can even Telegram users experience tips and rains just like on Discord or Reddit.</p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="item-inner">
+                <div class="time-wrapper">
                     <time>17.05.2024</time>
                 </div>
                 <div class="details">
