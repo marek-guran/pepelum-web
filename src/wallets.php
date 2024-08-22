@@ -583,6 +583,9 @@
             <p>Restoring wallet is straightforward process, you can restore your wallet from mnemonic phrase or your
                 backed up wallet file.</p>
         </div>
+        <?php
+        include 'src/donations.php';
+        ?>
     </div>
 
     <script>

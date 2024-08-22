@@ -19,15 +19,15 @@
     <link rel="stylesheet" href="styles/main.css">
 
     <meta name="theme-color" content="#212121" />
-	<link rel="manifest" href="manifest.json">
+    <link rel="manifest" href="manifest.json">
 
     <script>
-		if ('serviceWorker' in navigator) {
-			navigator.serviceWorker.register('/service-worker.js');
-		} else {
-			console.log("Service worker nie je podporovaný");
-		}
-	</script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js');
+        } else {
+            console.log("Service worker nie je podporovaný");
+        }
+    </script>
 
     <style>
         .close-btn {
@@ -47,6 +47,7 @@
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
             z-index: 9999;
         }
+
         .close-btn:hover {
             background-color: #e9ecef;
         }
@@ -56,32 +57,32 @@
 <body>
 
     <?php
-        $uri = $_SERVER['REQUEST_URI'];
-        $showCloseBtn = $uri != '/' && $uri != '/index.php?p=home' && $uri != '/?p=home';
+    $uri = $_SERVER['REQUEST_URI'];
+    $showCloseBtn = $uri != '/' && $uri != '/index.php?p=home' && $uri != '/?p=home';
 
-        if ($showCloseBtn) {
-            echo '<div class="close-btn" onclick="handleClose()"><i class="fa-solid fa-xmark"></i></div>';
-        }
+    if ($showCloseBtn) {
+        echo '<div class="close-btn" onclick="handleClose()"><i class="fa-solid fa-xmark"></i></div>';
+    }
 
-        if ($uri == '/' || $uri == '/index.php?p=home' || $uri == '/?p=home') {
-            include 'src/home.php';
-        } elseif ($uri == '/index.php?p=wallets' || $uri == '/?p=wallets') {
-            include 'src/wallets.php';
-        } elseif ($uri == '/index.php?p=mining' || $uri == '/?p=mining') {
-            include 'src/mining.php';
-        } elseif ($uri == '/index.php?p=getpepecoin' || $uri == '/?p=getpepecoin') {
-            include 'src/getpepecoin.php';
-        } elseif ($uri == '/index.php?p=bots' || $uri == '/?p=bots') {
-            include 'src/bots.php';
-        } elseif ($uri == '/index.php?p=roadmap' || $uri == '/?p=roadmap') {
-            include 'src/roadmap.php';
-        } elseif ($uri == '/index.php?p=history' || $uri == '/?p=history') {
-            include 'src/history.php';
-        } elseif ($uri == '/index.php?p=about' || $uri == '/?p=about') {
-            include 'src/about.php';
-        } elseif ($uri == '/index.php?p=electrumX' || $uri == '/?p=electrumX') {
-            include 'src/electrumX.php';
-        }
+    if ($uri == '/' || $uri == '/index.php?p=home' || $uri == '/?p=home') {
+        include 'src/home.php';
+    } elseif ($uri == '/index.php?p=wallets' || $uri == '/?p=wallets') {
+        include 'src/wallets.php';
+    } elseif ($uri == '/index.php?p=mining' || $uri == '/?p=mining') {
+        include 'src/mining.php';
+    } elseif ($uri == '/index.php?p=getpepecoin' || $uri == '/?p=getpepecoin') {
+        include 'src/getpepecoin.php';
+    } elseif ($uri == '/index.php?p=bots' || $uri == '/?p=bots') {
+        include 'src/bots.php';
+    } elseif ($uri == '/index.php?p=roadmap' || $uri == '/?p=roadmap') {
+        include 'src/roadmap.php';
+    } elseif ($uri == '/index.php?p=history' || $uri == '/?p=history') {
+        include 'src/history.php';
+    } elseif ($uri == '/index.php?p=about' || $uri == '/?p=about') {
+        include 'src/about.php';
+    } elseif ($uri == '/index.php?p=electrumX' || $uri == '/?p=electrumX') {
+        include 'src/electrumX.php';
+    }
     ?>
 
     <script src="libs/bootstrap/bootstrap.bundle.min.js"></script>

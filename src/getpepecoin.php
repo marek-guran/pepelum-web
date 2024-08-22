@@ -191,7 +191,7 @@
             <h4>Withdrawing Pepecoin</h4>
             <p>To withdraw your Pepecoin, go to the wallet section and find Pepecoin. Click on the button WITHDRAW and
                 fill all information like amount, address, confirm transaction and input 2-FA to send transaction.</p>
-                <div class="row centered-row">
+            <div class="row centered-row">
                 <div class="col-sm-4 text-center">
                     <a href="/images/getpepecoin/stakecube/11.png" target="_blank">
                         <img src="/images/getpepecoin/stakecube/11.png" class="mb-2">
@@ -204,14 +204,18 @@
                 </div>
             </div>
         </div>
+        <?php
+        include 'src/donations.php';
+        ?>
+    </div>
 
-        <script>
-            function showGuide(guideId) {
-                document.querySelectorAll('.guide').forEach(function (guide) {
-                    guide.style.display = 'none';
-                });
+    <script>
+        function showGuide(guideId) {
+            document.querySelectorAll('.guide').forEach(function (guide) {
+                guide.style.display = 'none';
+            });
 
-                document.getElementById(guideId).style.display = 'block';
-            }
-        </script>
+            document.getElementById(guideId).style.display = 'block';
+        }
+    </script>
 </body>

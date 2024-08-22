@@ -103,14 +103,18 @@
                 you should use, this time you want RandomX algorithm).
             </p>
         </div>
+        <?php
+        include 'src/donations.php';
+        ?>
+    </div>
 
-        <script>
-            function showGuide(guideId) {
-                document.querySelectorAll('.guide').forEach(function (guide) {
-                    guide.style.display = 'none';
-                });
+    <script>
+        function showGuide(guideId) {
+            document.querySelectorAll('.guide').forEach(function (guide) {
+                guide.style.display = 'none';
+            });
 
-                document.getElementById(guideId).style.display = 'block';
-            }
-        </script>
+            document.getElementById(guideId).style.display = 'block';
+        }
+    </script>
 </body>

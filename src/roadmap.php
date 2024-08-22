@@ -218,9 +218,10 @@
                 </div>
             </div>
         </li>
+        <?php
+    include 'src/donations.php';
+    ?>
     </ol>
-
 </section>
-
 
 <script src="/scripts/roadmap.js"></script>

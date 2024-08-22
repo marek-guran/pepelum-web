@@ -35,34 +35,41 @@
             <h4>Depositing</h4>
             <p>Private message ℙ𝔼ℙ𝔼 𝔻𝕀𝕊ℙ𝔼ℕ𝕊𝔼ℝ (tip.cc) bot and follow steps like in sample conversation:<br><br>
                 <i class="fa-solid fa-user user-icon"></i> $deposit pepe<br>
-                <i class="fa-solid fa-robot bot-icon"></i>⤵ Deposit Pepecoin. Deposits need at least 10 confirmations to be credited to your account. Your deposit address: YOUR-WALLET-ADDRESS<br>
+                <i class="fa-solid fa-robot bot-icon"></i>⤵ Deposit Pepecoin. Deposits need at least 10 confirmations to
+                be credited to your account. Your deposit address: YOUR-WALLET-ADDRESS<br>
                 <i class="fa-solid fa-robot bot-icon"></i>⤵ Pepecoin deposit confirmed
             </p>
         </div>
 
         <div id="reddit" class="guide">
-        <h1>Reddit bot</h1>
+            <h1>Reddit bot</h1>
             <h4>Withdrawing</h4>
-            <p>Private message <a href="https://www.reddit.com/message/compose/?to=pepetipbot" target="_blank">pepetipbot</a> and follow steps like in sample conversation:<br><br>
+            <p>Private message <a href="https://www.reddit.com/message/compose/?to=pepetipbot"
+                    target="_blank">pepetipbot</a> and follow steps like in sample conversation:<br><br>
                 <strong>Subject:</strong> withdraw<br>
                 <strong>Message:</strong> withdraw YOUR-WALLET-ADDRESS all PEPE
             </p>
             <h4>Depositing</h4>
-            <p>Private message <a href="https://www.reddit.com/message/compose/?to=pepetipbot" target="_blank">pepetipbot</a> and follow steps like in sample conversation:<br><br>
+            <p>Private message <a href="https://www.reddit.com/message/compose/?to=pepetipbot"
+                    target="_blank">pepetipbot</a> and follow steps like in sample conversation:<br><br>
                 <strong>Subject:</strong> info<br>
                 <strong>Message:</strong> info<br>
                 <br>
                 Bot will then send you deposit addres
             </p>
         </div>
+        <?php
+    include 'src/donations.php';
+    ?>
+    </div>
 
-        <script>
-            function showGuide(guideId) {
-                document.querySelectorAll('.guide').forEach(function (guide) {
-                    guide.style.display = 'none';
-                });
+    <script>
+        function showGuide(guideId) {
+            document.querySelectorAll('.guide').forEach(function (guide) {
+                guide.style.display = 'none';
+            });
 
-                document.getElementById(guideId).style.display = 'block';
-            }
-        </script>
+            document.getElementById(guideId).style.display = 'block';
+        }
+    </script>
 </body>

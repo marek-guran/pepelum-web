@@ -87,5 +87,8 @@
                         Official Pepecoin Website</a>!</p>
             </div>
         </div>
+        <?php
+    include 'src/donations.php';
+    ?>
     </div>
 </body>
