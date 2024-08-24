@@ -23,7 +23,8 @@
         </div>
 
         <div id="discord" class="guide">
-            <h1>Discord bot</h1>
+            <h1><i
+            class="fa-brands fa-discord"></i> Discord bot</h1>
             <h4>Withdrawing</h4>
             <p>Private message ℙ𝔼ℙ𝔼 𝔻𝕀𝕊ℙ𝔼ℕ𝕊𝔼ℝ (tip.cc) bot and follow steps like in sample conversation:<br><br>
                 <i class="fa-solid fa-user user-icon"></i> $withdraw pepe<br>
@@ -46,7 +47,8 @@
         </div>
 
         <div id="reddit" class="guide">
-            <h1>Reddit bot</h1>
+            <h1><i
+            class="fa-brands fa-reddit"></i> Reddit bot</h1>
             <h4>Withdrawing</h4>
             <p>Private message <a href="https://www.reddit.com/message/compose/?to=pepetipbot"
                     target="_blank">pepetipbot</a> and follow steps like in sample conversation:<br><br>
@@ -64,7 +66,8 @@
         </div>
 
         <div id="telegram" class="guide">
-            <h1>Telegram bot</h1>
+            <h1><i
+            class="fa-brands fa-telegram"></i> Telegram bot</h1>
             <h4>Withdrawing</h4>
             <p>Private message <a href="https://t.me/PepecoinTipbot" target="_blank">Pepecoin Tipbot</a> and follow
                 steps like in sample conversation:<br><br>
