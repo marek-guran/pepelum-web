@@ -140,9 +140,7 @@
                     Pepecoin</span></a>
         </div>
         <div class="col-md-3">
-            <a href="?p=bots" class="btn btn-primary w-100 mb-4 bot"><span><i class="fa-solid fa-robot"></i> Discord and
-                    Reddit
-                    bots</span></a>
+            <a href="?p=bots" class="btn btn-primary w-100 mb-4 bot"><span><i class="fa-solid fa-robot"></i> Tip Bots</span></a>
         </div>
         <div class="col-md-3">
             <a href="?p=roadmap" class="btn btn-primary w-100 mb-4 roadmap"><span><i class="fa-solid fa-map"></i>

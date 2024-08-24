@@ -6,15 +6,19 @@
 
 <body>
     <div class="container mt-5 mb-3">
-        <h2>Discord and Reddit bots</h2>
+        <h2>Tip Bots</h2>
         <div class="row centered-row mb-3">
             <div class="col">
-                <button class="btn btn-primary w-100 mb-1" onclick="showGuide('discord')">Discord bot <i
+                <button class="btn btn-primary w-100 mb-1" onclick="showGuide('discord')">Discord <i
                         class="fa-brands fa-discord"></i></button>
             </div>
             <div class="col">
-                <button class="btn btn-primary w-100 mb-1" onclick="showGuide('reddit')">Reddit bot <i
+                <button class="btn btn-primary w-100 mb-1" onclick="showGuide('reddit')">Reddit <i
                         class="fa-brands fa-reddit"></i></button>
+            </div>
+            <div class="col">
+                <button class="btn btn-primary w-100 mb-1" onclick="showGuide('telegram')">Telegram <i
+                        class="fa-brands fa-telegram"></i></button>
             </div>
         </div>
 
@@ -55,12 +59,30 @@
                 <strong>Subject:</strong> info<br>
                 <strong>Message:</strong> info<br>
                 <br>
-                Bot will then send you deposit addres
+                Bot will then send you deposit address
+            </p>
+        </div>
+
+        <div id="telegram" class="guide">
+            <h1>Telegram bot</h1>
+            <h4>Withdrawing</h4>
+            <p>Private message <a href="https://t.me/PepecoinTipbot" target="_blank">Pepecoin Tipbot</a> and follow
+                steps like in sample conversation:<br><br>
+                <i class="fa-solid fa-user user-icon"></i> /withdrawpepe 15000 YOUR-WALLET-ADDRESS<br>
+                <i class="fa-solid fa-robot bot-icon"></i> @user, your withdrawal of 15,000 PEPE ($0.05112) to
+                YOUR-WALLET-ADDRESS is being processed...
+            </p>
+            <h4>Depositing</h4>
+            <p>Private message <a href="https://t.me/PepecoinTipbot" target="_blank">Pepecoin Tipbot</a> and follow
+                steps like in sample conversation:<br><br>
+                <i class="fa-solid fa-user user-icon"></i> /deposit<br>
+                <i class="fa-solid fa-robot bot-icon"></i> @user, your PEPE deposit address: YOUR-WALLET-ADDRESS<br>
+                <i class="fa-solid fa-robot bot-icon"></i> 💰 You have initiated a deposit of 3,000 PEPE ($0.00915), it will be available after 10 confirmations...
             </p>
         </div>
         <?php
-    include 'src/donations.php';
-    ?>
+        include 'src/donations.php';
+        ?>
     </div>
 
     <script>
