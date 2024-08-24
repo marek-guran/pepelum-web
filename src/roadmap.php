@@ -171,14 +171,14 @@
                 <div class="details">
                     <h3>List of planned changes</h3>
                     <p>- Matt Furie (copyright rights to use PEPE),<br>
-                    - Pepecoin Merch Store,<br>
-                    - New design of website, social media banners and ads,<br>
-                    - New professional Pepecoin logo,<br>
-                    - New exchanges, including fiat to crypto onramp services,<br>
-                    - Mobile, web, desktop wallets listings<br>
-                    - Branded hardware wallets like Tangem, Trezor...<br>
-                    - Pepecoin as payment option on services like BitPay, Crypto.com Pay, Coinbase Commerce, and
-                    Cryptocurrency Checkout
+                        - Pepecoin Merch Store,<br>
+                        - New design of website, social media banners and ads,<br>
+                        - New professional Pepecoin logo,<br>
+                        - New exchanges, including fiat to crypto onramp services,<br>
+                        - Mobile, web, desktop wallets listings<br>
+                        - Branded hardware wallets like Tangem, Trezor...<br>
+                        - Pepecoin as payment option on services like BitPay, Crypto.com Pay, Coinbase Commerce, and
+                        Cryptocurrency Checkout
                     </p>
                 </div>
             </div>
@@ -190,7 +190,9 @@
                 </div>
                 <div class="details">
                     <h3>Telegram Tip Bot</h3>
-                    <p>This day was Pepecoin listed on Telegram bot called UltimateTipBot with also special branding as PepecoinTipBot. Thanks to this now can even Telegram users experience tips and rains just like on Discord or Reddit.</p>
+                    <p>This day was Pepecoin listed on Telegram bot called UltimateTipBot with also special branding as
+                        PepecoinTipBot. Thanks to this now can even Telegram users experience tips and rains just like
+                        on Discord or Reddit.</p>
                 </div>
             </div>
         </li>
@@ -216,11 +218,12 @@
                     <p>Fairly launched without pre-mining, with option to store Pepecoin on Pepecoin Core wallet.
                         Pepecoin is also available on Discord and Reddit using tip bots.</p>
                 </div>
+
+                <?php
+                include 'src/donations.php';
+                ?>
             </div>
         </li>
-        <?php
-    include 'src/donations.php';
-    ?>
     </ol>
 </section>
 
