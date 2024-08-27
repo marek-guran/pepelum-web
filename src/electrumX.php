@@ -148,6 +148,12 @@
             <button class="btn btn-sm btn-outline-primary qr-button" data-bs-toggle="modal"
                 data-bs-target="#qrModalLTC">QR Code</button>
         </p>
+        <p><strong>Bitcoin:</strong> <span id="donationAddressBTC">bc1q0awpqdd3xh9sclsqv5nyg4rhkctx68r98tsm2u</span>
+            <button class="btn btn-sm btn-outline-primary copy-button"
+                data-clipboard-target="#donationAddressBTC">Copy</button>
+            <button class="btn btn-sm btn-outline-primary qr-button" data-bs-toggle="modal"
+                data-bs-target="#qrModalBTC">QR Code</button>
+        </p>
         <hr>
         <p class="lead raleway"><a href="https://electrumx-spesmilo.readthedocs.io/" target="_blank"
                 rel="noopener noreferrer"><strong>Documentation,</strong></a> this server uses <a
@@ -193,6 +199,20 @@
                 </div>
                 <div class="modal-body text-center">
                     <img src="/images/qr/qr-ltc1q34vd7ecr2z3f0euqamxg2j93lwkdp5c4s33rsc.png" alt="Donation QR Code"
+                        class="modal-img">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="qrModalBTC" tabindex="-1" aria-labelledby="qrModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="qrModalLabel">Donate by Bitcoin</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="/images/qr/qr-bc1q0awpqdd3xh9sclsqv5nyg4rhkctx68r98tsm2u.png" alt="Donation QR Code"
                         class="modal-img">
                 </div>
             </div>
