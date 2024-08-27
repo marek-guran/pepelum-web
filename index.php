@@ -21,6 +21,34 @@
     <meta name="theme-color" content="#212121" />
     <link rel="manifest" href="manifest.json">
 
+    <!-- Primary Meta Tags -->
+    <meta name="description"
+        content="Pepelum is your one-stop resource for everything Pepecoin (PEP). Discover how to buy, store, and sell Pepecoin securely. Explore our roadmap and leverage our Electrum server for seamless transactions.">
+    <meta name="keywords"
+        content="Pepecoin, PEP, Pepelum, Pepecoin guide, buy Pepecoin, store Pepecoin, sell Pepecoin, Pepecoin roadmap, Electrum server, cryptocurrency, digital currency, blockchain, crypto wallet, Pepecoin tutorial, crypto transactions, Pepecoin resources, Pepecoin investment, Pepecoin security, crypto exchange, Pepecoin price, Pepecoin Electrum, Pepecoin support, Pepecoin wallet">
+    <meta name="author" content="Pepelum Team">
+    <meta name="robots" content="index, follow">
+    <meta name="rating" content="general">
+    <meta name="distribution" content="global">
+    <meta name="revisit-after" content="7 days">
+    <meta name="subject" content="Pepecoin (PEP) - Cryptocurrency Guides and Resources">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Pepelum - Comprehensive Guide to Pepecoin (PEP): Buy, Store, Sell, and More">
+    <meta property="og:description"
+        content="Discover how to securely buy, store, and sell Pepecoin with Pepelum's expert guides. Stay informed with our roadmap and utilize our Electrum server for smooth transactions.">
+    <meta property="og:image" content="https://pepelum.site/android-chrome-512x512.png">
+    <meta property="og:url" content="https://www.pepelum.com">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Pepelum - Comprehensive Guide to Pepecoin (PEP): Buy, Store, Sell, and More">
+    <meta name="twitter:description"
+        content="Pepelum provides in-depth guides on buying, storing, and selling Pepecoin (PEP). Follow our detailed roadmap and access our Electrum server for seamless transactions.">
+    <meta name="twitter:image">
+
+
     <script>
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('/service-worker.js');
