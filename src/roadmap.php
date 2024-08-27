@@ -186,6 +186,18 @@
         <li>
             <div class="item-inner">
                 <div class="time-wrapper">
+                    <time>27.08.2024</time>
+                </div>
+                <div class="details">
+                    <h3>TradeOgre Listing</h3>
+                    <p>Pepecoin got listed this day on new exchange named <a
+                            href="https://tradeogre.com/exchange/PEP-USDT" target="_blank">tradeogre.com</a>.</p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="item-inner">
+                <div class="time-wrapper">
                     <time>08.08.2024</time>
                 </div>
                 <div class="details">
