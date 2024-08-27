@@ -37,7 +37,7 @@
     <meta property="og:title" content="Pepelum - Comprehensive Guide to Pepecoin (PEP): Buy, Store, Sell, and More">
     <meta property="og:description"
         content="Discover how to securely buy, store, and sell Pepecoin with Pepelum's expert guides. Stay informed with our roadmap and utilize our Electrum server for smooth transactions.">
-    <meta property="og:image" content="https://pepelum.site/android-chrome-512x512.png">
+    <meta property="og:image" content="https://pepelum.site/PEPELUM.png">
     <meta property="og:url" content="https://www.pepelum.com">
     <meta property="og:type" content="website">
 
