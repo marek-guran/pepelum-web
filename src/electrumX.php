@@ -60,7 +60,7 @@
 
 
         a {
-            color: #169441!important;
+            color: #169441 !important;
             text-decoration: none;
         }
 
@@ -160,6 +160,8 @@
                 href="https://github.com/PepeEnthusiast/electrumx-pepecoin" target="_blank"
                 rel="noopener noreferrer"><strong>modified ElectrumX</strong></a></p>
         <p>ElectrumX 1.16.0</p>
+        <hr>
+        <p>List of known electrum servers <a href="https://pepelum.site/servers.txt" target="_blank">here</a></p>
     </div>
 
     <!-- QR Code Modal -->
