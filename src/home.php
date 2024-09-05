@@ -118,7 +118,7 @@
 </style>
 <div class="container mt-5 home-margin">
     <h1 class="text-center mb-4 raleway bold">Pepelum, <a href="https://pepecoin.org/" target="_blank"
-            rel="noopener noreferrer">₱epecoin</a> helper</h1>
+            rel="noopener noreferrer">Ᵽepecoin</a> helper</h1>
     <hr>
     <div class="row">
         <div class="col-md-3">

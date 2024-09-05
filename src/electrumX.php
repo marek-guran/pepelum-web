@@ -9,7 +9,7 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <!-- Meta tags for Pepecoin -->
     <meta name="description"
@@ -36,7 +36,7 @@
         }
 
         .raleway {
-            font-family: 'Raleway';
+            font-family: 'Questrial';
             color: white;
         }
 
@@ -110,7 +110,7 @@
 <body>
     <div class="container">
         <h1 class="raleway">Welcome to PEPELUM, <a href="https://pepecoin.org/" target="_blank"
-                rel="noopener noreferrer">₱epecoin</a>
+                rel="noopener noreferrer">Ᵽepecoin</a>
             ElectrumX server</h1>
         <hr>
         <p class="lead raleway"><strong>Connect to server using:</strong></p>
