@@ -211,12 +211,38 @@
         <li>
             <div class="item-inner">
                 <div class="time-wrapper">
+                    <time>06.06.2024</time>
+                </div>
+                <div class="details">
+                    <h3>Stakecube Listing</h3>
+                    <p>This day got Pepecoin listed on new exchange thanks to community member <strong>DJ</strong> who
+                        got later promoted as <strong>listing manager.</strong> This allows people to trade Pepecoin at
+                        this <a href="https://stakecube.net/app/exchange/pep_usdt" target="_blank">link</a>.</p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="item-inner">
+                <div class="time-wrapper">
                     <time>17.05.2024</time>
                 </div>
                 <div class="details">
                     <h3>Hard Fork (Merge mining)</h3>
                     <p>17th May happend hard fork which enabled at block 42,000 merge mining allowing Pepecoin to take
                         advantage from whole SCRYPT network security</p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="item-inner">
+                <div class="time-wrapper">
+                    <time>14.02.2024</time>
+                </div>
+                <div class="details">
+                    <h3>Xeggex Listing</h3>
+                    <p>Very first trade on very first exchange Xeggex happend on this day. It was great day for
+                        Pepecoin. It can be traded at this <a href="https://xeggex.com/market/PEP_USDT"
+                            target="_blank">link</a>.</p>
                 </div>
             </div>
         </li>
