@@ -35,5 +35,5 @@ $_SESSION['pepe'] += $rewards;
 $_SESSION['remaining_score'] %= $reward_threshold;
 
 // Return the updated pepe value
-echo $_SESSION['pepe'];
+echo json_encode($_SESSION['pepe']);
 ?>

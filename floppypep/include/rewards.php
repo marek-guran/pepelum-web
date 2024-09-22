@@ -118,7 +118,7 @@ $currentBalance = getBalance();
 
 <?php if (isset($_GET['p']) && $_GET['p'] == 'rewards'): ?>
     <div class="container full-page">
-        <h1 id="payout">Payout: 0 Ᵽ</h1>
+        <h1 id="payout">Amount: 0 Ᵽ</h1>
         <p>Each 100 points gives you 1 Ᵽ. You can play as many times as you want and dont need to claim straight
             away. It
             will add your Ᵽ to amount even if you made last game 10 Ᵽ, but didnt claim and went playing again.
@@ -127,7 +127,6 @@ $currentBalance = getBalance();
         <form action="include/send_payout.php" method="post">
             <label for="wallet">Wallet Address:</label>
             <input type="text" id="wallet" name="wallet" required>
-            <input type="hidden" id="payoutValue" name="payoutValue">
             <button type="submit">Send</button>
         </form>
         <h3 class="balance">Current balance for withdrawals: <?php echo htmlspecialchars($currentBalance); ?> Ᵽ</h3>
@@ -136,7 +135,7 @@ $currentBalance = getBalance();
     </div>
 <?php else: ?>
     <div class="container">
-        <h1 id="payout">Payout: 0 Ᵽ</h1>
+        <h1 id="payout">Amount: 0 Ᵽ</h1>
         <p>Each 100 points gives you 1 Ᵽ. You can play as many times as you want and dont need to claim straight
             away. It
             will add your pepe to amount even if you made last game 10 Ᵽ, but didnt claim and went playing again.
@@ -145,7 +144,6 @@ $currentBalance = getBalance();
         <form action="include/send_payout.php" method="post">
             <label for="wallet">Wallet Address:</label>
             <input type="text" id="wallet" name="wallet" required>
-            <input type="hidden" id="payoutValue" name="payoutValue">
             <button type="submit">Send</button>
         </form>
         <h3 class="balance">Current balance for withdrawals: <?php echo htmlspecialchars($currentBalance); ?> Ᵽ</h3>

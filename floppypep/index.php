@@ -52,12 +52,29 @@
 
             setTimeout(function () {
                var payoutContent = document.getElementById('payout').textContent;
-               console.log('Payout Content:', payoutContent);
-               document.getElementById('payoutValue').value = payoutContent;
                event.target.submit();
             }, 5000);
          });
       })();
+   </script>
+
+   <script>
+      // Function to fetch the balance from balance.php
+    // //   function fetchBalance() {
+     //     fetch('include/balance.php')
+      //       .then(response => response.text())  // Use .text() for plain text response
+      //       .then(data => {
+               // Update the content of the <h1> element with "Amount: <balance> PEPE"
+      //          document.getElementById('payout').textContent = `Amount: ${data} Ᵽ`;
+      //       })
+     //        .catch(error => {
+     //           console.error('Error fetching balance:', error);
+      //       });
+     //  }
+
+      // Fetch the balance when the page loads
+     //  window.onload = fetchBalance;
+
    </script>
 
    <script>
@@ -100,7 +117,6 @@
          alert('Developer address copied to clipboard!');
       });
    </script>
-
 </body>
 
 </html>
