@@ -1,15 +1,20 @@
 <?php
 session_start();
 
-// Initialize pepe if not set
-if (!isset($_SESSION['pepe'])) {
-    $_SESSION['pepe'] = 0;
+function initializeSessionVariables() {
+    // Initialize pepe if not set
+    if (!isset($_SESSION['pepe'])) {
+        $_SESSION['pepe'] = 0;
+    }
+
+    // Initialize remaining_score if not set
+    if (!isset($_SESSION['remaining_score'])) {
+        $_SESSION['remaining_score'] = 0;
+    }
 }
 
-// Initialize remaining_score if not set
-if (!isset($_SESSION['remaining_score'])) {
-    $_SESSION['remaining_score'] = 0;
-}
+// Call the function to initialize session variables
+initializeSessionVariables();
 
 // Get the score from the POST request
 $score = isset($_POST['score']) ? intval($_POST['score']) : 0;

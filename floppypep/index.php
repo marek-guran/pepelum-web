@@ -13,7 +13,7 @@
    <meta property="og:description"
       content="Play Floppy PEP, remake of popular game Flappy Bird built in html, css and js" />
    <meta property="og:type" content="website" />
-   <meta property="og:url" content="https://floppypep.pepelum.site/" />
+   <meta property="og:url" content="https://pepelum.site/floppypep/" />
    <meta property="og:site_name" content="FloppyPep" />
 
    <?php if (!isset($_GET['p']) || $_GET['p'] == 'game'): ?>
@@ -44,6 +44,44 @@
          location.reload();
       });
    </script>
+
+   <script>
+      (function () {
+         document.querySelector('form').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            setTimeout(function () {
+               var payoutContent = document.getElementById('payout').textContent;
+               console.log('Payout Content:', payoutContent);
+               document.getElementById('payoutValue').value = payoutContent;
+               event.target.submit();
+            }, 5000);
+         });
+      })();
+   </script>
+
+   <script>
+      document.getElementById('donationAddress').addEventListener('click', function () {
+         // Create a temporary input element
+         var tempInput = document.createElement('input');
+         tempInput.value = 'PeV56xggPVPLVde3D4wQzQXG7Lnsp8wcpJ';
+         document.body.appendChild(tempInput);
+
+         // Select the text in the input element
+         tempInput.select();
+         tempInput.setSelectionRange(0, 99999); // For mobile devices
+
+         // Copy the text to the clipboard
+         document.execCommand('copy');
+
+         // Remove the temporary input element
+         document.body.removeChild(tempInput);
+
+         // Optionally, display a message to the user
+         alert('Donation address copied to clipboard!');
+      });
+   </script>
+
 </body>
 
 </html>

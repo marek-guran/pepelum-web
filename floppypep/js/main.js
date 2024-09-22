@@ -23,7 +23,8 @@
    var highscore = 0;
    var pepe = 0;
 
-   var pipeheight = 140;
+   var pipeheight = 160;
+   var padding = 170;
    var pipewidth = 52;
    var pipes = new Array();
 
@@ -423,7 +424,6 @@
       var flyArea = $("#flyarea").height();
 
       // Define a larger padding value to ensure a reasonable gap
-      var padding = 190; // Increased padding for a larger gap
       var constraint = flyArea - pipeheight - (padding * 2); // Double padding (for top and bottom)
 
       // Calculate the top pipe height ensuring it respects the padding
