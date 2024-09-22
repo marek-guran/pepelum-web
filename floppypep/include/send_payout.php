@@ -6,11 +6,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $walletAddress = $_POST['wallet'];
 
     // Retrieve the amount of Pepecoins from the hidden input
-    $payoutValue = $_POST['payoutValue'];
+    //$payoutValue = $_POST['payoutValue'];
+    $payoutValue = $_SESSION['pepe'];
 
     // Extract the numeric value from the payout string (e.g., "Amount: 34 Ᵽ")
     preg_match('/Amount: (\d+) Ᵽ/', $payoutValue, $matches);
-    $pepe = isset($matches[1]) ? (int) $matches[1] : 0;
+    //$pepe = isset($matches[1]) ? (int) $matches[1] : 0;
+    $pepe = $payoutValue;
 
     // Check if the amount of Pepecoins is greater than 0
     if ($pepe > 0) {

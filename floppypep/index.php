@@ -52,8 +52,8 @@
 
             setTimeout(function () {
                var payoutContent = document.getElementById('payout').textContent;
-               event.target.submit();
-            }, 5000);
+              event.target.submit();
+           }, 5000);
          });
       })();
    </script>
