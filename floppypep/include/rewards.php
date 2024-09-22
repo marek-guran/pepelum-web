@@ -132,6 +132,7 @@ $currentBalance = getBalance();
         </form>
         <h3 class="balance">Current balance for withdrawals: <?php echo htmlspecialchars($currentBalance); ?> Ᵽ</h3>
         <h2 class="balance" id="donationAddress">Donation address for game (click to copy): PeV56xggPVPLVde3D4wQzQXG7Lnsp8wcpJ</h2>
+        <h2 class="balance" id="devAddress">Developer donation address (click to copy): PgQN3BqErwVeCpbmAx7gSSJijBdjGL4F2K</h2>
     </div>
 <?php else: ?>
     <div class="container">
@@ -149,6 +150,7 @@ $currentBalance = getBalance();
         </form>
         <h3 class="balance">Current balance for withdrawals: <?php echo htmlspecialchars($currentBalance); ?> Ᵽ</h3>
         <h2 class="balance" id="donationAddress">Donation address for game (click to copy): PeV56xggPVPLVde3D4wQzQXG7Lnsp8wcpJ</h2>
+        <h2 class="balance" id="devAddress">Developer donation address (click to copy): PgQN3BqErwVeCpbmAx7gSSJijBdjGL4F2K</h2>
     </div>
 <?php endif; ?>
 <?php include 'include/menu.php'; ?>

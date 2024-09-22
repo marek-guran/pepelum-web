@@ -80,6 +80,25 @@
          // Optionally, display a message to the user
          alert('Donation address copied to clipboard!');
       });
+      document.getElementById('devAddress').addEventListener('click', function () {
+         // Create a temporary input element
+         var devInput = document.createElement('input');
+         devInput.value = 'PgQN3BqErwVeCpbmAx7gSSJijBdjGL4F2K';
+         document.body.appendChild(devInput);
+
+         // Select the text in the input element
+         devInput.select();
+         devInput.setSelectionRange(0, 99999); // For mobile devices
+
+         // Copy the text to the clipboard
+         document.execCommand('copy');
+
+         // Remove the temporary input element
+         document.body.removeChild(devInput);
+
+         // Optionally, display a message to the user
+         alert('Developer address copied to clipboard!');
+      });
    </script>
 
 </body>
