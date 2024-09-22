@@ -29,7 +29,8 @@
     .bot,
     .roadmap,
     .about,
-    .server {
+    .server,
+    .game {
         position: relative;
         overflow: hidden;
         background-color: black;
@@ -46,7 +47,8 @@
     .bot span,
     .roadmap span,
     .about span,
-    .server span {
+    .server span,
+    .game span {
         transition: opacity 0.5s ease;
     }
 
@@ -56,7 +58,8 @@
     .bot:hover span,
     .roadmap:hover span,
     .about:hover span,
-    .server:hover span {
+    .server:hover span,
+    .game:hover span {
         opacity: 0;
     }
 
@@ -115,6 +118,14 @@
         background-repeat: no-repeat;
         background-color: black;
     }
+
+    .game:hover {
+        background-image: url('/images/home/game.png');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: black;
+    }
 </style>
 <div class="container mt-5 home-margin">
     <h1 class="text-center mb-4 raleway bold">Pepelum, <a href="https://pepecoin.org/" target="_blank"
@@ -141,6 +152,10 @@
         </div>
         <div class="col-md-3">
             <a href="?p=bots" class="btn btn-primary w-100 mb-4 bot"><span><i class="fa-solid fa-robot"></i> Tip Bots</span></a>
+        </div>
+        <div class="col-md-3">
+            <a href="/floppypep/" class="btn btn-primary w-100 mb-4 game"><span><i class="fa-solid fa-gamepad"></i>
+                    Floppy PEP (GAME)</span></a>
         </div>
         <div class="col-md-3">
             <a href="?p=roadmap" class="btn btn-primary w-100 mb-4 roadmap"><span><i class="fa-solid fa-map"></i>
