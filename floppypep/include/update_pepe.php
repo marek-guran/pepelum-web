@@ -19,6 +19,26 @@ function initializeSessionVariables()
     }
 }
 
+// Function to check the origin of the request
+function checkRequestOrigin()
+{
+    $allowedDomain = 'https://pepelum.site/'; // Replace with your main domain
+    
+    // Check Origin or Referer header
+    $origin = isset($_SERVER['HTTP_ORIGIN']) ? $_SERVER['HTTP_ORIGIN'] : null;
+    $referer = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : null;
+    
+    // Verify if the request is coming from the allowed domain
+    if ($origin !== $allowedDomain && (is_null($referer) || strpos($referer, $allowedDomain) !== 0)) {
+        // If the request is not from the allowed domain, block it
+        echo "Request is not from a valid domain.";
+        exit;
+    }
+}
+
+// Call the function to check if the request is coming from the correct domain
+checkRequestOrigin();
+
 // Call the function to initialize session variables
 initializeSessionVariables();
 
@@ -46,6 +66,9 @@ if ($score > $max_allowed_score) {
     unset($_SESSION['score']);
     exit;
 }
+
+// Unset elapsed time after the check
+unset($elapsed_time);
 
 // Add the new score to the remaining score
 $_SESSION['remaining_score'] += $score;
