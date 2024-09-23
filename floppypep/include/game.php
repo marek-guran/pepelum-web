@@ -1,3 +1,14 @@
+
+<?php
+session_start();
+unset($_SESSION['start_time']);
+
+// Set initial values if not already set
+if (!isset($_SESSION['start_time'])) {
+    $_SESSION['start_time'] = time(); // Record the start time
+    $_SESSION['score'] = 0; // Initialize score
+}
+?>
 <div id="gamecontainer">
     <div id="gamescreen">
         <div id="sky" class="animated">
