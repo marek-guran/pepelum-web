@@ -386,11 +386,8 @@
 
       //fade out the scoreboard
       $("#scoreboard").transition({ y: '-40px', opacity: 0 }, 1000, 'ease', function () {
-         //when that's done, display us back to nothing
-         $("#scoreboard").css("display", "none");
-
-         //start the game over!
-         showSplash();
+         //when that's done, refresh the page
+         location.reload();
       });
    });
 

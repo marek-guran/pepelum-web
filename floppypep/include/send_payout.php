@@ -41,6 +41,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             } else {
                 echo "Success: Sent $pepe Ᵽ to $walletAddress. CLI output: $output";
                 $_SESSION['pepe'] = 0; // Set pepe to 0 after successful transaction
+                unset($_SESSION['start_time']);
+                unset($_SESSION['score']);
+                $_SESSION['pepe'] = 0;
+                session_destroy();
                 header("Location: https://pepelum.site/floppypep/");
                 exit();
             }

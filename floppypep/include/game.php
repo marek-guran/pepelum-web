@@ -1,7 +1,8 @@
-
 <?php
 session_start();
 unset($_SESSION['start_time']);
+unset($_SESSION['score']);
+unset($_SESSION['remaining_score']);
 
 // Set initial values if not already set
 if (!isset($_SESSION['start_time'])) {

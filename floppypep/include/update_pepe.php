@@ -1,7 +1,8 @@
 <?php
 session_start();
 
-function initializeSessionVariables() {
+function initializeSessionVariables()
+{
     // Initialize pepe if not set
     if (!isset($_SESSION['pepe'])) {
         $_SESSION['pepe'] = 0;
@@ -29,10 +30,10 @@ $elapsed_time = time() - $_SESSION['start_time'];
 
 // Calculate the maximum allowed score based on elapsed time
 if ($elapsed_time < 6) {
-    $max_allowed_score = 0; // Cannot score in the first 10 seconds
+    $max_allowed_score = 0; // Cannot score in the first 6 seconds
 } else {
-    // First point takes 10 seconds, each additional point takes 2 seconds
-    $max_allowed_score = 1 + floor(($elapsed_time - 6) / 2);
+    // First point takes 10 seconds, each additional point takes 1 second
+    $max_allowed_score = 1 + floor(($elapsed_time - 6) / 1);
 }
 
 // Check if the submitted score exceeds the maximum allowed score
@@ -41,6 +42,8 @@ if ($score > $max_allowed_score) {
     $_SESSION['remaining_score'] = 0;
     $_SESSION['pepe'] = 0;
     echo $_SESSION['pepe']; // Return the updated pepe value (which is 0)
+    unset($_SESSION['start_time']);
+    unset($_SESSION['score']);
     exit;
 }
 
