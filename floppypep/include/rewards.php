@@ -125,6 +125,7 @@ $currentBalance = getBalance();
         <form id="payout-form" action="include/send_payout.php" method="post">
             <label for="wallet">Wallet Address:</label>
             <input type="text" id="wallet" name="wallet" required>
+            <div class="cf-turnstile" data-sitekey="0x4AAAAAAAkpV3eUV9WyKLZb"></div>
             <button type="submit">Send</button>
             <p id="error-message" style="color: red; display: none;">Wrong address format. Wallet address must start with a
                 capital letter "P".</p>
@@ -144,6 +145,7 @@ $currentBalance = getBalance();
         <form action="include/send_payout.php" method="post">
             <label for="wallet">Wallet Address:</label>
             <input type="text" id="wallet" name="wallet" required>
+            <div class="cf-turnstile" data-sitekey="0x4AAAAAAAkpV3eUV9WyKLZb"></div>
             <button type="submit">Send</button>
         </form>
         <h3 class="balance">Current balance for withdrawals: <?php echo htmlspecialchars($currentBalance); ?> Ᵽ</h3>

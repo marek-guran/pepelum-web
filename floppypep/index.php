@@ -35,6 +35,7 @@
    <?php include 'include/menu.php'; ?>
    <?php include 'include/rewards.php'; ?>
 
+   <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
    <script src="js/jquery.min.js"></script>
    <script src="js/jquery.transit.min.js"></script>
    <script src="js/buzz.min.js"></script>
