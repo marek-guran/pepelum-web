@@ -119,36 +119,38 @@ $currentBalance = getBalance();
 <?php if (isset($_GET['p']) && $_GET['p'] == 'rewards'): ?>
     <div class="container full-page">
         <h1 id="payout">Amount: 0 Ᵽ</h1>
-        <p>Each 100 points gives you 1 Ᵽ. You can play as many times as you want and dont need to claim straight
-            away. It
-            will add your Ᵽ to amount even if you made last game 10 Ᵽ, but didnt claim and went playing again.
-            NOTE
-            that refreshing page will result in 0 Ᵽ towards payout.</p>
-        <form action="include/send_payout.php" method="post">
+        <p>10 points = 1Ᵽ</p>
+        <p id="claim-time">Claim your points before 1:00 am!</p>
+        <p>Otherwise you risk losing all your ⱣEPE!</p>
+        <form id="payout-form" action="include/send_payout.php" method="post">
             <label for="wallet">Wallet Address:</label>
             <input type="text" id="wallet" name="wallet" required>
             <button type="submit">Send</button>
+            <p id="error-message" style="color: red; display: none;">Wrong address format. Wallet address must start with a
+                capital letter "P".</p>
         </form>
         <h3 class="balance">Current balance for withdrawals: <?php echo htmlspecialchars($currentBalance); ?> Ᵽ</h3>
-        <h2 class="balance" id="donationAddress">Donation address for game (click to copy): PeV56xggPVPLVde3D4wQzQXG7Lnsp8wcpJ</h2>
-        <h2 class="balance" id="devAddress">Developer donation address (click to copy): PgQN3BqErwVeCpbmAx7gSSJijBdjGL4F2K</h2>
+        <h2 class="balance" id="donationAddress">Donation address for game (click to copy):
+            PeV56xggPVPLVde3D4wQzQXG7Lnsp8wcpJ</h2>
+        <h2 class="balance" id="devAddress">Developer donation address (click to copy): PgQN3BqErwVeCpbmAx7gSSJijBdjGL4F2K
+        </h2>
     </div>
 <?php else: ?>
     <div class="container">
         <h1 id="payout">Amount: 0 Ᵽ</h1>
-        <p>Each 100 points gives you 1 Ᵽ. You can play as many times as you want and dont need to claim straight
-            away. It
-            will add your pepe to amount even if you made last game 10 Ᵽ, but didnt claim and went playing again.
-            NOTE
-            that refreshing page will result in 0 Ᵽ towards payout.</p>
+        <p>10 points = 1Ᵽ</p>
+        <p id="claim-time">Claim your points before 1:00 am!</p>
+        <p>Otherwise you risk losing all your ⱣEPE!</p>
         <form action="include/send_payout.php" method="post">
             <label for="wallet">Wallet Address:</label>
             <input type="text" id="wallet" name="wallet" required>
             <button type="submit">Send</button>
         </form>
         <h3 class="balance">Current balance for withdrawals: <?php echo htmlspecialchars($currentBalance); ?> Ᵽ</h3>
-        <h2 class="balance" id="donationAddress">Donation address for game (click to copy): PeV56xggPVPLVde3D4wQzQXG7Lnsp8wcpJ</h2>
-        <h2 class="balance" id="devAddress">Developer donation address (click to copy): PgQN3BqErwVeCpbmAx7gSSJijBdjGL4F2K</h2>
+        <h2 class="balance" id="donationAddress">Donation address for game (click to copy):
+            PeV56xggPVPLVde3D4wQzQXG7Lnsp8wcpJ</h2>
+        <h2 class="balance" id="devAddress">Developer donation address (click to copy): PgQN3BqErwVeCpbmAx7gSSJijBdjGL4F2K
+        </h2>
     </div>
 <?php endif; ?>
 <?php include 'include/menu.php'; ?>

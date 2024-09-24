@@ -249,6 +249,7 @@ Screen - Game
       left: 0;
    }
 }
+
 @media (max-width: 767px) {
    #gamescreen {
       height: 95%;
@@ -272,17 +273,18 @@ Screen - Game
 #flyarea {
    position: absolute;
    bottom: 0;
-   height: 98%;
+   height: 94%;
    width: 100%;
 }
 
 #ceiling {
-   position: absolute;
-   top: -16px;
-   height: 16px;
+   position: fixed; /* Make it fixed to float on top */
+   top: 0; /* Position it at the top of the screen */
+   height: 5%;
    width: 100%;
    background-image: url('../assets/ceiling.png');
-   background-repeat: repeat-x;
+   background-repeat: repeat;
+   z-index: 11;
 
    -webkit-animation: animCeiling 481ms linear infinite;
    animation: animCeiling 481ms linear infinite;
@@ -405,13 +407,54 @@ Screen - Game
 
 .bird {
    position: absolute;
-   width: 34px;
-   height: 24px;
-   background-image: url('../assets/pep.png');
    background-size: cover;
 
-   -webkit-animation: animBird 300ms steps(4) infinite;
-   animation: animBird 300ms steps(4) infinite;
+   -webkit-animation: changeImage 300ms infinite;
+   animation: changeImage 300ms infinite;
+}
+
+@-webkit-keyframes changeImage {
+   0% {
+      background-image: url('../assets/pep1.svg');
+   }
+
+   25% {
+      background-image: url('../assets/pep2.svg');
+   }
+
+   50% {
+      background-image: url('../assets/pep3.svg');
+   }
+
+   75% {
+      background-image: url('../assets/pep2.svg');
+   }
+
+   100% {
+      background-image: url('../assets/pep1.svg');
+   }
+}
+
+@keyframes changeImage {
+   0% {
+      background-image: url('../assets/pep1.svg');
+   }
+
+   25% {
+      background-image: url('../assets/pep2.svg');
+   }
+
+   50% {
+      background-image: url('../assets/pep3.svg');
+   }
+
+   75% {
+      background-image: url('../assets/pep2.svg');
+   }
+
+   100% {
+      background-image: url('../assets/pep1.svg');
+   }
 }
 
 .pipe {

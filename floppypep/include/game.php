@@ -9,12 +9,15 @@ if (!isset($_SESSION['start_time'])) {
     $_SESSION['start_time'] = time(); // Record the start time
     $_SESSION['score'] = 0; // Initialize score
 }
+$_SESSION['hdfjgsjfdjkshbvfjhkvhb52g6fds4g89fds541s65!@DSF'] = '315?6!15641asda8erf4';
 ?>
 <div id="gamecontainer">
     <div id="gamescreen">
         <div id="sky" class="animated">
             <div id="flyarea">
                 <div id="ceiling" class="animated"></div>
+                <div id="ceiling2" class="animated"></div>
+                <div id="ceiling3" class="animated"></div>
                 <!-- This is the flying and pipe area container -->
                 <div id="player" class="bird animated"></div>
 

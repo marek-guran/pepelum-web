@@ -23,15 +23,24 @@ function initializeSessionVariables()
 function checkRequestOrigin()
 {
     $allowedDomain = 'https://pepelum.site/'; // Replace with your main domain
-    
+    $expectedSessionValue = '315?6!15641asda8erf4'; // Expected session value
+
+    // Check if the session variable is set and matches the expected value
+    if (!isset($_SESSION['hdfjgsjfdjkshbvfjhkvhb52g6fds4g89fds541s65!@DSF']) || 
+        $_SESSION['hdfjgsjfdjkshbvfjhkvhb52g6fds4g89fds541s65!@DSF'] !== $expectedSessionValue) {
+        // If the session variable is not set or does not match, block the request
+        echo "You shall not pass!";
+        exit;
+    }
+
     // Check Origin or Referer header
     $origin = isset($_SERVER['HTTP_ORIGIN']) ? $_SERVER['HTTP_ORIGIN'] : null;
     $referer = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : null;
-    
+
     // Verify if the request is coming from the allowed domain
     if ($origin !== $allowedDomain && (is_null($referer) || strpos($referer, $allowedDomain) !== 0)) {
         // If the request is not from the allowed domain, block it
-        echo "Request is not from a valid domain.";
+        echo "You shall not pass!";
         exit;
     }
 }
@@ -74,7 +83,7 @@ unset($elapsed_time);
 $_SESSION['remaining_score'] += $score;
 
 // Define the reward threshold
-$reward_threshold = 100;
+$reward_threshold = 10;
 
 // Calculate how many rewards can be given
 $rewards = floor($_SESSION['remaining_score'] / $reward_threshold);

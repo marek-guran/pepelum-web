@@ -10,21 +10,73 @@
    updatePepe(score);
 
    var currentstate;
-   var rewardThreshold = 100;
+   var rewardThreshold = 10;
 
-   var gravity = 0.25;
+   // Initial gravity and jump values for 1920x1080 resolution
+   var baseGravity = 0.25;
+   var baseJump = -4.6;
+
+   // Function to calculate gravity based on screen height
+   function calculateGravity() {
+      var screenHeight = window.innerHeight;
+      if (screenHeight <= 1080) {
+         return baseGravity;
+      } else {
+         // Increase gravity gradually for higher resolutions
+         var extraHeight = screenHeight - 1080;
+         var gravityIncrease = extraHeight * 0.0001; // Adjust this factor as needed
+         return baseGravity + gravityIncrease;
+      }
+   }
+
+   // Function to calculate jump based on screen height
+   function calculateJump() {
+      var screenHeight = window.innerHeight;
+      if (screenHeight <= 1080) {
+         return baseJump;
+      } else {
+         // Decrease jump magnitude gradually for higher resolutions
+         var extraHeight = screenHeight - 1080;
+         var jumpDecrease = extraHeight * 0.003; // Adjust this factor as needed
+         return baseJump - jumpDecrease;
+      }
+   }
+
+   // Set the gravity and jump values
+   var gravity = calculateGravity();
+   var jump = calculateJump();
+
+   // Log the gravity and jump values for debugging
+   console.log("Gravity:", gravity);
+   console.log("Jump:", jump);
+
+   // Example usage in your game loop or physics calculations
+   function updatePhysics() {
+      // Use the gravity and jump values in your physics calculations
+      // Example: velocity += gravity;
+      // Example: if (isJumping) velocity = jump;
+   }
+
+   // Recalculate gravity and jump when the window is resized
+   window.addEventListener('resize', function () {
+      gravity = calculateGravity();
+      jump = calculateJump();
+      console.log("Updated Gravity:", gravity);
+      console.log("Updated Jump:", jump);
+   });
    var velocity = 0;
    var position = 180;
    var rotation = 0;
-   var jump = -4.6;
    var flyArea = $("#flyarea").height();
 
    var score = 0;
    var highscore = 0;
    var pepe = 0;
 
-   var pipeheight = 160;
-   var padding = 170;
+   // Get the screen height and width
+   var screenHeight = window.innerHeight;
+   var pipeheight = screenHeight * 0.2;
+   var padding = pipeheight * 1.1;
    var pipewidth = 52;
    var pipes = new Array();
 
@@ -122,9 +174,62 @@
       // Only start the game loop if it's not the rewards page
       if (!isRewardsPage) {
          //start up our loops
-         var updaterate = 1000.0 / 60.0; //60 times a second
+                  // Initial updaterate value for 1920x1080 resolution
+         var baseUpdaterate = 1000.0 / 60.0; // 60 times a second
+         
+         // Function to calculate updaterate based on screen width
+         function calculateUpdaterate() {
+             var screenWidth = window.innerWidth;
+             if (screenWidth <= 1920) {
+                 return baseUpdaterate;
+             } else {
+                 // Decrease updaterate interval gradually for higher resolutions
+                 var extraWidth = screenWidth - 1920;
+                 var updaterateDecrease = extraWidth * 0.002; // Adjust this factor as needed
+                 return baseUpdaterate - updaterateDecrease;
+             }
+         }
+         
+         // Set the updaterate value
+         var updaterate = calculateUpdaterate();
+         
+         // Log the updaterate value for debugging
+         console.log("Updaterate:", updaterate);
+         
+         // Example usage in your game loop or update function
+         function updateGame() {
+             // Use the updaterate value in your game loop
+             setTimeout(updateGame, updaterate);
+         }
+         
+         // Start the game loop
+         updateGame();
+         
+         // Recalculate updaterate when the window is resized
+         window.addEventListener('resize', function() {
+             updaterate = calculateUpdaterate();
+             console.log("Updated Updaterate:", updaterate);
+         });
          loopGameloop = setInterval(gameloop, updaterate);
-         loopPipeloop = setInterval(updatePipes, 1400);
+
+         // Calculate the interval based on the screen width
+         var screenWidth = window.innerWidth;
+
+         // Define a base interval (e.g., 1400 milliseconds)
+         var baseInterval = 1400;
+
+         // Adjust the interval based on the screen width, but keep it at 1400 for phone screens
+         var adjustedInterval;
+         if (screenWidth < 2001) {
+            // For phone screens, use the base interval
+            adjustedInterval = baseInterval;
+         } else {
+            // For larger screens, adjust the interval based on the screen width
+            adjustedInterval = Math.max(baseInterval * (screenWidth / 1920), 1000); // Minimum interval of 800 milliseconds
+         }
+
+         // Set the new interval for creating pipes
+         loopPipeloop = setInterval(updatePipes, adjustedInterval);
 
          //jump from the start!
          playerJump();
@@ -151,8 +256,37 @@
 
       // Create the bounding box
       var box = document.getElementById('player').getBoundingClientRect();
-      var origwidth = 34.0;
-      var origheight = 24.0;
+      var origwidth = 49.0;
+      var origheight = 52.0;
+
+      // Function to update bird size based on screen resolution
+      function updateBirdSize() {
+         var screenWidth = window.innerWidth;
+         var screenHeight = window.innerHeight;
+
+         // Calculate new dimensions based on the screen resolution
+         var aspectRatio = origwidth / origheight;
+         var newHeight = (origheight / 1080) * screenHeight;
+         var newWidth = newHeight * aspectRatio;
+
+         // Ensure minimum size for visibility on small screens
+         var minWidth = screenWidth * 0.01; // 10% of screen width
+         var minHeight = minWidth / aspectRatio; // Maintain aspect ratio
+
+         newWidth = Math.max(newWidth, minWidth);
+         newHeight = Math.max(newHeight, minHeight);
+
+         // Update the bird's CSS properties
+         var birdElement = document.querySelector('.bird');
+         birdElement.style.width = newWidth + 'px';
+         birdElement.style.height = newHeight + 'px';
+      }
+
+      // Call the function to set the initial size
+      updateBirdSize();
+
+      // Add an event listener to update the size on window resize
+      window.addEventListener('resize', updateBirdSize);
 
       var boxwidth = origwidth - (Math.sin(Math.abs(rotation) / 90) * 8);
       var boxheight = (origheight + box.height) / 2;

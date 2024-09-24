@@ -52,29 +52,10 @@
 
             setTimeout(function () {
                var payoutContent = document.getElementById('payout').textContent;
-              event.target.submit();
-           }, 5000);
+               event.target.submit();
+            }, 5000);
          });
       })();
-   </script>
-
-   <script>
-      // Function to fetch the balance from balance.php
-    // //   function fetchBalance() {
-     //     fetch('include/balance.php')
-      //       .then(response => response.text())  // Use .text() for plain text response
-      //       .then(data => {
-               // Update the content of the <h1> element with "Amount: <balance> PEPE"
-      //          document.getElementById('payout').textContent = `Amount: ${data} Ᵽ`;
-      //       })
-     //        .catch(error => {
-     //           console.error('Error fetching balance:', error);
-      //       });
-     //  }
-
-      // Fetch the balance when the page loads
-     //  window.onload = fetchBalance;
-
    </script>
 
    <script>
@@ -115,6 +96,30 @@
 
          // Optionally, display a message to the user
          alert('Developer address copied to clipboard!');
+      });
+   </script>
+   <script>
+      // Get the server time for 1:00 am
+      var serverTime = new Date('<?php echo date('Y-m-d'); ?> 01:00:00');
+
+      // Convert server time to user's local time
+      var localTime = new Date(serverTime.toLocaleString('en-US', { timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone }));
+
+      // Format the local time to display in the desired format
+      var options = { hour: '2-digit', minute: '2-digit', hour12: true };
+      var formattedLocalTime = localTime.toLocaleTimeString([], options);
+
+      // Update the paragraph with the local time
+      document.getElementById('claim-time').innerHTML = 'Claim your ⱣEPE before ' + formattedLocalTime + '!';
+
+      document.getElementById('payout-form').addEventListener('submit', function (event) {
+         var walletAddress = document.getElementById('wallet').value;
+         if (!walletAddress.startsWith('P')) {
+            event.preventDefault(); // Prevent form submission
+            document.getElementById('error-message').style.display = 'block'; // Show error message
+         } else {
+            document.getElementById('error-message').style.display = 'none'; // Hide error message
+         }
       });
    </script>
 </body>
