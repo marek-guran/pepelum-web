@@ -1,40 +1,40 @@
 <style>
-    body {
-        margin: 0;
-        padding: 0;
-        font-family: Arial, sans-serif;
-    }
     .bottom-nav {
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-        height: 5%;
-        background-color: #333;
-        color: white;
-        text-align: center;
-        padding: 10px 0;
-        display: none; /* Hide by default */
-        z-index: 1000000;
+        position: fixed !important;
+        bottom: 0 !important;
+        width: 100% !important;
+        height: 6% !important;
+        background-color: #333 !important;
+        color: white !important;
+        text-align: center !important;
+        padding: 10px 0 !important;
+        display: none !important;
+        /* Hide by default */
+        z-index: 1000000 !important;
     }
+
     .bottom-nav a {
-        color: white;
-        text-decoration: none;
-        margin: 0 15px;
-        font-size: 18px;
+        color: white !important;
+        text-decoration: none !important;
+        margin: 0 15px !important; /* Add margin to create space between items */
+        font-size: 2em !important;
     }
+
     .bottom-nav a:hover {
-        text-decoration: underline;
+        text-decoration: none !important;
     }
+
     /* Media query for mobile devices */
     @media (max-width: 767px) {
         .bottom-nav {
-            display: block; /* Show on mobile devices */
+            display: block !important;
+            /* Show on mobile devices */
         }
     }
 </style>
 </head>
 
 <div class="bottom-nav">
-    <a href="?p=game">Game</a>
-    <a href="?p=rewards">Rewards</a>
+    <a href="?p=game"><i class="fa-solid fa-gamepad"></i></a>
+    <a href="?p=rewards"><i class="fa-solid fa-coins"></i></a>
 </div>

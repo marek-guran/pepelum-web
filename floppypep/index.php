@@ -15,11 +15,10 @@
    <meta property="og:type" content="website" />
    <meta property="og:url" content="https://pepelum.site/floppypep/" />
    <meta property="og:site_name" content="FloppyPep" />
+   <link rel="stylesheet" href="/libs/fontawesome/css/all.css">
 
-   <?php if (!isset($_GET['p']) || $_GET['p'] == 'game'): ?>
-      <link href="css/reset.css" rel="stylesheet">
-      <link href="css/main.css" rel="stylesheet">
-   <?php endif; ?>
+   <link href="css/reset.css" rel="stylesheet">
+   <link href="css/main.css" rel="stylesheet">
 </head>
 
 <body>
@@ -44,9 +43,7 @@
       window.addEventListener("orientationchange", function () {
          location.reload();
       });
-   </script>
 
-   <script>
       (function () {
          document.querySelector('form').addEventListener('submit', function (event) {
             event.preventDefault();
@@ -57,9 +54,7 @@
             }, 5000);
          });
       })();
-   </script>
 
-   <script>
       document.getElementById('donationAddress').addEventListener('click', function () {
          // Create a temporary input element
          var tempInput = document.createElement('input');
@@ -98,13 +93,15 @@
          // Optionally, display a message to the user
          alert('Developer address copied to clipboard!');
       });
-   </script>
-   <script>
-      // Get the server time for 1:00 am
-      var serverTime = new Date('<?php echo date('Y-m-d'); ?> 01:00:00');
 
-      // Convert server time to user's local time
-      var localTime = new Date(serverTime.toLocaleString('en-US', { timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone }));
+      // Get the server time for 1:00 am in UTC
+      var serverTime = new Date('<?php echo date('Y-m-d H:i:s', strtotime('01:00:00 UTC')); ?>');
+
+      // Get the user's time zone offset in milliseconds
+      var userTimezoneOffset = new Date().getTimezoneOffset() * 60000; // Convert minutes to milliseconds
+
+      // Calculate the user's local time by adding the timezone offset
+      var localTime = new Date(serverTime.getTime() - userTimezoneOffset);
 
       // Format the local time to display in the desired format
       var options = { hour: '2-digit', minute: '2-digit', hour12: true };

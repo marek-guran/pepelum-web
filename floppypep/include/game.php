@@ -21,15 +21,21 @@ $_SESSION['hdfjgsjfdjkshbvfjhkvhb52g6fds4g89fds541s65!@DSF'] = '315?6!15641asda8
                 <!-- This is the flying and pipe area container -->
                 <div id="player" class="bird animated"></div>
 
-                <div id="bigscore"></div>
+                <div id="bigscore" class="font-score"></div>
 
                 <div id="splash"></div>
 
                 <div id="scoreboard">
-                    <div id="pepe"></div>
-                    <div id="currentscore"></div>
-                    <div id="highscore"></div>
-                    <div id="replay"><img src="assets/replay.png" alt="replay"></div>
+                    <h1 class="font-over">GAME OVER</h1>
+                    <div class="card">
+                        <div id="pepe-label" class="font">PEPE</div>
+                        <div id="pepe-number" class="font-number">0 PEPE</div>
+                        <div id="score-label" class="font">SCORE</div>
+                        <div id="score-number" class="font-number">0</div>
+                        <div id="highscore-label" class="font">HIGHSCORE</div>
+                        <div id="highscore-number" class="font-number">0</div>
+                        <div id="replay"><img src="assets/replay.png" alt="replay"></div>
+                    </div>
                 </div>
 
                 <!-- Pipes go here! -->

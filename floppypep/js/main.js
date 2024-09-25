@@ -24,7 +24,7 @@
       } else {
          // Increase gravity gradually for higher resolutions
          var extraHeight = screenHeight - 1080;
-         var gravityIncrease = extraHeight * 0.0001; // Adjust this factor as needed
+         var gravityIncrease = extraHeight * 0.0003; // Adjust this factor as needed
          return baseGravity + gravityIncrease;
       }
    }
@@ -37,7 +37,7 @@
       } else {
          // Decrease jump magnitude gradually for higher resolutions
          var extraHeight = screenHeight - 1080;
-         var jumpDecrease = extraHeight * 0.003; // Adjust this factor as needed
+         var jumpDecrease = extraHeight * 0.006; // Adjust this factor as needed
          return baseJump - jumpDecrease;
       }
    }
@@ -158,80 +158,77 @@
    function startGame() {
       currentstate = states.GameScreen;
 
-      //fade out the splash
       $("#splash").stop();
       $("#splash").transition({ opacity: 0 }, 500, 'ease');
 
-      //update the big score
       setBigScore();
 
-      //debug mode?
       if (debugmode) {
-         //show the bounding boxes
          $(".boundingbox").show();
       }
 
-      // Only start the game loop if it's not the rewards page
       if (!isRewardsPage) {
-         //start up our loops
-                  // Initial updaterate value for 1920x1080 resolution
-         var baseUpdaterate = 1000.0 / 60.0; // 60 times a second
-         
-         // Function to calculate updaterate based on screen width
+         var baseUpdaterate = 1000.0 / 60.0;
+
          function calculateUpdaterate() {
-             var screenWidth = window.innerWidth;
-             if (screenWidth <= 1920) {
-                 return baseUpdaterate;
-             } else {
-                 // Decrease updaterate interval gradually for higher resolutions
-                 var extraWidth = screenWidth - 1920;
-                 var updaterateDecrease = extraWidth * 0.002; // Adjust this factor as needed
-                 return baseUpdaterate - updaterateDecrease;
-             }
+            var screenWidth = window.innerWidth;
+            if (screenWidth <= 1920) {
+               return baseUpdaterate;
+            } else {
+               var extraWidth = screenWidth - 1920;
+               var updaterateDecrease = extraWidth * 0.002;
+               return baseUpdaterate - updaterateDecrease;
+            }
          }
-         
-         // Set the updaterate value
+
          var updaterate = calculateUpdaterate();
-         
-         // Log the updaterate value for debugging
+
          console.log("Updaterate:", updaterate);
-         
-         // Example usage in your game loop or update function
+
          function updateGame() {
-             // Use the updaterate value in your game loop
-             setTimeout(updateGame, updaterate);
+            setTimeout(updateGame, updaterate);
          }
-         
-         // Start the game loop
+
          updateGame();
-         
-         // Recalculate updaterate when the window is resized
-         window.addEventListener('resize', function() {
-             updaterate = calculateUpdaterate();
-             console.log("Updated Updaterate:", updaterate);
+
+         window.addEventListener('resize', function () {
+            updaterate = calculateUpdaterate();
+            console.log("Updated Updaterate:", updaterate);
          });
          loopGameloop = setInterval(gameloop, updaterate);
 
-         // Calculate the interval based on the screen width
-         var screenWidth = window.innerWidth;
-
-         // Define a base interval (e.g., 1400 milliseconds)
-         var baseInterval = 1400;
-
-         // Adjust the interval based on the screen width, but keep it at 1400 for phone screens
-         var adjustedInterval;
-         if (screenWidth < 2001) {
-            // For phone screens, use the base interval
-            adjustedInterval = baseInterval;
-         } else {
-            // For larger screens, adjust the interval based on the screen width
-            adjustedInterval = Math.max(baseInterval * (screenWidth / 1920), 1000); // Minimum interval of 800 milliseconds
+         function calculatePipeInterval() {
+            var screenWidth = window.innerWidth;
+            if (screenWidth >= 4000) {
+               var baseInterval = 2500;
+               var additionalInterval = Math.floor((screenWidth - 1800) / 1000) * 10;
+               return baseInterval + additionalInterval;
+            } else if (screenWidth > 1080) {
+               var baseInterval = 1000;
+               return Math.max(baseInterval * (1920 / screenWidth), 10);
+            } else {
+               return 1400;
+            }
          }
 
-         // Set the new interval for creating pipes
-         loopPipeloop = setInterval(updatePipes, adjustedInterval);
+         var pipeInterval = calculatePipeInterval();
 
-         //jump from the start!
+         window.addEventListener('resize', function () {
+            pipeInterval = calculatePipeInterval();
+            clearInterval(loopPipeloop);
+            loopPipeloop = setInterval(updatePipes, pipeInterval);
+         });
+
+         if (window.innerWidth > 1080) {
+            // First pipe delay 1 second
+            setTimeout(function () {
+               updatePipes();
+               loopPipeloop = setInterval(updatePipes, pipeInterval);
+            }, 1000);
+         } else {
+            updatePipes();
+            loopPipeloop = setInterval(updatePipes, pipeInterval);
+         }
          playerJump();
       }
    }
@@ -261,8 +258,8 @@
 
       // Function to update bird size based on screen resolution
       function updateBirdSize() {
-         var screenWidth = window.innerWidth;
-         var screenHeight = window.innerHeight;
+         var screenWidth = window.innerWidth * 0.9;
+         var screenHeight = window.innerHeight * 0.9;
 
          // Calculate new dimensions based on the screen resolution
          var aspectRatio = origwidth / origheight;
@@ -402,35 +399,35 @@
 
       var digits = score.toString().split('');
       for (var i = 0; i < digits.length; i++)
-         elemscore.append("<img src='assets/font_big_" + digits[i] + ".png' alt='" + digits[i] + "'>");
+         elemscore.append(digits[i]);
    }
 
    function setSmallScore() {
-      var elemscore = $("#currentscore");
+      var elemscore = $("#score-number");
       elemscore.empty();
 
       var digits = score.toString().split('');
       for (var i = 0; i < digits.length; i++)
-         elemscore.append("<img src='assets/font_small_" + digits[i] + ".png' alt='" + digits[i] + "'>");
+         elemscore.append(digits[i]);
    }
 
    function setHighScore() {
-      var elemscore = $("#highscore");
+      var elemscore = $("#highscore-number");
       elemscore.empty();
 
       var digits = highscore.toString().split('');
       for (var i = 0; i < digits.length; i++)
-         elemscore.append("<img src='assets/font_small_" + digits[i] + ".png' alt='" + digits[i] + "'>");
+         elemscore.append(digits[i]);
    }
 
    function setPepeScore() {
       pepe = Math.floor(score / rewardThreshold);
-      var elemscore = $("#pepe");
+      var elemscore = $("#pepe-number");
       elemscore.empty();
 
       var digits = pepe.toString().split('');
       for (var i = 0; i < digits.length; i++)
-         elemscore.append("<img src='assets/font_small_" + digits[i] + ".png' alt='" + digits[i] + "' style='width: 20px;'>");
+         elemscore.append(digits[i]);
    }
 
    function playerDead() {
@@ -563,8 +560,20 @@
       // Calculate the bottom pipe height ensuring it respects the padding
       var bottomheight = (flyArea - pipeheight) - topheight;
 
-      // Create and append the new pipe with the calculated heights
-      var newpipe = $('<div class="pipe animated"><div class="pipe_upper" style="height: ' + topheight + 'px;"></div><div class="pipe_lower" style="height: ' + bottomheight + 'px;"></div></div>');
+      // Calculate pipe speed based on screen width
+      var screenWidth = window.innerWidth;
+      var pipeSpeed;
+      if (screenWidth <= 1080) {
+         pipeSpeed = 7500; // Default speed for screen width 1080 or lower
+      } else {
+         // Calculate speed based on screen width
+         var baseSpeed = 7500;
+         var speedFactor = 1080 / screenWidth;
+         pipeSpeed = baseSpeed * speedFactor;
+      }
+
+      // Create and append the new pipe with the calculated heights and speed
+      var newpipe = $('<div class="pipe animated" style="animation: animPipe ' + pipeSpeed + 'ms linear;"><div class="pipe_upper" style="height: ' + topheight + 'px;"></div><div class="pipe_lower" style="height: ' + bottomheight + 'px;"></div></div>');
       $("#flyarea").append(newpipe);
       pipes.push(newpipe);
    }

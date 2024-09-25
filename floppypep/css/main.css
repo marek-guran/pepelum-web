@@ -1,3 +1,40 @@
+@font-face {
+   font-family: 'FlappyBird';
+   src: url('../fonts/FloppyFont.ttf') format('truetype');
+   font-weight: 400;
+   font-style: normal;
+}
+
+.font {
+   font-family: 'FlappyBird';
+   font-size: 4em !important;
+   color: #fff; /* Adjust color as needed */
+   -webkit-text-stroke: 1px #000; /* Add outline for better readability */
+}
+
+.font-score {
+   font-family: 'FlappyBird';
+   font-size: 7em !important;
+   color: #fff; /* Adjust color as needed */
+   -webkit-text-stroke: 1px #000; /* Add outline for better readability */
+}
+
+.font-over {
+   font-family: 'FlappyBird';
+   font-size: 10em !important;
+   color: #000000; /* Adjust color as needed */
+   -webkit-text-stroke: 0.5px #ffffff!important; /* Add outline for better readability */
+   text-align: center;
+}
+
+.font-number {
+   font-family: 'FlappyBird';
+   font-size: 4em; /* Ensure same size as text */
+   color: #fff; /* Adjust color as needed */
+   -webkit-text-stroke: 1px #000; /* Add outline for better readability */
+   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add text shadow for better readability */
+}
+
 @-webkit-keyframes animLand {
    0% {
       background-position: 0px 0px;
@@ -158,6 +195,174 @@
    }
 }
 
+@media (min-width: 1081px) and (max-width: 1980px) {
+   @-webkit-keyframes animPipe {
+      0% {
+         left: 900px;
+      }
+
+      100% {
+         left: -100px;
+      }
+   }
+
+   @-moz-keyframes animPipe {
+      0% {
+         left: 900px;
+      }
+
+      100% {
+         left: -100px;
+      }
+   }
+
+   @-o-keyframes animPipe {
+      0% {
+         left: 900px;
+      }
+
+      100% {
+         left: -100px;
+      }
+   }
+
+   @keyframes animPipe {
+      0% {
+         left: 900px;
+      }
+
+      100% {
+         left: -100px;
+      }
+   }
+}
+
+@media (min-width: 1981px) and (max-width: 2980px) {
+   @-webkit-keyframes animPipe {
+      0% {
+         left: 1800px;
+      }
+
+      100% {
+         left: -100px;
+      }
+   }
+
+   @-moz-keyframes animPipe {
+      0% {
+         left: 1800px;
+      }
+
+      100% {
+         left: -100px;
+      }
+   }
+
+   @-o-keyframes animPipe {
+      0% {
+         left: 1800px;
+      }
+
+      100% {
+         left: -100px;
+      }
+   }
+
+   @keyframes animPipe {
+      0% {
+         left: 1800px;
+      }
+
+      100% {
+         left: -100px;
+      }
+   }
+}
+
+@media (min-width: 2981px) and (max-width: 3980px) {
+   @-webkit-keyframes animPipe {
+      0% {
+         left: 2700px;
+      }
+
+      100% {
+         left: -100px;
+      }
+   }
+
+   @-moz-keyframes animPipe {
+      0% {
+         left: 2700px;
+      }
+
+      100% {
+         left: -100px;
+      }
+   }
+
+   @-o-keyframes animPipe {
+      0% {
+         left: 2700px;
+      }
+
+      100% {
+         left: -100px;
+      }
+   }
+
+   @keyframes animPipe {
+      0% {
+         left: 2700px;
+      }
+
+      100% {
+         left: -100px;
+      }
+   }
+}
+
+@media (min-width: 3981px) {
+   @-webkit-keyframes animPipe {
+      0% {
+         left: 3600px;
+      }
+
+      100% {
+         left: -100px;
+      }
+   }
+
+   @-moz-keyframes animPipe {
+      0% {
+         left: 3600px;
+      }
+
+      100% {
+         left: -100px;
+      }
+   }
+
+   @-o-keyframes animPipe {
+      0% {
+         left: 3600px;
+      }
+
+      100% {
+         left: -100px;
+      }
+   }
+
+   @keyframes animPipe {
+      0% {
+         left: 3600px;
+      }
+
+      100% {
+         left: -100px;
+      }
+   }
+}
+
 @-webkit-keyframes animCeiling {
    0% {
       background-position: 0px 0px;
@@ -278,8 +483,10 @@ Screen - Game
 }
 
 #ceiling {
-   position: fixed; /* Make it fixed to float on top */
-   top: 0; /* Position it at the top of the screen */
+   position: fixed;
+   /* Make it fixed to float on top */
+   top: 0;
+   /* Position it at the top of the screen */
    height: 5%;
    width: 100%;
    background-image: url('../assets/ceiling.png');
@@ -312,82 +519,92 @@ Screen - Game
    z-index: 100;
 }
 
-#bigscore img {
-   display: inline-block;
-   padding: 1px;
-}
-
 #splash {
    position: absolute;
    opacity: 0;
    top: 75px;
    left: 50%;
    transform: translateX(-50%);
-   width: 188px;
-   height: 170px;
+   width: 376px; /* 188px * 2 */
+   height: 340px; /* 170px * 2 */
    background-image: url('../assets/splash.png');
    background-repeat: no-repeat;
+   background-size: contain; /* Ensure the image fits within the element */
 }
-
-
 #scoreboard {
    position: absolute;
    display: none;
    opacity: 0;
-   top: 64px;
    left: 50% !important;
    transform: translateX(-50%) !important;
-   width: 236px;
-   height: 280px;
-   background-image: url('../assets/score.png');
-   background-repeat: no-repeat;
-
    z-index: 1000;
 }
 
-#pepe {
-   position: absolute;
-   opacity: 100;
-   top: 114px;
-   left: 32px;
-   width: 44px;
-   height: 44px;
+#scoreboard h1 {
+   margin-bottom: 20px;
 }
 
-#currentscore {
-   position: absolute;
-   top: 105px;
-   left: 107px;
-   width: 104px;
-   height: 14px;
-   text-align: right;
+.card {
+   display: inline-block;
+   padding: 20px;
+   border: none;
+   border-radius: 18px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   background-color: #000000;
+   width: 400px; /* Default width */
+   color: #fff; /* Adjust color as needed */
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows: auto auto auto auto auto;
+   gap: 10px;
 }
 
-#currentscore img {
-   padding-left: 2px;
+#pepe-label {
+   grid-column: 1;
+   grid-row: 1;
+   text-align: center;
 }
 
-#highscore {
-   position: absolute;
-   top: 147px;
-   left: 107px;
-   width: 104px;
-   height: 14px;
-   text-align: right;
+#pepe-number {
+   grid-column: 1;
+   grid-row: 2;
+   text-align: center;
 }
 
-#highscore img {
-   padding-left: 2px;
+#score-label {
+   grid-column: 2;
+   grid-row: 1;
+   text-align: center;
+}
+
+#score-number {
+   grid-column: 2;
+   grid-row: 2;
+   text-align: center;
+}
+
+#highscore-label {
+   grid-column: 2;
+   grid-row: 3;
+   text-align: center;
+}
+
+#highscore-number {
+   grid-column: 2;
+   grid-row: 4;
+   text-align: center;
 }
 
 #replay {
-   position: absolute;
-   opacity: 0;
-   top: 205px;
-   left: 61px;
-   height: 115px;
-   width: 70px;
+   grid-column: 1 / span 2;
+   grid-row: 5;
+   margin-top: 20px;
+   text-align: center;
+}
+
+#replay img {
    cursor: pointer;
+   width: 15em;
 }
 
 .boundingbox {
@@ -457,6 +674,50 @@ Screen - Game
    }
 }
 
+@keyframes growBottom {
+   0% {
+      transform: scaleY(0);
+      transform-origin: bottom;
+   }
+
+   90% {
+      transform: scaleY(1);
+      transform-origin: bottom;
+   }
+
+   100% {
+      transform: scaleY(0.95);
+      transform-origin: bottom;
+   }
+
+   105% {
+      transform: scaleY(1);
+      transform-origin: bottom;
+   }
+}
+
+@keyframes growTop {
+   0% {
+      transform: scaleY(0);
+      transform-origin: top;
+   }
+
+   90% {
+      transform: scaleY(1);
+      transform-origin: top;
+   }
+
+   100% {
+      transform: scaleY(1.05);
+      transform-origin: top;
+   }
+
+   105% {
+      transform: scaleY(1);
+      transform-origin: top;
+   }
+}
+
 .pipe {
    position: absolute;
    left: -100px;
@@ -464,8 +725,8 @@ Screen - Game
    height: 100%;
    z-index: 10;
 
-   -webkit-animation: animPipe 7500ms linear;
-   animation: animPipe 7500ms linear;
+   -webkit-animation: animPipe 7500ms linear, popIn 0.3s ease-out;
+   animation: animPipe 7500ms linear, popIn 0.3s ease-out;
 }
 
 .pipe_upper {
@@ -475,6 +736,7 @@ Screen - Game
    background-image: url('../assets/pipe.png');
    background-repeat: repeat-y;
    background-position: center;
+   animation: growTop 0.5s ease-out;
 }
 
 .pipe_upper:after {
@@ -493,6 +755,7 @@ Screen - Game
    background-image: url('../assets/pipe.png');
    background-repeat: repeat-y;
    background-position: center;
+   animation: growBottom 0.5s ease-out;
 }
 
 .pipe_lower:after {
@@ -519,4 +782,30 @@ Screen - Game
    padding: 2px;
    text-decoration: none;
    color: #fff;
+}
+
+/* Media query for small screens */
+@media (max-width: 400px) {
+   .card {
+       width: 350px; /* Adjust width for small screens */
+   }
+   .font {
+      font-size: 4em !important;
+   }
+   
+   .font-score {
+      font-size: 3.5em !important;
+   }
+   
+   .font-over {
+      font-size: 8em !important;
+   }
+   
+   .font-number {
+      font-size: 4em; /* Ensure same size as text */
+   }
+   #splash {
+      width: 188px;
+      height: 170px;
+   }
 }
