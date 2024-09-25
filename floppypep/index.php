@@ -7,7 +7,24 @@
    <meta name="description" content="Play Floppy PEP, remake of popular game Flappy Bird built in html, css and js" />
    <meta name="keywords"
       content="flappybird,flappy,bird,floppybird,floppy,html,html5,css,css3,js,javascript,jquery,github,pepecoin,pepe,pep,floppy pep" />
-   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+   <?php
+   $userAgent = $_SERVER['HTTP_USER_AGENT'];
+   $isMobile = stripos($userAgent, "iPod") !== false ||
+      stripos($userAgent, "iPhone") !== false ||
+      stripos($userAgent, "iPad") !== false ||
+      stripos($userAgent, "Android") !== false ||
+      stripos($userAgent, "webOS") !== false ||
+      stripos($userAgent, "BlackBerry") !== false ||
+      stripos($userAgent, "Windows Phone") !== false ||
+      stripos($userAgent, "Opera Mini") !== false ||
+      stripos($userAgent, "IEMobile") !== false;
+
+   if ($isMobile) {
+      echo '<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />';
+   } else {
+      echo '<meta name="viewport" content="width=device-width, initial-scale=1.0" />';
+   }
+   ?>
 
    <meta property="og:title" content="Floppy PEP" />
    <meta property="og:description"

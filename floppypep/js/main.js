@@ -1,6 +1,4 @@
 (function () {
-   var debugmode = false;
-
    var states = Object.freeze({
       SplashScreen: 0,
       GameScreen: 1,
@@ -46,10 +44,6 @@
    var gravity = calculateGravity();
    var jump = calculateJump();
 
-   // Log the gravity and jump values for debugging
-   console.log("Gravity:", gravity);
-   console.log("Jump:", jump);
-
    // Example usage in your game loop or physics calculations
    function updatePhysics() {
       // Use the gravity and jump values in your physics calculations
@@ -61,8 +55,6 @@
    window.addEventListener('resize', function () {
       gravity = calculateGravity();
       jump = calculateJump();
-      console.log("Updated Gravity:", gravity);
-      console.log("Updated Jump:", jump);
    });
    var velocity = 0;
    var position = 180;
@@ -76,13 +68,54 @@
    // Get the screen height and width
    var screenHeight = window.innerHeight;
    var pipeheight = screenHeight * 0.2;
-   var padding = pipeheight * 1.1;
+   var padding = pipeheight * 1.2;
    var pipewidth = 52;
    var pipes = new Array();
 
    var replayclickable = false;
 
    var volume = 30;
+
+   document.addEventListener('DOMContentLoaded', function () {
+      // Get the volume slider and value display elements
+      var volumeSlider = document.getElementById('volume');
+      var volumeValue = document.getElementById('volume-value');
+
+      // Function to get a cookie by name
+      function getCookie(name) {
+         var value = "; " + document.cookie;
+         var parts = value.split("; " + name + "=");
+         if (parts.length == 2) return parts.pop().split(";").shift();
+      }
+
+      // Function to set a cookie
+      function setCookie(name, value, days) {
+         var expires = "";
+         if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            expires = "; expires=" + date.toUTCString();
+         }
+         document.cookie = name + "=" + (value || "") + expires + "; path=/";
+      }
+
+      // Load the saved volume from cookies
+      var savedVolume = getCookie('volume');
+      if (savedVolume !== undefined) {
+         volume = parseInt(savedVolume, 10); // Convert the saved volume to a number
+         volumeSlider.value = volume;
+         volumeValue.textContent = volume;
+         buzz.all().setVolume(volume); // Update the volume for all buzz sounds
+      }
+
+      // Update the volume value display and save to cookies on input change
+      volumeSlider.addEventListener('input', function () {
+         volume = volumeSlider.value;
+         volumeValue.textContent = volume;
+         setCookie('volume', volume, 365); // Save the volume in cookies for 1 year
+         buzz.all().setVolume(volume); // Update the volume for all buzz sounds
+      });
+   });
    //sounds
    var urlParams = new URLSearchParams(window.location.search);
    var isRewardsPage = urlParams.get('p') === 'rewards';
@@ -163,10 +196,6 @@
 
       setBigScore();
 
-      if (debugmode) {
-         $(".boundingbox").show();
-      }
-
       if (!isRewardsPage) {
          var baseUpdaterate = 1000.0 / 60.0;
 
@@ -183,8 +212,6 @@
 
          var updaterate = calculateUpdaterate();
 
-         console.log("Updaterate:", updaterate);
-
          function updateGame() {
             setTimeout(updateGame, updaterate);
          }
@@ -193,7 +220,6 @@
 
          window.addEventListener('resize', function () {
             updaterate = calculateUpdaterate();
-            console.log("Updated Updaterate:", updaterate);
          });
          loopGameloop = setInterval(gameloop, updaterate);
 
@@ -292,15 +318,6 @@
       var boxright = boxleft + boxwidth;
       var boxbottom = boxtop + boxheight;
 
-      // If we're in debug mode, draw the bounding box
-      if (debugmode) {
-         var boundingbox = $("#playerbox");
-         boundingbox.css('left', boxleft);
-         boundingbox.css('top', boxtop);
-         boundingbox.css('height', boxheight);
-         boundingbox.css('width', boxwidth);
-      }
-
       // Did we hit the ground?
       if (box.bottom >= $("#land").offset().top) {
          playerDead();
@@ -326,14 +343,6 @@
       var pipeleft = nextpipeupper.offset().left - 2; // For some reason it starts at the inner pipe's offset, not the outer pipe's.
       var piperight = pipeleft + pipewidth;
       var pipebottom = pipetop + pipeheight;
-
-      if (debugmode) {
-         var boundingbox = $("#pipebox");
-         boundingbox.css('left', pipeleft);
-         boundingbox.css('top', pipetop);
-         boundingbox.css('height', pipeheight);
-         boundingbox.css('width', pipewidth);
-      }
 
       // Have we gotten inside the pipe yet?
       if (boxright > pipeleft) {
@@ -528,7 +537,6 @@
          type: 'POST',
          data: { score: score },
          success: function (response) {
-            console.log('Pepe updated:', response);
             // Update the element with ID 'payout' with the received amount
             document.getElementById('payout').innerText = `Amount: ${response} Ᵽ`;
          },
@@ -552,7 +560,7 @@
       var flyArea = $("#flyarea").height();
 
       // Define a larger padding value to ensure a reasonable gap
-      var constraint = flyArea - pipeheight - (padding * 2); // Double padding (for top and bottom)
+      var constraint = flyArea - pipeheight - (padding * 1.6); // Double padding (for top and bottom)
 
       // Calculate the top pipe height ensuring it respects the padding
       var topheight = Math.floor((Math.random() * constraint) + padding); // Add lower padding

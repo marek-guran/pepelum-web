@@ -101,6 +101,11 @@
         font-size: 1.2em;
         word-break: break-word;
     }
+
+    .volume {
+        margin-top: 30px;
+        font-size: 1.5em;
+    }
 </style>
 
 <?php
@@ -135,6 +140,10 @@ $currentBalance = getBalance();
             PeV56xggPVPLVde3D4wQzQXG7Lnsp8wcpJ</h2>
         <h2 class="balance" id="devAddress">Developer donation address (click to copy): PgQN3BqErwVeCpbmAx7gSSJijBdjGL4F2K
         </h2>
+        <div class="volume">
+            <label for="volume">Volume: <span id="volume-value">30</span>%</label>
+            <input type="range" id="volume" name="volume" min="0" max="100" value="30">
+        </div>
     </div>
 <?php else: ?>
     <div class="container">
@@ -153,6 +162,10 @@ $currentBalance = getBalance();
             PeV56xggPVPLVde3D4wQzQXG7Lnsp8wcpJ</h2>
         <h2 class="balance" id="devAddress">Developer donation address (click to copy): PgQN3BqErwVeCpbmAx7gSSJijBdjGL4F2K
         </h2>
+        <div class="volume">
+            <label for="volume">Volume: <span id="volume-value">30</span>%</label>
+            <input type="range" id="volume" name="volume" min="0" max="100" value="30">
+        </div>
     </div>
 <?php endif; ?>
 <?php include 'include/menu.php'; ?>
