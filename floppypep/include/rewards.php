@@ -138,7 +138,7 @@ $currentBalance = getBalance();
 
 <?php if (isset($_GET['p']) && $_GET['p'] == 'rewards'): ?>
     <div class="container full-page">
-        <h1 id="payout">Amount: 0 Ᵽ</h1>
+        <h1 id="payout">Balance: 0 Ᵽ</h1>
         <p>10 points = 1Ᵽ</p>
         <p>Claim your ⱣEPE as soon as possible!</p>
         <p id="claim-time">Server reboots at 1:00 am! This means that you will lose your ⱣEPE balance!</p>
@@ -165,7 +165,7 @@ $currentBalance = getBalance();
     </div>
 <?php else: ?>
     <div class="container">
-        <h1 id="payout">Amount: 0 Ᵽ</h1>
+        <h1 id="payout">Balance: 0 Ᵽ</h1>
         <p>10 points = 1Ᵽ</p>
         <p>Claim your ⱣEPE as soon as possible!</p>
         <p id="claim-time">Server reboots at 1:00 am! This means that you will lose your ⱣEPE balance!</p>
