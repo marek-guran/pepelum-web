@@ -4,8 +4,6 @@
         margin: 0;
         padding: 0;
         display: flex;
-        justify-content: center;
-        align-items: center;
         height: 100vh;
     }
 
@@ -16,13 +14,14 @@
         text-align: center;
         display: none;
         z-index: 10000;
+        justify-content: center;
+        align-items: center;
         background-color: #333;
     }
 
     h1 {
         margin-bottom: 20px;
         color: white;
-        font-size: 1.5em !important;
     }
 
     p {
@@ -38,6 +37,8 @@
     form {
         display: flex;
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 
     label {
@@ -60,8 +61,9 @@
         color: #fff;
         border: none;
         border-radius: 18px;
-        font-size: 16px;
         cursor: pointer;
+        width: fit-content;
+        margin-top: 20px;
     }
 
     button:hover {
@@ -74,7 +76,7 @@
             position: fixed;
             top: 0;
             right: 0;
-            width: 20%;
+            width: 30%;
             height: 100vh;
             overflow-y: auto;
         }
@@ -106,6 +108,19 @@
         margin-top: 30px;
         font-size: 1.5em;
     }
+
+    .center-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    input[type="range"] {
+        width: 80%;
+    }
+
 </style>
 
 <?php
@@ -125,16 +140,19 @@ $currentBalance = getBalance();
     <div class="container full-page">
         <h1 id="payout">Amount: 0 Ᵽ</h1>
         <p>10 points = 1Ᵽ</p>
-        <p id="claim-time">Claim your points before 1:00 am!</p>
-        <p>Otherwise you risk losing all your ⱣEPE!</p>
-        <form id="payout-form" action="include/send_payout.php" method="post">
-            <label for="wallet">Wallet Address:</label>
-            <input type="text" id="wallet" name="wallet" required>
-            <div class="cf-turnstile" data-sitekey="0x4AAAAAAAkpV3eUV9WyKLZb"></div>
-            <button type="submit">Send</button>
-            <p id="error-message" style="color: red; display: none;">Wrong address format. Wallet address must start with a
-                capital letter "P".</p>
-        </form>
+        <p>Claim your ⱣEPE as soon as possible!</p>
+        <p id="claim-time">Server reboots at 1:00 am! This means that you will lose your ⱣEPE balance!</p>
+        <div class="center-form">
+            <form id="payout-form" action="include/send_payout.php" method="post">
+                <label for="wallet">Wallet Address:</label>
+                <input type="text" id="wallet" name="wallet" required>
+                <div class="cf-turnstile" data-sitekey="0x4AAAAAAAkpV3eUV9WyKLZb"></div>
+                <button type="submit">Send</button>
+                <p id="error-message" style="color: red; display: none;">Wrong address format. Wallet address must start
+                    with a
+                    capital letter "P".</p>
+            </form>
+        </div>
         <h3 class="balance">Current balance for withdrawals: <?php echo htmlspecialchars($currentBalance); ?> Ᵽ</h3>
         <h2 class="balance" id="donationAddress">Donation address for game (click to copy):
             PeV56xggPVPLVde3D4wQzQXG7Lnsp8wcpJ</h2>
@@ -149,14 +167,16 @@ $currentBalance = getBalance();
     <div class="container">
         <h1 id="payout">Amount: 0 Ᵽ</h1>
         <p>10 points = 1Ᵽ</p>
-        <p id="claim-time">Claim your points before 1:00 am!</p>
-        <p>Otherwise you risk losing all your ⱣEPE!</p>
-        <form action="include/send_payout.php" method="post">
-            <label for="wallet">Wallet Address:</label>
-            <input type="text" id="wallet" name="wallet" required>
-            <div class="cf-turnstile" data-sitekey="0x4AAAAAAAkpV3eUV9WyKLZb"></div>
-            <button type="submit">Send</button>
-        </form>
+        <p>Claim your ⱣEPE as soon as possible!</p>
+        <p id="claim-time">Server reboots at 1:00 am! This means that you will lose your ⱣEPE balance!</p>
+        <div class="center-form">
+            <form id="payout-form" action="include/send_payout.php" method="post">
+                <label for="wallet">Wallet Address:</label>
+                <input type="text" id="wallet" name="wallet" required>
+                <div class="cf-turnstile" data-sitekey="0x4AAAAAAAkpV3eUV9WyKLZb"></div>
+                <button type="submit">Send</button>
+            </form>
+        </div>
         <h3 class="balance">Current balance for withdrawals: <?php echo htmlspecialchars($currentBalance); ?> Ᵽ</h3>
         <h2 class="balance" id="donationAddress">Donation address for game (click to copy):
             PeV56xggPVPLVde3D4wQzQXG7Lnsp8wcpJ</h2>

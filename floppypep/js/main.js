@@ -5,7 +5,7 @@
       ScoreScreen: 2
    });
 
-   updatePepe(score);
+   updatepepe(score);
 
    var currentstate;
    var rewardThreshold = 10;
@@ -44,13 +44,6 @@
    var gravity = calculateGravity();
    var jump = calculateJump();
 
-   // Example usage in your game loop or physics calculations
-   function updatePhysics() {
-      // Use the gravity and jump values in your physics calculations
-      // Example: velocity += gravity;
-      // Example: if (isJumping) velocity = jump;
-   }
-
    // Recalculate gravity and jump when the window is resized
    window.addEventListener('resize', function () {
       gravity = calculateGravity();
@@ -69,7 +62,20 @@
    var screenHeight = window.innerHeight;
    var pipeheight = screenHeight * 0.2;
    var padding = pipeheight * 1.2;
-   var pipewidth = 52;
+   var pipewidth;
+
+   var pipewidth;
+   if (window.innerWidth <= 1080) {
+      pipewidth = 52;
+   } else {
+      pipewidth = Math.min(52 * (window.innerWidth / 1080), 1000); // Set 100 as the maximum limit
+   }
+
+   // Set CSS variables dynamically
+   document.documentElement.style.setProperty('--pipe-height', `${pipewidth / 2}px`);
+   document.documentElement.style.setProperty('--pipe-width', `${pipewidth}px`);
+
+   var pipeSpeed = 7500;
    var pipes = new Array();
 
    var replayclickable = false;
@@ -197,18 +203,20 @@
       setBigScore();
 
       if (!isRewardsPage) {
-         var baseUpdaterate = 1000.0 / 60.0;
+         var baseUpdaterate = 1000.0 / 60.0; // Base 60 FPS
 
          function calculateUpdaterate() {
             var screenWidth = window.innerWidth;
             if (screenWidth <= 1920) {
                return baseUpdaterate;
             } else {
+               // A much smaller and more manageable factor
                var extraWidth = screenWidth - 1920;
-               var updaterateDecrease = extraWidth * 0.002;
-               return baseUpdaterate - updaterateDecrease;
+               var updaterateDecrease = extraWidth / 1000; // Adjust factor to match your needs
+               return Math.max(baseUpdaterate - updaterateDecrease, 1000 / 240); // Min updaterate (120 FPS cap)
             }
          }
+
 
          var updaterate = calculateUpdaterate();
 
@@ -226,12 +234,12 @@
          function calculatePipeInterval() {
             var screenWidth = window.innerWidth;
             if (screenWidth >= 4000) {
-               var baseInterval = 2500;
-               var additionalInterval = Math.floor((screenWidth - 1800) / 1000) * 10;
-               return baseInterval + additionalInterval;
+               var baseInterval = 250;
+               var additionalInterval = Math.floor((screenWidth - 1800) / 1000) / 10;
+               return 1400;
             } else if (screenWidth > 1080) {
                var baseInterval = 1000;
-               return Math.max(baseInterval * (1920 / screenWidth), 10);
+               return 1400;
             } else {
                return 1400;
             }
@@ -261,7 +269,7 @@
 
    function updatePlayer(player) {
       //rotation
-      rotation = Math.min((velocity / 10) * 90, 90);
+      rotation = Math.min(Math.max((velocity / 10) * 90, -40), 90);
 
       //apply rotation and position
       $(player).css({ rotate: rotation, top: position });
@@ -282,8 +290,8 @@
       var origwidth = 49.0;
       var origheight = 52.0;
 
-      // Function to update bird size based on screen resolution
-      function updateBirdSize() {
+      // Function to update pepe size based on screen resolution
+      function updatepepeSize() {
          var screenWidth = window.innerWidth * 0.9;
          var screenHeight = window.innerHeight * 0.9;
 
@@ -299,17 +307,17 @@
          newWidth = Math.max(newWidth, minWidth);
          newHeight = Math.max(newHeight, minHeight);
 
-         // Update the bird's CSS properties
-         var birdElement = document.querySelector('.bird');
-         birdElement.style.width = newWidth + 'px';
-         birdElement.style.height = newHeight + 'px';
+         // Update the pepe's CSS properties
+         var pepeElement = document.querySelector('.pepe');
+         pepeElement.style.width = newWidth + 'px';
+         pepeElement.style.height = newHeight + 'px';
       }
 
       // Call the function to set the initial size
-      updateBirdSize();
+      updatepepeSize();
 
       // Add an event listener to update the size on window resize
-      window.addEventListener('resize', updateBirdSize);
+      window.addEventListener('resize', updatepepeSize);
 
       var boxwidth = origwidth - (Math.sin(Math.abs(rotation) / 90) * 8);
       var boxheight = (origheight + box.height) / 2;
@@ -429,7 +437,7 @@
          elemscore.append(digits[i]);
    }
 
-   function setPepeScore() {
+   function setpepeScore() {
       pepe = Math.floor(score / rewardThreshold);
       var elemscore = $("#pepe-number");
       elemscore.empty();
@@ -444,7 +452,7 @@
       $(".animated").css('animation-play-state', 'paused');
       $(".animated").css('-webkit-animation-play-state', 'paused');
 
-      //drop the bird to the floor
+      //drop the pepe to the floor
       var playerbottom = $("#player").position().top + $("#player").width(); //we use width because he'll be rotated 90 deg
       var floor = flyArea;
       var movey = Math.max(0, floor - playerbottom);
@@ -491,7 +499,7 @@
       //update the scoreboard
       setSmallScore();
       setHighScore();
-      setPepeScore();
+      setpepeScore();
 
       //SWOOSH!
       soundSwoosh.stop();
@@ -511,7 +519,7 @@
       replayclickable = true;
 
       // Update pepe on the server
-      updatePepe(score);
+      updatepepe(score);
    }
 
    $("#replay").click(function () {
@@ -531,18 +539,18 @@
       });
    });
 
-   function updatePepe(score) {
+   function updatepepe(score) {
       $.ajax({
          url: 'include/update_pepe.php',
          type: 'POST',
          data: { score: score },
          success: function (response) {
             // Update the element with ID 'payout' with the received amount
-            document.getElementById('payout').innerText = `Amount: ${response} Ᵽ`;
+            document.getElementById('payout').innerText = `Balance: ${response} Ᵽ`;
          },
          error: function (xhr, status, error) {
             console.error('Error updating pepe:', error);
-            document.getElementById('payout').innerText = `Amount: 0 Ᵽ`;
+            document.getElementById('payout').innerText = `Balance: 0 Ᵽ`;
          }
       });
    }
@@ -568,20 +576,24 @@
       // Calculate the bottom pipe height ensuring it respects the padding
       var bottomheight = (flyArea - pipeheight) - topheight;
 
-      // Calculate pipe speed based on screen width
-      var screenWidth = window.innerWidth;
-      var pipeSpeed;
-      if (screenWidth <= 1080) {
-         pipeSpeed = 7500; // Default speed for screen width 1080 or lower
-      } else {
-         // Calculate speed based on screen width
-         var baseSpeed = 7500;
-         var speedFactor = 1080 / screenWidth;
-         pipeSpeed = baseSpeed * speedFactor;
-      }
-
       // Create and append the new pipe with the calculated heights and speed
-      var newpipe = $('<div class="pipe animated" style="animation: animPipe ' + pipeSpeed + 'ms linear;"><div class="pipe_upper" style="height: ' + topheight + 'px;"></div><div class="pipe_lower" style="height: ' + bottomheight + 'px;"></div></div>');
+      var newpipe = $(`
+         <div class="pipe animated" 
+              style="
+                animation: animPipe ${pipeSpeed}ms linear; 
+                width: ${pipewidth}px;">
+           <div class="pipe_upper" 
+                style="
+                  height: ${topheight}px; 
+                  width: ${pipewidth}px;">
+           </div>
+           <div class="pipe_lower" 
+                style="
+                  height: ${bottomheight}px; 
+                  width: ${pipewidth}px;">
+           </div>
+         </div>
+       `);
       $("#flyarea").append(newpipe);
       pipes.push(newpipe);
    }

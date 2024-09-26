@@ -19,7 +19,7 @@ $_SESSION['hdfjgsjfdjkshbvfjhkvhb52g6fds4g89fds541s65!@DSF'] = '315?6!15641asda8
                 <div id="ceiling2" class="animated"></div>
                 <div id="ceiling3" class="animated"></div>
                 <!-- This is the flying and pipe area container -->
-                <div id="player" class="bird animated"></div>
+                <div id="player" class="pepe animated"></div>
 
                 <div id="bigscore" class="font-score"></div>
 

@@ -1,38 +1,56 @@
+:root {
+   --pipe-height: 52px;
+   /* Default value */
+   --pipe-width: 26px;
+   /* Default value */
+}
+
 @font-face {
-   font-family: 'FlappyBird';
+   font-family: 'Flappypepe';
    src: url('../fonts/FloppyFont.ttf') format('truetype');
    font-weight: 400;
    font-style: normal;
 }
 
 .font {
-   font-family: 'FlappyBird';
-   font-size: 4em !important;
-   color: #fff; /* Adjust color as needed */
-   -webkit-text-stroke: 1px #000; /* Add outline for better readability */
+   font-family: 'Flappypepe';
+   font-size: 2em !important;
+   color: #fff;
+   /* Adjust color as needed */
+   -webkit-text-stroke: 1px #000;
+   /* Add outline for better readability */
 }
 
 .font-score {
-   font-family: 'FlappyBird';
-   font-size: 7em !important;
-   color: #fff; /* Adjust color as needed */
-   -webkit-text-stroke: 1px #000; /* Add outline for better readability */
+   font-family: 'Flappypepe';
+   font-size: 3.5em !important;
+   color: #fff;
+   /* Adjust color as needed */
+   -webkit-text-stroke: 1px #000;
+   /* Add outline for better readability */
 }
 
 .font-over {
-   font-family: 'FlappyBird';
-   font-size: 10em !important;
-   color: #000000; /* Adjust color as needed */
-   -webkit-text-stroke: 0.5px #ffffff!important; /* Add outline for better readability */
+   font-family: 'Flappypepe';
+   font-size: 3.5em !important;
+   color: #ffffff;
+   /* Adjust color as needed */
+   -webkit-text-stroke: 0.5px #000000 !important;
+   /* Add outline for better readability */
    text-align: center;
+   margin-top: 20px;
 }
 
 .font-number {
-   font-family: 'FlappyBird';
-   font-size: 4em; /* Ensure same size as text */
-   color: #fff; /* Adjust color as needed */
-   -webkit-text-stroke: 1px #000; /* Add outline for better readability */
-   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add text shadow for better readability */
+   font-family: 'Flappypepe';
+   font-size: 2em;
+   /* Ensure same size as text */
+   color: #fff;
+   /* Adjust color as needed */
+   -webkit-text-stroke: 1px #000;
+   /* Add outline for better readability */
+   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+   /* Add text shadow for better readability */
 }
 
 @-webkit-keyframes animLand {
@@ -81,7 +99,7 @@
    }
 
    100% {
-      background-position: -275px 100%;
+      background-position: -550px 100%;
    }
 }
 
@@ -91,7 +109,7 @@
    }
 
    100% {
-      background-position: -275px 100%;
+      background-position: -550px 100%;
    }
 }
 
@@ -101,7 +119,7 @@
    }
 
    100% {
-      background-position: -275px 100%;
+      background-position: -550px 100%;
    }
 }
 
@@ -111,11 +129,11 @@
    }
 
    100% {
-      background-position: -275px 100%;
+      background-position: -550px 100%;
    }
 }
 
-@-webkit-keyframes animBird {
+@-webkit-keyframes animpepe {
    from {
       background-position: 0px 0px;
    }
@@ -125,7 +143,7 @@
    }
 }
 
-@-moz-keyframes animBird {
+@-moz-keyframes animpepe {
    from {
       background-position: 0px 0px;
    }
@@ -135,7 +153,7 @@
    }
 }
 
-@-o-keyframes animBird {
+@-o-keyframes animpepe {
    from {
       background-position: 0px 0px;
    }
@@ -145,7 +163,7 @@
    }
 }
 
-@keyframes animBird {
+@keyframes animpepe {
    from {
       background-position: 0px 0px;
    }
@@ -161,7 +179,7 @@
    }
 
    100% {
-      left: -100px;
+      left: -1000px;
    }
 }
 
@@ -171,7 +189,7 @@
    }
 
    100% {
-      left: -100px;
+      left: -1000px;
    }
 }
 
@@ -181,7 +199,7 @@
    }
 
    100% {
-      left: -100px;
+      left: -1000px;
    }
 }
 
@@ -191,7 +209,7 @@
    }
 
    100% {
-      left: -100px;
+      left: -1000px;
    }
 }
 
@@ -202,7 +220,7 @@
       }
 
       100% {
-         left: -100px;
+         left: -1000px;
       }
    }
 
@@ -212,7 +230,7 @@
       }
 
       100% {
-         left: -100px;
+         left: -1000px;
       }
    }
 
@@ -222,7 +240,7 @@
       }
 
       100% {
-         left: -100px;
+         left: -1000px;
       }
    }
 
@@ -232,7 +250,7 @@
       }
 
       100% {
-         left: -100px;
+         left: -1000px;
       }
    }
 }
@@ -244,7 +262,7 @@
       }
 
       100% {
-         left: -100px;
+         left: -1000px;
       }
    }
 
@@ -254,7 +272,7 @@
       }
 
       100% {
-         left: -100px;
+         left: -1000px;
       }
    }
 
@@ -264,7 +282,7 @@
       }
 
       100% {
-         left: -100px;
+         left: -1000px;
       }
    }
 
@@ -274,7 +292,7 @@
       }
 
       100% {
-         left: -100px;
+         left: -1000px;
       }
    }
 }
@@ -286,7 +304,7 @@
       }
 
       100% {
-         left: -100px;
+         left: -1000px;
       }
    }
 
@@ -296,7 +314,7 @@
       }
 
       100% {
-         left: -100px;
+         left: -1000px;
       }
    }
 
@@ -306,7 +324,7 @@
       }
 
       100% {
-         left: -100px;
+         left: -1000px;
       }
    }
 
@@ -316,7 +334,7 @@
       }
 
       100% {
-         left: -100px;
+         left: -1000px;
       }
    }
 }
@@ -328,7 +346,7 @@
       }
 
       100% {
-         left: -100px;
+         left: -1000px;
       }
    }
 
@@ -338,7 +356,7 @@
       }
 
       100% {
-         left: -100px;
+         left: -1000px;
       }
    }
 
@@ -348,7 +366,7 @@
       }
 
       100% {
-         left: -100px;
+         left: -1000px;
       }
    }
 
@@ -358,48 +376,8 @@
       }
 
       100% {
-         left: -100px;
+         left: -1000px;
       }
-   }
-}
-
-@-webkit-keyframes animCeiling {
-   0% {
-      background-position: 0px 0px;
-   }
-
-   100% {
-      background-position: -63px 0px;
-   }
-}
-
-@-moz-keyframes animCeiling {
-   0% {
-      background-position: 0px 0px;
-   }
-
-   100% {
-      background-position: -63px 0px;
-   }
-}
-
-@-o-keyframes animCeiling {
-   0% {
-      background-position: 0px 0px;
-   }
-
-   100% {
-      background-position: -63px 0px;
-   }
-}
-
-@keyframes animCeiling {
-   0% {
-      background-position: 0px 0px;
-   }
-
-   100% {
-      background-position: -63px 0px;
    }
 }
 
@@ -450,7 +428,7 @@ Screen - Game
 /* Media query for larger screens (PCs and tablets) */
 @media (min-width: 768px) {
    #gamescreen {
-      width: 80%;
+      width: 70%;
       left: 0;
    }
 }
@@ -484,17 +462,27 @@ Screen - Game
 
 #ceiling {
    position: fixed;
-   /* Make it fixed to float on top */
    top: 0;
-   /* Position it at the top of the screen */
    height: 5.2%;
    width: 100%;
    background-image: url('../assets/ceiling.png');
    background-repeat: repeat;
+   background-size: contain;
    z-index: 11;
 
-   -webkit-animation: animCeiling 481ms linear infinite;
-   animation: animCeiling 481ms linear infinite;
+   -webkit-animation: animCeiling 40s linear infinite;
+   animation: animCeiling 40s linear infinite;
+   will-change: background-position;
+}
+
+@keyframes animCeiling {
+   0% {
+      background-position: 0 0;
+   }
+
+   100% {
+      background-position: -6400px 0;
+   }
 }
 
 #land {
@@ -503,7 +491,7 @@ Screen - Game
    width: 100%;
    height: 10%;
    background-image: url('../assets/land.png');
-   background-repeat: repeat-x;
+   background-repeat: repeat;
    background-position: 0px 0px;
    background-color: #233d4f;
 
@@ -525,12 +513,16 @@ Screen - Game
    top: 75px;
    left: 50%;
    transform: translateX(-50%);
-   width: 376px; /* 188px * 2 */
-   height: 340px; /* 170px * 2 */
+   width: 376px;
+   /* 188px * 2 */
+   height: 340px;
+   /* 170px * 2 */
    background-image: url('../assets/splash.png');
    background-repeat: no-repeat;
-   background-size: contain; /* Ensure the image fits within the element */
+   background-size: contain;
+   /* Ensure the image fits within the element */
 }
+
 #scoreboard {
    position: absolute;
    display: none;
@@ -551,8 +543,10 @@ Screen - Game
    border-radius: 18px;
    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
    background-color: #000000;
-   width: 400px; /* Default width */
-   color: #fff; /* Adjust color as needed */
+   width: 400px;
+   /* Default width */
+   color: #fff;
+   /* Adjust color as needed */
    display: grid;
    grid-template-columns: 1fr 1fr;
    grid-template-rows: auto auto auto auto auto;
@@ -622,7 +616,7 @@ Screen - Game
    top: 200px;
 }
 
-.bird {
+.pepe {
    position: absolute;
    background-size: cover;
 
@@ -720,7 +714,7 @@ Screen - Game
 
 .pipe {
    position: absolute;
-   left: -100px;
+   left: -100000px;
    width: 52px;
    height: 100%;
    z-index: 10;
@@ -736,6 +730,7 @@ Screen - Game
    background-image: url('../assets/pipe.png');
    background-repeat: repeat-y;
    background-position: center;
+   background-size: contain;
    animation: growTop 0.5s ease-out;
 }
 
@@ -743,8 +738,9 @@ Screen - Game
    content: "";
    position: absolute;
    bottom: 0;
-   width: 52px;
-   height: 26px;
+   height: var(--pipe-height);
+   width: var(--pipe-width);
+   background-size: cover;
    background-image: url('../assets/pipe-down.png');
 }
 
@@ -755,6 +751,7 @@ Screen - Game
    background-image: url('../assets/pipe.png');
    background-repeat: repeat-y;
    background-position: center;
+   background-size: contain;
    animation: growBottom 0.5s ease-out;
 }
 
@@ -762,8 +759,9 @@ Screen - Game
    content: "";
    position: absolute;
    top: 0;
-   width: 52px;
-   height: 26px;
+   height: var(--pipe-height);
+   width: var(--pipe-width);
+   background-size: cover;
    background-image: url('../assets/pipe-up.png');
 }
 
@@ -787,25 +785,299 @@ Screen - Game
 /* Media query for small screens */
 @media (max-width: 400px) {
    .card {
-       width: 350px; /* Adjust width for small screens */
+      width: 350px !important;
    }
+
    .font {
-      font-size: 4em !important;
+      font-size: 2em !important;
+   }
+
+   .font-score {
+      font-size: 2.5em !important;
+   }
+
+   .font-over {
+      font-size: 3em !important;
+   }
+
+   .font-number {
+      font-size: 2em !important;
+   }
+
+   #splash {
+      width: 188px !important;
+      height: 170px !important;
+   }
+
+   form {
+      width: 100% !important;
+   }
+
+   h1 {
+      font-size: 2em !important;
+   }
+
+   h2 {
+      font-size: 1.75em !important;
+   }
+
+   h3 {
+      font-size: 1.5em !important;
+   }
+
+   h4 {
+      font-size: 1.25em !important;
+   }
+
+   h5 {
+      font-size: 1em !important;
+   }
+
+   p, span, label, .volume, input, button {
+      font-size: 1.5em !important;
    }
    
+   .volume #volume-value {
+      font-size: 1em !important;
+   }
+}
+
+/* Media query for medium screens */
+@media (min-width: 401px) and (max-width: 1920px) {
+   .card {
+      width: 400px !important;
+   }
+
+   .font {
+      font-size: 2em !important;
+   }
+
    .font-score {
       font-size: 3.5em !important;
    }
+
+   .font-over {
+      font-size: 3.5em !important;
+   }
+
+   .font-number {
+      font-size: 2em !important;
+   }
+
+   #splash {
+      width: 376px !important;
+      height: 340px !important;
+   }
+
+   form {
+      width: 80% !important;
+   }
+
+   h1 {
+      font-size: 2em !important;
+   }
+
+   h2 {
+      font-size: 1.75em !important;
+   }
+
+   h3 {
+      font-size: 1.5em !important;
+   }
+
+   h4 {
+      font-size: 1.25em !important;
+   }
+
+   h5 {
+      font-size: 1em !important;
+   }
+
+   p, span, label, .volume, input, button {
+      font-size: 1.5em !important;
+   }
    
+   .volume #volume-value {
+      font-size: 1em !important;
+   }
+}
+
+/* Media query for large screens */
+@media (min-width: 1921px) and (max-width: 2400px) {
+   .card {
+      width: 800px !important;
+   }
+
+   .font {
+      font-size: 3.5em !important;
+   }
+
+   .font-score {
+      font-size: 5em !important;
+   }
+
+   .font-over {
+      font-size: 5em !important;
+   }
+
+   .font-number {
+      font-size: 3.5em !important;
+   }
+
+   #splash {
+      width: 752px !important;
+      height: 680px !important;
+   }
+
+   form {
+      width: 60% !important;
+   }
+
+   h1 {
+      font-size: 3em !important;
+   }
+
+   h2 {
+      font-size: 2.75em !important;
+   }
+
+   h3 {
+      font-size: 2.5em !important;
+   }
+
+   h4 {
+      font-size: 2em !important;
+   }
+
+   h5 {
+      font-size: 1.5em !important;
+   }
+
+   p, span, label, .volume, input, button {
+      font-size: 1.5em !important;
+   }
+   
+   .volume #volume-value {
+      font-size: 1em !important;
+   }
+}
+
+/* Media query for ultra-large screens */
+@media (min-width: 2401px) and (max-width: 4000px) {
+   .card {
+      width: 1400px !important;
+   }
+
+   .font {
+      font-size: 6em !important;
+   }
+
+   .font-score {
+      font-size: 8em !important;
+   }
+
    .font-over {
       font-size: 8em !important;
    }
-   
+
    .font-number {
-      font-size: 4em; /* Ensure same size as text */
+      font-size: 5em !important;
    }
+
    #splash {
-      width: 188px;
-      height: 170px;
+      width: 752px !important;
+      height: 680px !important;
+   }
+
+   form {
+      width: 50% !important;
+   }
+
+   h1 {
+      font-size: 4em !important;
+   }
+
+   h2 {
+      font-size: 3.5em !important;
+   }
+
+   h3 {
+      font-size: 3em !important;
+   }
+
+   h4 {
+      font-size: 2.5em !important;
+   }
+
+   h5 {
+      font-size: 2em !important;
+   }
+
+   p, span, label, .volume, input, button {
+      font-size: 2em !important;
+   }
+
+   .volume #volume-value {
+      font-size: 1em !important;
+   }
+}
+
+/* Media query for extra-large screens */
+@media (min-width: 4001px) {
+   .card {
+      width: 1400px !important;
+   }
+
+   .font {
+      font-size: 6em !important;
+   }
+
+   .font-score {
+      font-size: 8em !important;
+   }
+
+   .font-over {
+      font-size: 8em !important;
+   }
+
+   .font-number {
+      font-size: 5em !important;
+   }
+
+   #splash {
+      width: 752px !important;
+      height: 680px !important;
+   }
+
+   form {
+      width: 40% !important;
+   }
+
+   h1 {
+      font-size: 4em !important;
+   }
+
+   h2 {
+      font-size: 3.5em !important;
+   }
+
+   h3 {
+      font-size: 3em !important;
+   }
+
+   h4 {
+      font-size: 2.5em !important;
+   }
+
+   h5 {
+      font-size: 2em !important;
+   }
+
+   p, span, label, .volume, input, button {
+      font-size: 2em !important;
+   }
+
+   .volume #volume-value {
+      font-size: 1em !important;
    }
 }
