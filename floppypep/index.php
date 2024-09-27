@@ -86,15 +86,39 @@
       window.addEventListener("orientationchange", function () {
          location.reload();
       });
-
       (function () {
          document.querySelector('form').addEventListener('submit', function (event) {
             event.preventDefault();
 
-            setTimeout(function () {
-               var payoutContent = document.getElementById('payout').textContent;
-               event.target.submit();
-            }, 1000);
+            var walletAddress = document.getElementById('wallet').value;
+            var errorAddr = document.getElementById('error-address');
+            var errorBal = document.getElementById('error-balance');
+
+            fetch('include/get_balance.php')
+               .then(response => response.json())
+               .then(data => {
+                  var currentPepeBalance = Number(data.currentPepeBalance);
+
+                  if (!walletAddress.startsWith('P')) {
+                     errorBal.style.display = 'none';
+                     errorAddr.textContent = 'Wrong address format. Wallet address must start with a capital letter "P".';
+                     errorAddr.style.display = 'block';
+                     return;
+                  } else if (currentPepeBalance < 1) {
+                     errorAddr.style.display = 'none';
+                     errorBal.textContent = 'You can\'t withdraw nothing!';
+                     errorBal.style.display = 'block';
+                     return;
+                  } else {
+                     errorBal.style.display = 'none';
+                     errorAddr.style.display = 'none';
+                     var payoutContent = document.getElementById('payout').textContent;
+                     event.target.submit();
+                  }
+               })
+               .catch(error => {
+                  console.error('Error fetching balance:', error);
+               });
          });
       })();
 

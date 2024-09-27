@@ -5,6 +5,7 @@
         padding: 0;
         display: flex;
         height: 100vh;
+        background-color: #333;
     }
 
     .container {
@@ -152,9 +153,8 @@ $currentBalance = getBalance();
                 <input type="text" id="wallet" name="wallet" required>
                 <div class="cf-turnstile" data-sitekey="0x4AAAAAAAkpV3eUV9WyKLZb"></div>
                 <button type="submit">Send</button>
-                <p id="error-message" style="color: red; display: none;">Wrong address format. Wallet address must start
-                    with a
-                    capital letter "P".</p>
+                <p id="error-address" style="color: red; display: none; margin-top: 0.5em;"></p>
+                <p id="error-balance" style="color: red; display: none; margin-top: 0.5em;"></p>
             </form>
         </div>
         <h3 class="balance">Current balance for withdrawals: <?php echo htmlspecialchars($currentBalance); ?> Ᵽ</h3>
@@ -179,6 +179,8 @@ $currentBalance = getBalance();
                 <input type="text" id="wallet" name="wallet" required>
                 <div class="cf-turnstile" data-sitekey="0x4AAAAAAAkpV3eUV9WyKLZb"></div>
                 <button type="submit">Send</button>
+                <p id="error-address" style="color: red; display: none; margin-top: 0.5em;"></p>
+                <p id="error-balance" style="color: red; display: none; margin-top: 0.5em;"></p>
             </form>
         </div>
         <h3 class="balance">Current balance for withdrawals: <?php echo htmlspecialchars($currentBalance); ?> Ᵽ</h3>

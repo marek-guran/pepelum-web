@@ -68,9 +68,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 }
             } else {
                 echo "Error: Unable to execute Pepecoin CLI command.";
+                sleep(10);
+                header("Location: https://pepelum.site/floppypep/");
             }
         } else {
             echo "Error: The amount of Pepecoins to send must be greater than 0.";
+            sleep(10);
+            header("Location: https://pepelum.site/floppypep/");
         }
     } else {
         // CAPTCHA failed
