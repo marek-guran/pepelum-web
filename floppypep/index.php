@@ -33,7 +33,8 @@
    <meta property="og:url" content="https://pepelum.site/floppypep/" />
    <meta property="og:site_name" content="FloppyPep" />
    <link rel="stylesheet" href="/libs/fontawesome/css/all.css">
-
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
    <link href="css/reset.css" rel="stylesheet">
    <link href="css/main.css" rel="stylesheet">
    <?php
@@ -44,17 +45,37 @@
 </head>
 
 <body>
-
    <?php
-   if (!isset($_GET['p']) || $_GET['p'] == 'game') {
-      include 'include/game.php';
+   // Check if the 'p' parameter is set
+   if (isset($_GET['p'])) {
+      // Parse the 'p' parameter to extract the main page identifier and additional parameters
+      $p = $_GET['p'];
+      $parts = explode('=', $p, 2);
+      $page = $parts[0];
+      $additionalParams = isset($parts[1]) ? $parts[1] : '';
+
+      // Include the appropriate file based on the main page identifier
+      if ($page == 'game') {
+         include 'include/game.php';
+      } elseif ($page == 'payout') {
+         include 'include/payout.php';
+      } else {
+         include 'include/404.php';
+      }
    } else {
-      include 'include/404.php';
+      // Default to 'game' if 'p' parameter is not set
+      include 'include/game.php';
    }
    ?>
 
    <?php include 'include/menu.php'; ?>
-   <?php include 'include/rewards.php'; ?>
+
+   <?php
+   // Conditionally include rewards.php if the main page identifier is not 'payout'
+   if (!isset($page) || $page != 'payout') {
+      include 'include/rewards.php';
+   }
+   ?>
 
    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
    <script src="js/jquery.min.js"></script>
