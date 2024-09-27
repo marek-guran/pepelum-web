@@ -36,6 +36,11 @@
 
    <link href="css/reset.css" rel="stylesheet">
    <link href="css/main.css" rel="stylesheet">
+   <?php
+   if (!isset($_GET['p']) || $_GET['p'] == 'game') {
+      echo '<link rel="stylesheet" type="text/css" href="css/game.css">';
+   }
+   ?>
 </head>
 
 <body>
@@ -68,7 +73,7 @@
             setTimeout(function () {
                var payoutContent = document.getElementById('payout').textContent;
                event.target.submit();
-            }, 5000);
+            }, 1000);
          });
       })();
 

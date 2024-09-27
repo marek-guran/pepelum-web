@@ -444,7 +444,7 @@ Screen - Game
    top: 0;
    width: 100%;
    height: 90%;
-   background-image: url('../assets/sky.png');
+   background-image: url('../assets/sky.webp');
    background-repeat: repeat-x;
    background-position: 0px 100%;
    background-color: #1b3247;
@@ -456,7 +456,7 @@ Screen - Game
 #flyarea {
    position: absolute;
    bottom: 0;
-   height: 94%;
+   height: 94.5%;
    width: 100%;
 }
 
@@ -465,7 +465,7 @@ Screen - Game
    top: 0;
    height: 5.2%;
    width: 100%;
-   background-image: url('../assets/ceiling.png');
+   background-image: url('../assets/ceiling.webp');
    background-repeat: repeat;
    background-size: contain;
    z-index: 11;
@@ -490,7 +490,7 @@ Screen - Game
    bottom: 0;
    width: 100%;
    height: 10%;
-   background-image: url('../assets/land.png');
+   background-image: url('../assets/land.webp');
    background-repeat: repeat;
    background-position: 0px 0px;
    background-color: #233d4f;
@@ -517,7 +517,7 @@ Screen - Game
    /* 188px * 2 */
    height: 340px;
    /* 170px * 2 */
-   background-image: url('../assets/splash.png');
+   background-image: url('../assets/splash.webp');
    background-repeat: no-repeat;
    background-size: contain;
    /* Ensure the image fits within the element */
@@ -619,55 +619,216 @@ Screen - Game
 .pepe {
    position: absolute;
    background-size: cover;
-
-   -webkit-animation: changeImage 300ms infinite;
-   animation: changeImage 300ms infinite;
 }
 
-@-webkit-keyframes changeImage {
+/* Keyframes for 4K resolution */
+@-webkit-keyframes changeImage4K {
    0% {
-      background-image: url('../assets/pep1.svg');
+      background-image: url('../assets/pep-4K-1.svg');
    }
 
    25% {
-      background-image: url('../assets/pep2.svg');
+      background-image: url('../assets/pep-4K-2.svg');
    }
 
    50% {
-      background-image: url('../assets/pep3.svg');
+      background-image: url('../assets/pep-4K-3.svg');
    }
 
    75% {
-      background-image: url('../assets/pep2.svg');
+      background-image: url('../assets/pep-4K-2.svg');
    }
 
    100% {
-      background-image: url('../assets/pep1.svg');
+      background-image: url('../assets/pep-4K-1.svg');
    }
 }
 
-@keyframes changeImage {
+@keyframes changeImage4K {
    0% {
-      background-image: url('../assets/pep1.svg');
+      background-image: url('../assets/pep-4K-1.svg');
    }
 
    25% {
-      background-image: url('../assets/pep2.svg');
+      background-image: url('../assets/pep-4K-2.svg');
    }
 
    50% {
-      background-image: url('../assets/pep3.svg');
+      background-image: url('../assets/pep-4K-3.svg');
    }
 
    75% {
-      background-image: url('../assets/pep2.svg');
+      background-image: url('../assets/pep-4K-2.svg');
    }
 
    100% {
-      background-image: url('../assets/pep1.svg');
+      background-image: url('../assets/pep-4K-1.svg');
    }
 }
 
+/* Keyframes for 2K resolution */
+@-webkit-keyframes changeImage2K {
+   0% {
+      background-image: url('../assets/pep-2K-1.svg');
+   }
+
+   25% {
+      background-image: url('../assets/pep-2K-2.svg');
+   }
+
+   50% {
+      background-image: url('../assets/pep-2K-3.svg');
+   }
+
+   75% {
+      background-image: url('../assets/pep-2K-2.svg');
+   }
+
+   100% {
+      background-image: url('../assets/pep-2K-1.svg');
+   }
+}
+
+@keyframes changeImage2K {
+   0% {
+      background-image: url('../assets/pep-2K-1.svg');
+   }
+
+   25% {
+      background-image: url('../assets/pep-2K-2.svg');
+   }
+
+   50% {
+      background-image: url('../assets/pep-2K-3.svg');
+   }
+
+   75% {
+      background-image: url('../assets/pep-2K-2.svg');
+   }
+
+   100% {
+      background-image: url('../assets/pep-2K-1.svg');
+   }
+}
+
+/* Keyframes for FHD resolution */
+@-webkit-keyframes changeImageFHD {
+   0% {
+      background-image: url('../assets/pep-FHD-1.svg');
+   }
+
+   25% {
+      background-image: url('../assets/pep-FHD-2.svg');
+   }
+
+   50% {
+      background-image: url('../assets/pep-FHD-3.svg');
+   }
+
+   75% {
+      background-image: url('../assets/pep-FHD-2.svg');
+   }
+
+   100% {
+      background-image: url('../assets/pep-FHD-1.svg');
+   }
+}
+
+@keyframes changeImageFHD {
+   0% {
+      background-image: url('../assets/pep-FHD-1.svg');
+   }
+
+   25% {
+      background-image: url('../assets/pep-FHD-2.svg');
+   }
+
+   50% {
+      background-image: url('../assets/pep-FHD-3.svg');
+   }
+
+   75% {
+      background-image: url('../assets/pep-FHD-2.svg');
+   }
+
+   100% {
+      background-image: url('../assets/pep-FHD-1.svg');
+   }
+}
+
+/* Keyframes for HD resolution */
+@-webkit-keyframes changeImageHD {
+   0% {
+      background-image: url('../assets/pep-HD-1.svg');
+   }
+
+   25% {
+      background-image: url('../assets/pep-HD-2.svg');
+   }
+
+   50% {
+      background-image: url('../assets/pep-HD-3.svg');
+   }
+
+   75% {
+      background-image: url('../assets/pep-HD-2.svg');
+   }
+
+   100% {
+      background-image: url('../assets/pep-HD-1.svg');
+   }
+}
+
+@keyframes changeImageHD {
+   0% {
+      background-image: url('../assets/pep-HD-1.svg');
+   }
+
+   25% {
+      background-image: url('../assets/pep-HD-2.svg');
+   }
+
+   50% {
+      background-image: url('../assets/pep-HD-3.svg');
+   }
+
+   75% {
+      background-image: url('../assets/pep-HD-2.svg');
+   }
+
+   100% {
+      background-image: url('../assets/pep-HD-1.svg');
+   }
+}
+
+/* Apply keyframes based on screen width */
+@media (min-width: 4000px) {
+   .pepe {
+      -webkit-animation: changeImage4K 300ms infinite;
+      animation: changeImage4K 300ms infinite;
+   }
+}
+
+@media (min-width: 2560px) and (max-width: 3999px) {
+   .pepe {
+      -webkit-animation: changeImage2K 300ms infinite;
+      animation: changeImage2K 300ms infinite;
+   }
+}
+
+@media (min-width: 1920px) and (max-width: 2559px) {
+   .pepe {
+      -webkit-animation: changeImageFHD 300ms infinite;
+      animation: changeImageFHD 300ms infinite;
+   }
+}
+
+@media (max-width: 1919px) {
+   .pepe {
+      -webkit-animation: changeImageHD 300ms infinite;
+      animation: changeImageHD 300ms infinite;
+   }
+}
 @keyframes growBottom {
    0% {
       transform: scaleY(0);
@@ -714,7 +875,8 @@ Screen - Game
 
 .pipe {
    position: absolute;
-   left: -100000px;
+   left: 100px;
+   background-image: none!important;
    width: 52px;
    height: 100%;
    z-index: 10;
@@ -727,7 +889,7 @@ Screen - Game
    position: absolute;
    top: 0;
    width: 52px;
-   background-image: url('../assets/pipe.png');
+   background-image: url('../assets/pipe.webp');
    background-repeat: repeat-y;
    background-position: center;
    background-size: contain;
@@ -741,14 +903,14 @@ Screen - Game
    height: var(--pipe-height);
    width: var(--pipe-width);
    background-size: cover;
-   background-image: url('../assets/pipe-down.png');
+   background-image: url('../assets/pipe-down.webp');
 }
 
 .pipe_lower {
    position: absolute;
    bottom: 0;
    width: 52px;
-   background-image: url('../assets/pipe.png');
+   background-image: url('../assets/pipe.webp');
    background-repeat: repeat-y;
    background-position: center;
    background-size: contain;
@@ -762,7 +924,7 @@ Screen - Game
    height: var(--pipe-height);
    width: var(--pipe-width);
    background-size: cover;
-   background-image: url('../assets/pipe-up.png');
+   background-image: url('../assets/pipe-up.webp');
 }
 
 #footer {

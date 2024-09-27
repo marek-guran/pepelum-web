@@ -34,7 +34,7 @@ $_SESSION['hdfjgsjfdjkshbvfjhkvhb52g6fds4g89fds541s65!@DSF'] = '315?6!15641asda8
                         <div id="score-number" class="font-number">0</div>
                         <div id="highscore-label" class="font">HIGHSCORE</div>
                         <div id="highscore-number" class="font-number">0</div>
-                        <div id="replay"><img src="assets/replay.png" alt="replay"></div>
+                        <div id="replay"><img src="assets/replay.webp" alt="replay"></div>
                     </div>
                 </div>
 

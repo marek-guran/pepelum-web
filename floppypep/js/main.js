@@ -594,9 +594,24 @@
            </div>
          </div>
        `);
+
+      // Append the new pipe to the flyarea
       $("#flyarea").append(newpipe);
       pipes.push(newpipe);
+
+      // Remove old pipes that are off-screen
+      $(".pipe").each(function () {
+         // Calculate the position of the pipe
+         var position = $(this).position();
+
+         // Remove the pipe if it is off-screen (e.g., left of the flyArea)
+         if (position.left + pipewidth < 0) {
+            $(this).remove();
+            pipes = pipes.filter(pipe => pipe[0] !== this); // Update the pipes array
+         }
+      });
    }
+
 
    var isIncompatible = {
       Android: function () {
@@ -621,4 +636,46 @@
          return (isIncompatible.Android() || isIncompatible.BlackBerry() || isIncompatible.iOS() || isIncompatible.Opera() || isIncompatible.Safari() || isIncompatible.Windows());
       }
    };
+
+   var disableZoom = function () {
+      if (isIncompatible.iOS()) {
+         console.log("detected iOS");
+         // Prevent zoom on touchstart
+         document.addEventListener('touchstart', function (event) {
+            if (event.touches.length > 1) {
+               event.preventDefault();
+            }
+         }, { passive: false });
+
+         // Prevent zoom on gesture start
+         document.addEventListener('gesturestart', function (event) {
+            event.preventDefault();
+         });
+
+         // Prevent zoom on double-tap
+         let lastTouchEnd = 0;
+         document.addEventListener('touchend', function (event) {
+            const now = (new Date()).getTime();
+            if (now - lastTouchEnd <= 300) {
+               event.preventDefault(); // Prevent the double-tap zoom
+            }
+            lastTouchEnd = now;
+         }, { passive: false });
+
+         // Prevent default double click behavior
+         document.addEventListener('dblclick', function (event) {
+            event.preventDefault();
+         });
+
+         // Prevent the double-tap zoom specifically
+         document.addEventListener('click', function (event) {
+            if (event.detail === 2) {
+               event.preventDefault();
+            }
+         });
+      }
+   };
+
+   // Call the disableZoom function to apply the changes
+   disableZoom();
 })();

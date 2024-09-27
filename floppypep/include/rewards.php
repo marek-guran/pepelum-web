@@ -94,6 +94,11 @@
             height: 100vh;
             position: static;
             box-shadow: none;
+            overflow: scroll;
+        }
+
+        .volume {
+            margin-bottom: 100px;
         }
     }
 
@@ -120,7 +125,6 @@
     input[type="range"] {
         width: 80%;
     }
-
 </style>
 
 <?php

@@ -58,11 +58,11 @@ $score = isset($_POST['score']) ? intval($_POST['score']) : 0;
 $elapsed_time = time() - $_SESSION['start_time'];
 
 // Calculate the maximum allowed score based on elapsed time
-if ($elapsed_time < 6) {
+if ($elapsed_time < 4) {
     $max_allowed_score = 0; // Cannot score in the first 6 seconds
 } else {
     // First point takes 10 seconds, each additional point takes 1 second
-    $max_allowed_score = 1 + floor(($elapsed_time - 6) / 1);
+    $max_allowed_score = 1 + floor(($elapsed_time - 4) / 1);
 }
 
 // Check if the submitted score exceeds the maximum allowed score
