@@ -83,13 +83,16 @@ unset($elapsed_time);
 $_SESSION['remaining_score'] += $score;
 
 // Define the reward threshold
-$reward_threshold = 10;
+$reward_threshold = 10; // Change this value as needed
 
-// Calculate how many rewards can be given
+// Store the current pepe value
+$current_pepe = $_SESSION['pepe'];
+
+// Calculate how many rewards can be given based on the new threshold
 $rewards = floor($_SESSION['remaining_score'] / $reward_threshold);
 
-// Update pepe value
-$_SESSION['pepe'] += $rewards;
+// Update pepe value by adding the new rewards
+$_SESSION['pepe'] = $current_pepe + $rewards;
 
 // Update the remaining score
 $_SESSION['remaining_score'] %= $reward_threshold;
