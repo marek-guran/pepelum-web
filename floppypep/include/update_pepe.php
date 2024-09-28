@@ -1,6 +1,9 @@
 <?php
 session_start();
 
+// Define the reward threshold
+$reward_threshold = 1; // Change this value as needed
+
 function initializeSessionVariables()
 {
     // Initialize pepe if not set
@@ -13,9 +16,9 @@ function initializeSessionVariables()
         $_SESSION['remaining_score'] = 0;
     }
 
-    // Initialize start time if not set
-    if (!isset($_SESSION['start_time'])) {
-        $_SESSION['start_time'] = time(); // Record the start time
+    // Initialize last_post_time if not set
+    if (!isset($_SESSION['last_post_time'])) {
+        $_SESSION['last_post_time'] = 0; // Last time a score was posted
     }
 }
 
@@ -26,8 +29,10 @@ function checkRequestOrigin()
     $expectedSessionValue = '315?6!15641asda8erf4'; // Expected session value
 
     // Check if the session variable is set and matches the expected value
-    if (!isset($_SESSION['hdfjgsjfdjkshbvfjhkvhb52g6fds4g89fds541s65!@DSF']) || 
-        $_SESSION['hdfjgsjfdjkshbvfjhkvhb52g6fds4g89fds541s65!@DSF'] !== $expectedSessionValue) {
+    if (
+        !isset($_SESSION['hdfjgsjfdjkshbvfjhkvhb52g6fds4g89fds541s65!@DSF']) ||
+        $_SESSION['hdfjgsjfdjkshbvfjhkvhb52g6fds4g89fds541s65!@DSF'] !== $expectedSessionValue
+    ) {
         // If the session variable is not set or does not match, block the request
         echo "You shall not pass!";
         exit;
@@ -54,14 +59,56 @@ initializeSessionVariables();
 // Get the score from the POST request
 $score = isset($_POST['score']) ? intval($_POST['score']) : 0;
 
+// Calculate elapsed time since the last post
+$post_time = time() - $_SESSION['last_post_time'];
+
+// Load banned IPs from a file
+$banned_ips = file('banned_ips.txt', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+function getUserIP() {
+    if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
+        // Check IP from shared internet
+        $ip = $_SERVER['HTTP_CLIENT_IP'];
+    } elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+        // Check IP passed from proxy
+        $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+    } else {
+        // Default fallback to REMOTE_ADDR
+        $ip = $_SERVER['REMOTE_ADDR'];
+    }
+    return $ip;
+}
+
+$user_ip = getUserIP();
+
+if (in_array($user_ip, $banned_ips)) {
+    echo 'You were banned for malicious activity';
+    exit;
+}
+
+if ($post_time < 3 && $post_time >= 2) {
+    echo $_SESSION['pepe'];
+    exit;
+}
+
+if ($post_time < 1) {
+    $result = file_put_contents('banned_ips.txt', $user_ip . PHP_EOL, FILE_APPEND);
+    if ($result === false) {
+        echo 'Error writing to banned_ips.txt';
+    } else {
+        session_destroy();
+        echo 'You were banned for malicious activity';
+    }
+    exit;
+}
+
 // Calculate elapsed time
 $elapsed_time = time() - $_SESSION['start_time'];
 
 // Calculate the maximum allowed score based on elapsed time
 if ($elapsed_time < 4) {
-    $max_allowed_score = 0; // Cannot score in the first 6 seconds
+    $max_allowed_score = 0; // Cannot score in the first 4 seconds
 } else {
-    // First point takes 10 seconds, each additional point takes 1 second
+    // First point takes 4 seconds, each additional point takes 1 second
     $max_allowed_score = 1 + floor(($elapsed_time - 4) / 1);
 }
 
@@ -70,6 +117,7 @@ if ($score > $max_allowed_score) {
     // Reset the score due to suspicious activity
     $_SESSION['remaining_score'] = 0;
     $_SESSION['pepe'] = 0;
+    $_SESSION['last_post_time'] = time();
     echo $_SESSION['pepe']; // Return the updated pepe value (which is 0)
     unset($_SESSION['start_time']);
     unset($_SESSION['score']);
@@ -81,9 +129,6 @@ unset($elapsed_time);
 
 // Add the new score to the remaining score
 $_SESSION['remaining_score'] += $score;
-
-// Define the reward threshold
-$reward_threshold = 10; // Change this value as needed
 
 // Store the current pepe value
 $current_pepe = $_SESSION['pepe'];
@@ -99,4 +144,8 @@ $_SESSION['remaining_score'] %= $reward_threshold;
 
 // Return only the updated pepe value
 echo $_SESSION['pepe'];
+
+// Unset start_time after updating pepe
+$_SESSION['start_time'] = time(); 
+$_SESSION['last_post_time'] = time();
 ?>

@@ -9,6 +9,10 @@ if (!isset($_SESSION['start_time'])) {
     $_SESSION['start_time'] = time(); // Record the start time
     $_SESSION['score'] = 0; // Initialize score
 }
+// Initialize last_post_time if not set
+if (!isset($_SESSION['last_post_time'])) {
+    $_SESSION['last_post_time'] = 0; // Last time a score was posted
+}
 $_SESSION['hdfjgsjfdjkshbvfjhkvhb52g6fds4g89fds541s65!@DSF'] = '315?6!15641asda8erf4';
 ?>
 <div id="gamecontainer">
