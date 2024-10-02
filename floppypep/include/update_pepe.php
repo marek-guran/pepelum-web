@@ -2,7 +2,7 @@
 session_start();
 
 // Define the reward threshold
-$reward_threshold = 1; // Change this value as needed
+$reward_threshold = 10; // Change this value as needed
 
 function initializeSessionVariables()
 {

@@ -68,7 +68,11 @@
    }
    ?>
 
-   <?php include 'include/menu.php'; ?>
+   <?php
+   if (!isset($_GET['p']) || strpos($_GET['p'], 'payout') !== 0) {
+      include 'include/menu.php';
+   }
+   ?>
 
    <?php
    // Conditionally include rewards.php if the main page identifier is not 'payout'
@@ -76,7 +80,7 @@
       include 'include/rewards.php';
    }
    ?>
-   
+
    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js"></script>
    <script src="js/jquery.min.js"></script>
    <script src="js/jquery.transit.min.js"></script>

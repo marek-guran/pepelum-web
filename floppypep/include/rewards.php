@@ -143,6 +143,8 @@ $currentBalance = getBalance();
 
 <?php if (isset($_GET['p']) && $_GET['p'] == 'rewards'): ?>
     <div class="container full-page">
+        <h1>Payouts disabled due recent malicious activity draining whole game balance!</h1>
+        <p><a href="https://pepeblocks.com/tx/037fbda2b241e0a8860d30b2176734783fd533a1eb4cd1cc6853fb22124e8d47" target="_blank">Transaction of wallet drain</a></p>
         <h1 id="payout">Balance: 0 Ᵽ</h1>
         <p>10 points = 1Ᵽ</p>
         <p>Claim your ⱣEPE as soon as possible!</p>
@@ -169,6 +171,8 @@ $currentBalance = getBalance();
     </div>
 <?php else: ?>
     <div class="container">
+    <h1>Payouts disabled due recent malicious activity draining whole game balance!</h1>
+        <p><a href="https://pepeblocks.com/tx/037fbda2b241e0a8860d30b2176734783fd533a1eb4cd1cc6853fb22124e8d47" target="_blank">Transaction of wallet drain</a></p>
         <h1 id="payout">Balance: 0 Ᵽ</h1>
         <p>10 points = 1Ᵽ</p>
         <p>Claim your ⱣEPE as soon as possible!</p>
