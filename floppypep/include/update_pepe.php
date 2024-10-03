@@ -112,11 +112,8 @@ $calculated_hash = hash_hmac('sha256', $_SESSION['pepe'] . $_SESSION['initial_st
 
 // Validate the hash by comparing it with the one stored in the session
 if ($_SESSION['expected_hash'] !== $calculated_hash) {
-    // Log the IP and ban user if the hash is invalid
-    $user_ip = getUserIP();
-    file_put_contents('banned_ips.txt', $user_ip . PHP_EOL, FILE_APPEND);
     session_destroy();
-    echo 'You were banned for malicious activity';
+    echo 'Your session is invalid';
     exit;
 }
 
