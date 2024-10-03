@@ -98,7 +98,7 @@
             overflow: scroll;
         }
 
-        .volume {
+        .custom-table {
             margin-bottom: 100px;
         }
     }
@@ -126,6 +126,34 @@
     input[type="range"] {
         width: 80%;
     }
+
+    .custom-table {
+        border-collapse: separate;
+        border-spacing: 0;
+        border-radius: 18px;
+        overflow: hidden;
+        font-size: 1.4em;
+    }
+
+    .custom-table thead th:first-child {
+        border-top-left-radius: 18px;
+    }
+
+    .custom-table thead th:last-child {
+        border-top-right-radius: 18px;
+    }
+
+    .custom-table tbody tr:last-child td:first-child {
+        border-bottom-left-radius: 18px;
+    }
+
+    .custom-table tbody tr:last-child td:last-child {
+        border-bottom-right-radius: 18px;
+    }
+
+    .custom-table a {
+        color: white;
+    }
 </style>
 
 <?php
@@ -143,8 +171,6 @@ $currentBalance = getBalance();
 
 <?php if (isset($_GET['p']) && $_GET['p'] == 'rewards'): ?>
     <div class="container full-page">
-        <h1>Payouts disabled due recent malicious activity draining whole game balance!</h1>
-        <p><a href="https://pepeblocks.com/tx/037fbda2b241e0a8860d30b2176734783fd533a1eb4cd1cc6853fb22124e8d47" target="_blank">Transaction of wallet drain</a></p>
         <h1 id="payout">Balance: 0 Ᵽ</h1>
         <p>10 points = 1Ᵽ</p>
         <p>Claim your ⱣEPE as soon as possible!</p>
@@ -168,11 +194,31 @@ $currentBalance = getBalance();
             <label for="volume">Volume: <span id="volume-value">30</span>%</label>
             <input type="range" id="volume" name="volume" min="0" max="100" value="30">
         </div>
+        <hr>
+        <table
+            class="table table-striped table-bordered table-hover custom-table table-dark table-borderless table-responsive">
+            <p class="mb-1">List of attacks on Game</p>
+            <thead class="thead-dark">
+                <tr>
+                    <th>Date</th>
+                    <th>Stolen ⱣEPE</th>
+                    <th>TX Link</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2.10.2024</td>
+                    <td>42,000 Ᵽ</td>
+                    <td><a href="https://pepeblocks.com/tx/037fbda2b241e0a8860d30b2176734783fd533a1eb4cd1cc6853fb22124e8d47"
+                            target="_blank">Open</a></td>
+                    <td>Pending review for fix</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 <?php else: ?>
     <div class="container">
-    <h1>Payouts disabled due recent malicious activity draining whole game balance!</h1>
-        <p><a href="https://pepeblocks.com/tx/037fbda2b241e0a8860d30b2176734783fd533a1eb4cd1cc6853fb22124e8d47" target="_blank">Transaction of wallet drain</a></p>
         <h1 id="payout">Balance: 0 Ᵽ</h1>
         <p>10 points = 1Ᵽ</p>
         <p>Claim your ⱣEPE as soon as possible!</p>
@@ -196,6 +242,28 @@ $currentBalance = getBalance();
             <label for="volume">Volume: <span id="volume-value">30</span>%</label>
             <input type="range" id="volume" name="volume" min="0" max="100" value="30">
         </div>
+        <hr>
+        <table
+            class="table table-striped table-bordered table-hover custom-table table-dark table-borderless table-responsive">
+            <p class="mb-1">List of attacks on Game</p>
+            <thead class="thead-dark">
+                <tr>
+                    <th>Date</th>
+                    <th>Stolen ⱣEPE</th>
+                    <th>TX Link</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2.10.2024</td>
+                    <td>42,000 Ᵽ</td>
+                    <td><a href="https://pepeblocks.com/tx/037fbda2b241e0a8860d30b2176734783fd533a1eb4cd1cc6853fb22124e8d47"
+                            target="_blank">Open</a></td>
+                    <td>Pending review for fix</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 <?php endif; ?>
 <?php include 'include/menu.php'; ?>
