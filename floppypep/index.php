@@ -1,3 +1,17 @@
+<?php
+session_start();
+
+// Secret key for HMAC
+$secret_key = '';
+
+// Ensure start time is only set once
+if (!isset($_SESSION['initial_start_time'])) {
+    $_SESSION['initial_start_time'] = time();
+}
+
+// Generate the hash and store it on the server (not sent to the client)
+$_SESSION['expected_hash'] = hash_hmac('sha256', $_SESSION['pepe'] . $_SESSION['initial_start_time'], $secret_key);
+?>
 <!DOCTYPE html>
 <html lang="en">
 

@@ -64,7 +64,8 @@ $post_time = time() - $_SESSION['last_post_time'];
 
 // Load banned IPs from a file
 $banned_ips = file('banned_ips.txt', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
-function getUserIP() {
+function getUserIP()
+{
     if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
         // Check IP from shared internet
         $ip = $_SERVER['HTTP_CLIENT_IP'];
@@ -98,6 +99,24 @@ if ($post_time < 1) {
         session_destroy();
         echo 'You were banned for malicious activity';
     }
+    exit;
+}
+// Ensure the session has a valid hash
+if (!isset($_SESSION['expected_hash'])) {
+    echo 'Session expired or invalid!';
+    exit;
+}
+$secret_key = '';
+// Regenerate the hash based on session data
+$calculated_hash = hash_hmac('sha256', $_SESSION['pepe'] . $_SESSION['initial_start_time'], $secret_key);
+
+// Validate the hash by comparing it with the one stored in the session
+if ($_SESSION['expected_hash'] !== $calculated_hash) {
+    // Log the IP and ban user if the hash is invalid
+    $user_ip = getUserIP();
+    file_put_contents('banned_ips.txt', $user_ip . PHP_EOL, FILE_APPEND);
+    session_destroy();
+    echo 'You were banned for malicious activity';
     exit;
 }
 
@@ -146,6 +165,6 @@ $_SESSION['remaining_score'] %= $reward_threshold;
 echo $_SESSION['pepe'];
 
 // Unset start_time after updating pepe
-$_SESSION['start_time'] = time(); 
+$_SESSION['start_time'] = time();
 $_SESSION['last_post_time'] = time();
 ?>
