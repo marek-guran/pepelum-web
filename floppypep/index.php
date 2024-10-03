@@ -9,6 +9,10 @@ if (!isset($_SESSION['initial_start_time'])) {
     $_SESSION['initial_start_time'] = time();
 }
 
+if (!isset($_SESSION['pepe'])) {
+   $_SESSION['pepe'] = 0;
+}
+
 // Generate the hash and store it on the server (not sent to the client)
 $_SESSION['expected_hash'] = hash_hmac('sha256', $_SESSION['pepe'] . $_SESSION['initial_start_time'], $secret_key);
 ?>
