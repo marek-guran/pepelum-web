@@ -92,16 +92,30 @@ if ($post_time < 3 && $post_time >= 2) {
     exit;
 }
 
+$warning_threshold = 10; // Number of warnings before banning
+
 if ($post_time < 1) {
-    $result = file_put_contents('banned_ips.txt', $user_ip . PHP_EOL, FILE_APPEND);
-    if ($result === false) {
-        echo 'Error writing to banned_ips.txt';
-    } else {
-        session_destroy();
-        echo 'You were banned for malicious activity';
+    if (!isset($_SESSION['warnings'])) {
+        $_SESSION['warnings'] = 0;
     }
-    exit;
+
+    $_SESSION['warnings'] += 1;
+
+    if ($_SESSION['warnings'] >= $warning_threshold) {
+        $result = file_put_contents('banned_ips.txt', $user_ip . PHP_EOL, FILE_APPEND);
+        if ($result === false) {
+            echo 'Error writing to banned_ips.txt';
+        } else {
+            session_destroy();
+            echo 'You were banned for malicious activity';
+        }
+        exit;
+    } else {
+        $warnings_left = $warning_threshold - $_SESSION['warnings'];
+        echo 'Warning: Your activity is being monitored. You have ' . $_SESSION['warnings'] . ' warning(s). ' . $warnings_left . ' warning(s) remain until you are banned for spamming server.';
+    }
 }
+
 // Ensure the session has a valid hash
 if (!isset($_SESSION['expected_hash'])) {
     echo 'Session expired or invalid!';
