@@ -202,17 +202,19 @@ $currentBalance = getBalance();
                 <tr>
                     <th>Date</th>
                     <th>Stolen ⱣEPE</th>
-                    <th>TX Link</th>
+                    <th>TX Link(s)</th>
                     <th>Status</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>2.10.2024</td>
-                    <td>42,000 Ᵽ</td>
+                    <td>2.10.2024 - 3.10.2024</td>
+                    <td>87,000 Ᵽ</td>
                     <td><a href="https://pepeblocks.com/tx/037fbda2b241e0a8860d30b2176734783fd533a1eb4cd1cc6853fb22124e8d47"
-                            target="_blank">Open</a></td>
-                    <td>Pending review for fix</td>
+                            target="_blank">Day 1</a>, <a
+                            href="https://pepeblocks.com/tx/0ea02cf76e7d6bee4c7c9c2b0f4c6ec2cfcb6835681b73365772271b1e2d577a"
+                            target="_blank">Day 2</a></td>
+                    <td>Resolved</td>
                 </tr>
             </tbody>
         </table>
@@ -250,17 +252,19 @@ $currentBalance = getBalance();
                 <tr>
                     <th>Date</th>
                     <th>Stolen ⱣEPE</th>
-                    <th>TX Link</th>
+                    <th>TX Link(s)</th>
                     <th>Status</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>2.10.2024</td>
-                    <td>42,000 Ᵽ</td>
+                    <td>2.10.2024 - 3.10.2024</td>
+                    <td>87,000 Ᵽ</td>
                     <td><a href="https://pepeblocks.com/tx/037fbda2b241e0a8860d30b2176734783fd533a1eb4cd1cc6853fb22124e8d47"
-                            target="_blank">Open</a></td>
-                    <td>Pending review for fix</td>
+                            target="_blank">Day 1</a>, <a
+                            href="https://pepeblocks.com/tx/0ea02cf76e7d6bee4c7c9c2b0f4c6ec2cfcb6835681b73365772271b1e2d577a"
+                            target="_blank">Day 2</a></td>
+                    <td>Resolved</td>
                 </tr>
             </tbody>
         </table>

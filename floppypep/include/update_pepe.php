@@ -1,4 +1,5 @@
 <?php
+$dotenv = parse_ini_file(dirname(__DIR__) . '/.env');
 session_start();
 
 // Define the reward threshold
@@ -106,7 +107,7 @@ if (!isset($_SESSION['expected_hash'])) {
     echo 'Session expired or invalid!';
     exit;
 }
-$secret_key = '';
+$secret_key = $dotenv['SECRET_KEY'];
 // Regenerate the hash based on session data
 $calculated_hash = hash_hmac('sha256', $_SESSION['pepe'] . $_SESSION['initial_start_time'], $secret_key);
 
@@ -130,13 +131,9 @@ if ($elapsed_time < 4) {
 
 // Check if the submitted score exceeds the maximum allowed score
 if ($score > $max_allowed_score) {
-    // Reset the score due to suspicious activity
-    $_SESSION['remaining_score'] = 0;
-    $_SESSION['pepe'] = 0;
-    $_SESSION['last_post_time'] = time();
-    echo $_SESSION['pepe']; // Return the updated pepe value (which is 0)
-    unset($_SESSION['start_time']);
-    unset($_SESSION['score']);
+    session_destroy();
+    file_put_contents('banned_ips.txt', $user_ip . PHP_EOL, FILE_APPEND);
+    echo 'Trying to cheat? Just remember, even the best water thieves get washed away eventually!';
     exit;
 }
 

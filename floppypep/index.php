@@ -1,12 +1,34 @@
 <?php
 session_start();
 
+function get_server_boot_time()
+{
+   $uptime = shell_exec('uptime -s');  // Returns boot time in format "YYYY-MM-DD HH:MM:SS"
+
+   if ($uptime === null) {
+      return null;  // Handle error
+   }
+
+   return strtotime(trim($uptime));  // Convert boot time to timestamp
+}
+
+// Get current boot time
+get_server_boot_time();
+$current_boot_time = get_server_boot_time();
+
+if (!isset($_SESSION['boot_time']) || $_SESSION['boot_time'] != get_server_boot_time()) {
+   session_destroy();
+   session_start();
+   $_SESSION['boot_time'] = get_server_boot_time();
+}
+
 // Secret key for HMAC
-$secret_key = '';
+$dotenv = parse_ini_file(__DIR__ . '/.env');
+$secret_key = $dotenv['SECRET_KEY'];
 
 // Ensure start time is only set once
 if (!isset($_SESSION['initial_start_time'])) {
-    $_SESSION['initial_start_time'] = time();
+   $_SESSION['initial_start_time'] = time();
 }
 
 if (!isset($_SESSION['pepe'])) {
@@ -22,7 +44,7 @@ $_SESSION['expected_hash'] = hash_hmac('sha256', $_SESSION['pepe'] . $_SESSION['
 <head>
    <title>Floppy PEP</title>
    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-   <meta name="description" content="Play Floppy PEP, remake of popular game Flappy Bird built in html, css and js" />
+   <meta name="description" content="Play Floppy PEP, remake of popular game Flappy Bird." />
    <meta name="keywords"
       content="flappybird,flappy,bird,floppybird,floppy,html,html5,css,css3,js,javascript,jquery,github,pepecoin,pepe,pep,floppy pep" />
    <?php
@@ -99,114 +121,20 @@ $_SESSION['expected_hash'] = hash_hmac('sha256', $_SESSION['pepe'] . $_SESSION['
    }
    ?>
 
-   <script src="https://challenges.cloudflare.com/turnstile/v0/api.js"></script>
-   <script src="js/jquery.min.js"></script>
-   <script src="js/jquery.transit.min.js"></script>
-   <script src="js/buzz.min.js"></script>
-   <script src="js/main.js"></script>
+   <?php
+   if (!preg_match('/\.\.\/p=rewards.*/', $_SERVER['REQUEST_URI'])) {
+      echo '<script src="https://challenges.cloudflare.com/turnstile/v0/api.js"></script>';
+      echo '<script src="js/jquery.min.js"></script>';
+      echo '<script src="js/jquery.transit.min.js"></script>';
+      echo '<script src="js/buzz.min.js"></script>';
+      echo '<script src="js/main.js"></script>';
+   }
+   ?>
+   <?php include 'include/forms.php'; ?>
+
    <script>
       window.addEventListener("orientationchange", function () {
          location.reload();
-      });
-      (function () {
-         document.querySelector('form').addEventListener('submit', function (event) {
-            event.preventDefault();
-
-            var walletAddress = document.getElementById('wallet').value;
-            var errorAddr = document.getElementById('error-address');
-            var errorBal = document.getElementById('error-balance');
-
-            fetch('include/get_balance.php')
-               .then(response => response.json())
-               .then(data => {
-                  var currentPepeBalance = Number(data.currentPepeBalance);
-
-                  if (!walletAddress.startsWith('P')) {
-                     errorBal.style.display = 'none';
-                     errorAddr.textContent = 'Wrong address format. Wallet address must start with a capital letter "P".';
-                     errorAddr.style.display = 'block';
-                     return;
-                  } else if (currentPepeBalance < 1) {
-                     errorAddr.style.display = 'none';
-                     errorBal.textContent = 'You can\'t withdraw nothing!';
-                     errorBal.style.display = 'block';
-                     return;
-                  } else {
-                     errorBal.style.display = 'none';
-                     errorAddr.style.display = 'none';
-                     var payoutContent = document.getElementById('payout').textContent;
-                     event.target.submit();
-                  }
-               })
-               .catch(error => {
-                  console.error('Error fetching balance:', error);
-               });
-         });
-      })();
-
-      document.getElementById('donationAddress').addEventListener('click', function () {
-         // Create a temporary input element
-         var tempInput = document.createElement('input');
-         tempInput.value = 'PeV56xggPVPLVde3D4wQzQXG7Lnsp8wcpJ';
-         document.body.appendChild(tempInput);
-
-         // Select the text in the input element
-         tempInput.select();
-         tempInput.setSelectionRange(0, 99999); // For mobile devices
-
-         // Copy the text to the clipboard
-         document.execCommand('copy');
-
-         // Remove the temporary input element
-         document.body.removeChild(tempInput);
-
-         // Optionally, display a message to the user
-         alert('Donation address copied to clipboard!');
-      });
-      document.getElementById('devAddress').addEventListener('click', function () {
-         // Create a temporary input element
-         var devInput = document.createElement('input');
-         devInput.value = 'PgQN3BqErwVeCpbmAx7gSSJijBdjGL4F2K';
-         document.body.appendChild(devInput);
-
-         // Select the text in the input element
-         devInput.select();
-         devInput.setSelectionRange(0, 99999); // For mobile devices
-
-         // Copy the text to the clipboard
-         document.execCommand('copy');
-
-         // Remove the temporary input element
-         document.body.removeChild(devInput);
-
-         // Optionally, display a message to the user
-         alert('Developer address copied to clipboard!');
-      });
-
-      // Get the server time for 1:00 am in UTC
-      var serverTime = new Date('<?php echo date('Y-m-d H:i:s', strtotime('01:00:00 UTC')); ?>');
-
-      // Get the user's time zone offset in milliseconds
-      var userTimezoneOffset = new Date().getTimezoneOffset() * 60000; // Convert minutes to milliseconds
-
-      // Calculate the user's local time by adding the timezone offset
-      var localTime = new Date(serverTime.getTime() - userTimezoneOffset);
-
-      // Format the local time to display in the desired format
-      var options = { hour: '2-digit', minute: '2-digit', hour12: true };
-      var formattedLocalTime = localTime.toLocaleTimeString([], options);
-
-      // Update the paragraph with the local time
-      document.getElementById('claim-time').innerHTML = 'Server reboots at ' + formattedLocalTime + '! This means that you will lose your ⱣEPE balance';
-
-      document.getElementById('payout-form').addEventListener('submit', function (event) {
-         var walletAddress = document.getElementById('wallet').value;
-         if (!walletAddress.startsWith('P')) {
-            event.preventDefault(); // Prevent form submission
-            document.getElementById('error-message').style.display = 'block'; // Show error message
-         } else {
-            document.getElementById('error-message').style.display = 'none'; // Hide error message
-         }
       });
    </script>
 </body>

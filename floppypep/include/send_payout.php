@@ -1,10 +1,11 @@
 <?php
+$dotenv = parse_ini_file(dirname(__DIR__) . '/.env');
 session_start(); // Ensure the session is started
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Verify Turnstile CAPTCHA token
     $token = $_POST['cf-turnstile-response'];
-    $secret = ''; // Replace with your Cloudflare Turnstile secret key
+    $secret = $dotenv['PAYOUT_SECRET'];
 
     // Prepare data for Turnstile verification
     $data = array(
