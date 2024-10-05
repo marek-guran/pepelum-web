@@ -133,6 +133,9 @@
    var soundHit = new buzz.sound("assets/sounds/sfx_hit.ogg");
    var soundDie = new buzz.sound("assets/sounds/sfx_die.ogg");
    var soundSwoosh = new buzz.sound("assets/sounds/sfx_swooshing.ogg");
+   var theme1 = new buzz.sound("assets/sounds/air-castle-ra.mp3");
+   var theme2 = new buzz.sound("assets/sounds/space-journey-hartzmann.mp3");
+   var theme3 = new buzz.sound("assets/sounds/stardust-danijel-zambo.mp3");
    buzz.all().setVolume(volume);
 
    //loops
@@ -199,6 +202,31 @@
 
       $("#splash").stop();
       $("#splash").transition({ opacity: 0 }, 500, 'ease');
+
+      let themes = [theme1, theme2, theme3];
+      let lastPlayedIndex = -1;
+
+      function shuffle(array) {
+         for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+         }
+      }
+
+      function playNextTheme() {
+         if (lastPlayedIndex !== -1) {
+            themes[lastPlayedIndex].stop();
+         }
+         let availableThemes = themes.filter((_, index) => index !== lastPlayedIndex);
+         shuffle(availableThemes);
+         let nextTheme = availableThemes[0];
+         lastPlayedIndex = themes.indexOf(nextTheme);
+         nextTheme.play();
+         nextTheme.bind("ended", playNextTheme);
+      }
+
+      // Start playing the first theme
+      playNextTheme();
 
       setBigScore();
 
