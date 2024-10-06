@@ -87,12 +87,7 @@ if (in_array($user_ip, $banned_ips)) {
     exit;
 }
 
-if ($post_time < 3 && $post_time >= 2) {
-    echo $_SESSION['pepe'];
-    exit;
-}
-
-$warning_threshold = 10; // Number of warnings before banning
+$warning_threshold = 2500; // Number of warnings before banning
 
 if ($post_time < 1) {
     if (!isset($_SESSION['warnings'])) {
@@ -112,7 +107,7 @@ if ($post_time < 1) {
         exit;
     } else {
         $warnings_left = $warning_threshold - $_SESSION['warnings'];
-        echo 'Warning: Your activity is being monitored. You have ' . $_SESSION['warnings'] . ' warning(s). ' . $warnings_left . ' warning(s) remain until you are banned for spamming server.';
+        echo 'Slow down!';
     }
 }
 
