@@ -135,7 +135,7 @@ if ($elapsed_time < 4) {
     $max_allowed_score = 0; // Cannot score in the first 4 seconds
 } else {
     // First point takes 4 seconds, each additional point takes 1 second
-    $max_allowed_score = 1 + floor(($elapsed_time - 4) / 1);
+    $max_allowed_score = 1 + floor(($elapsed_time - 4) / 0.8);
 }
 
 // Check if the submitted score exceeds the maximum allowed score
