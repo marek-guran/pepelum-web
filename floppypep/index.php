@@ -44,9 +44,29 @@ $_SESSION['expected_hash'] = hash_hmac('sha256', $_SESSION['pepe'] . $_SESSION['
 <head>
    <title>Floppy PEP</title>
    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-   <meta name="description" content="Play Floppy PEP, remake of popular game Flappy Bird." />
+   <meta name="description"
+      content="Play Floppy PEP, remake of popular game Flappy Bird. Play to earn Pepecoins. This game is related to pepecoin.org project, cryptocurrency Pepecoin with ticker symbol PEP." />
    <meta name="keywords"
-      content="flappybird,flappy,bird,floppybird,floppy,html,html5,css,css3,js,javascript,jquery,github,pepecoin,pepe,pep,floppy pep" />
+      content="flappybird,flappy,bird,floppybird,floppy,html,html5,css,css3,js,javascript,jquery,github,pepecoin,pepe,pep,floppy pep,floppypep,game,play to earn,play2earn,play 2 earn" />
+   <meta name="author" content="Pepelum Team">
+   <meta name="robots" content="index, follow">
+   <meta name="rating" content="general">
+   <meta name="distribution" content="global">
+   <meta name="revisit-after" content="7 days">
+   <meta name="subject" content="Floppy PEP - Pepecoin game">
+   <meta property="og:title" content="Floppy PEP" />
+   <meta property="og:description"
+      content="Play Floppy PEP, remake of popular game Flappy Bird. Play to earn Pepecoins. This game is related to pepecoin.org project, cryptocurrency Pepecoin with ticker symbol PEP." />
+   <meta property="og:type" content="website" />
+   <meta property="og:url" content="https://pepelum.site/floppypep/" />
+   <meta property="og:site_name" content="FloppyPep" />
+   <meta property="og:image" content="https://pepelum.site/floppypep/assets/splash.png">
+   <!-- Twitter -->
+   <meta name="twitter:card" content="summary">
+   <meta name="twitter:title" content="Floppy PEP - Pepecoin game">
+   <meta name="twitter:description"
+      content="Play Floppy PEP, remake of popular game Flappy Bird. Play to earn Pepecoins. This game is related to pepecoin.org project, cryptocurrency Pepecoin with ticker symbol PEP.">
+   <meta name="twitter:image">
    <?php
    $userAgent = $_SERVER['HTTP_USER_AGENT'];
    $isMobile = stripos($userAgent, "iPod") !== false ||
@@ -65,13 +85,6 @@ $_SESSION['expected_hash'] = hash_hmac('sha256', $_SESSION['pepe'] . $_SESSION['
       echo '<meta name="viewport" content="width=device-width, initial-scale=1.0" />';
    }
    ?>
-
-   <meta property="og:title" content="Floppy PEP" />
-   <meta property="og:description"
-      content="Play Floppy PEP, remake of popular game Flappy Bird built in html, css and js" />
-   <meta property="og:type" content="website" />
-   <meta property="og:url" content="https://pepelum.site/floppypep/" />
-   <meta property="og:site_name" content="FloppyPep" />
    <link rel="stylesheet" href="/libs/fontawesome/css/all.css">
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
