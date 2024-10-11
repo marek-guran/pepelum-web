@@ -78,17 +78,20 @@
             </div>
             <div class="col-12 col-md-6">
                 <h3><i class="fa-solid fa-coins"></i> What is current price per coin?</h3>
-                <script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/currency.js"></script>
-                <div class="coinmarketcap-currency-widget cmc-widget" data-currencyid="31806" data-base="USD"
-                    data-secondary="" data-ticker="true" data-rank="true" data-marketcap="false" data-volume="true"
-                    data-statsticker="true" data-stats="USD"></div>
+                <script src="https://widgets.coingecko.com/gecko-coin-ticker-widget.js"></script>
+                <gecko-coin-ticker-widget locale="en" dark-mode="true" transparent-background="false" outlined="true"
+                    coin-id="pepecoin-network" initial-currency="usd"></gecko-coin-ticker-widget>
+                <h3><i class="fa-solid fa-cart-shopping mt-3"></i> How many could I get?</h3>
+                <script src="https://widgets.coingecko.com/gecko-coin-converter-widget.js"></script>
+                <gecko-coin-converter-widget locale="en" dark-mode="true" transparent-background="true"
+                    coin-id="pepecoin-network" initial-currency="usd"></gecko-coin-converter-widget>
                 <h3><i class="fa-solid fa-book mt-3"></i> Learn more</h3>
                 <p>Learn more at <a href="https://pepecoin.org/" target="_blank">
                         Official Pepecoin Website</a>!</p>
             </div>
         </div>
         <?php
-    include 'src/donations.php';
-    ?>
+        include 'src/donations.php';
+        ?>
     </div>
 </body>
