@@ -27,7 +27,7 @@ function initializeSessionVariables()
 function checkRequestOrigin()
 {
     $allowedDomain = 'https://pepelum.site/'; // Replace with your main domain
-    $expectedSessionValue = '315?6!15641asda8erf4'; // Expected session value
+    $expectedSessionValue = 'jsdgfhbvdfsagzfasdgfguhj6548515!?:sfads'; // Expected session value
 
     // Check if the session variable is set and matches the expected value
     if (

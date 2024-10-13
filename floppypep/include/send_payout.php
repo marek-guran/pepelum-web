@@ -3,19 +3,19 @@ $dotenv = parse_ini_file(dirname(__DIR__) . '/.env');
 session_start(); // Ensure the session is started
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Verify Turnstile CAPTCHA token
-    $token = $_POST['cf-turnstile-response'];
-    $secret = $dotenv['PAYOUT_SECRET'];
+    // Verify hCaptcha response
+    $token = $_POST['h-captcha-response'];
+    $secret = $dotenv['HCAPTCHA_SECRET']; // Update with your hCaptcha secret key
 
-    // Prepare data for Turnstile verification
+    // Prepare data for hCaptcha verification
     $data = array(
         'secret' => $secret,
         'response' => $token
     );
 
-    // Initialize cURL request to verify CAPTCHA
+    // Initialize cURL request to verify hCaptcha
     $verify = curl_init();
-    curl_setopt($verify, CURLOPT_URL, "https://challenges.cloudflare.com/turnstile/v0/siteverify");
+    curl_setopt($verify, CURLOPT_URL, "https://hcaptcha.com/siteverify");
     curl_setopt($verify, CURLOPT_POST, true);
     curl_setopt($verify, CURLOPT_POSTFIELDS, http_build_query($data));
     curl_setopt($verify, CURLOPT_RETURNTRANSFER, true);

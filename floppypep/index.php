@@ -150,6 +150,7 @@ $_SESSION['expected_hash'] = hash_hmac('sha256', $_SESSION['pepe'] . $_SESSION['
          location.reload();
       });
    </script>
+   <script src="https://hcaptcha.com/1/api.js" async defer></script>
 </body>
 
 </html>

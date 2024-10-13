@@ -179,7 +179,7 @@ $currentBalance = getBalance();
             <form id="payout-form" action="include/send_payout.php" method="post">
                 <label for="wallet">Wallet Address:</label>
                 <input type="text" id="wallet" name="wallet" required>
-                <div class="cf-turnstile" data-sitekey="0x4AAAAAAAkpV3eUV9WyKLZb"></div>
+                <div class="h-captcha" data-sitekey="9112ce92-dafe-4698-87cc-151680d0ede2"></div>
                 <button type="submit">Send</button>
                 <p id="error-address" style="color: red; display: none; margin-top: 0.5em;"></p>
                 <p id="error-balance" style="color: red; display: none; margin-top: 0.5em;"></p>
@@ -229,7 +229,7 @@ $currentBalance = getBalance();
             <form id="payout-form" action="include/send_payout.php" method="post">
                 <label for="wallet">Wallet Address:</label>
                 <input type="text" id="wallet" name="wallet" required>
-                <div class="cf-turnstile" data-sitekey="0x4AAAAAAAkpV3eUV9WyKLZb"></div>
+                <div class="h-captcha" data-sitekey="9112ce92-dafe-4698-87cc-151680d0ede2"></div>
                 <button type="submit">Send</button>
                 <p id="error-address" style="color: red; display: none; margin-top: 0.5em;"></p>
                 <p id="error-balance" style="color: red; display: none; margin-top: 0.5em;"></p>

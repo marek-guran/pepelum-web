@@ -13,7 +13,7 @@ if (!isset($_SESSION['start_time'])) {
 if (!isset($_SESSION['last_post_time'])) {
     $_SESSION['last_post_time'] = 0; // Last time a score was posted
 }
-$_SESSION['hdfjgsjfdjkshbvfjhkvhb52g6fds4g89fds541s65!@DSF'] = '315?6!15641asda8erf4';
+$_SESSION['hdfjgsjfdjkshbvfjhkvhb52g6fds4g89fds541s65!@DSF'] = 'jsdgfhbvdfsagzfasdgfguhj6548515!?:sfads';
 ?>
 <div id="gamecontainer">
     <div id="gamescreen">
