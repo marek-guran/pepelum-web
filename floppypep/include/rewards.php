@@ -208,6 +208,13 @@ $currentBalance = getBalance();
             </thead>
             <tbody>
                 <tr>
+                    <td>13.10.2024</td>
+                    <td>12,161 Ᵽ</td>
+                    <td><a href="https://pepeblocks.com/address/PheZJWhx8gnVff32EDSrPfv3jGAYL2nxoR"
+                            target="_blank">Address</a></td>
+                    <td>Resolved</td>
+                </tr>
+                <tr>
                     <td>2.10.2024 - 3.10.2024</td>
                     <td>87,000 Ᵽ</td>
                     <td><a href="https://pepeblocks.com/tx/037fbda2b241e0a8860d30b2176734783fd533a1eb4cd1cc6853fb22124e8d47"
@@ -257,6 +264,13 @@ $currentBalance = getBalance();
                 </tr>
             </thead>
             <tbody>
+                <tr>
+                    <td>13.10.2024</td>
+                    <td>12,161 Ᵽ</td>
+                    <td><a href="https://pepeblocks.com/address/PheZJWhx8gnVff32EDSrPfv3jGAYL2nxoR"
+                            target="_blank">Address</a></td>
+                    <td>Resolved</td>
+                </tr>
                 <tr>
                     <td>2.10.2024 - 3.10.2024</td>
                     <td>87,000 Ᵽ</td>
