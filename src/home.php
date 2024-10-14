@@ -154,8 +154,8 @@
             <a href="?p=bots" class="btn btn-primary w-100 mb-4 bot"><span><i class="fa-solid fa-robot"></i> Tip Bots</span></a>
         </div>
         <div class="col-md-3">
-            <a href="/floppypep/" class="btn btn-primary w-100 mb-4 game"><span><i class="fa-solid fa-gamepad"></i>
-                    Floppy PEP (GAME)</span></a>
+            <a href="https://flappypepe.com/" class="btn btn-primary w-100 mb-4 game"><span><i class="fa-solid fa-gamepad"></i>
+                    Flappy PEPE (GAME)</span></a>
         </div>
         <div class="col-md-3">
             <a href="?p=roadmap" class="btn btn-primary w-100 mb-4 roadmap"><span><i class="fa-solid fa-map"></i>
