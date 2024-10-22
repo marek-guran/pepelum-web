@@ -1,2 +1,6 @@
 User-agent: *
-Disallow:
+Disallow: /libs/
+Disallow: /scripts/
+Disallow: /src/
+Disallow: /images/
+Disallow: /floppypep/
