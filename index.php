@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pepelum - Comprehensive Guide to Pepecoin (PEP): Buy, Store, Sell, and More</title>
+    <title>Pepelum - Comprehensive Guide to Pepecoin $PEP</title>
     <link rel="stylesheet" href="libs/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="libs/fontawesome/css/all.css">
 
@@ -34,7 +34,7 @@
     <meta name="subject" content="Pepecoin (PEP) - Cryptocurrency Guides and Resources">
 
     <!-- Open Graph / Facebook -->
-    <meta property="og:title" content="Pepelum - Comprehensive Guide to Pepecoin (PEP): Buy, Store, Sell, and More">
+    <meta property="og:title" content="Pepelum - Comprehensive Guide to Pepecoin $PEP">
     <meta property="og:description"
         content="Discover how to securely buy, store, and sell Pepecoin with Pepelum's expert guides. Stay informed with our roadmap and utilize our Electrum server for smooth transactions.">
     <meta property="og:image" content="https://pepelum.site/PEPELUM.png">
@@ -43,10 +43,10 @@
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Pepelum - Comprehensive Guide to Pepecoin (PEP): Buy, Store, Sell, and More">
+    <meta name="twitter:title" content="Pepelum - Comprehensive Guide to Pepecoin $PEP">
     <meta name="twitter:description"
         content="Pepelum provides in-depth guides on buying, storing, and selling Pepecoin (PEP). Follow our detailed roadmap and access our Electrum server for seamless transactions.">
-    <meta name="twitter:image">
+    <meta name="twitter:image" content="https://pepelum.site/PEPELUM.png">
 
 
     <script>
