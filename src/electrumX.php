@@ -13,14 +13,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <!-- Meta tags for Pepecoin -->
     <meta name="description"
-        content="Pepecoin is a community-focused cryptocurrency, born from Dogecoin, offering a simple Layer 1 blockchain without complex smart contracts.">
+        content="Pepecoin ElectrumX server, simple way to connect your wallet to blockchain.">
     <meta name="keywords" content="Pepecoin, Cryptocurrency, Dogecoin, Community, Blockchain, Layer 1, ElectrumX, Node">
     <meta property="og:title" content="PEPELUM, Pepecoin ElectrumX server">
-    <meta property="og:description"
-        content="Pepecoin is a community focused cryptocurrency created by one of the original Dogecoin shibes. A simple Layer 1 blockchain for a new and fun community.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.pepecoin.com">
-    <meta property="og:image" content="https://www.pepecoin.com/pepecoin-logo.png">
     <style>
         body {
             background-color: #212121;

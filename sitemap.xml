@@ -9,69 +9,9 @@
        <priority>1.0000</priority>
   </url>
   <url>
-       <loc>https://pepelum.site/?p=wallets</loc>
-       <lastmod>2024-09-24T21:57:38+00:00</lastmod>
-       <changefreq>weekly</changefreq>
-       <priority>0.8000</priority>
-  </url>
-  <url>
-       <loc>https://pepelum.site/?p=mining</loc>
-       <lastmod>2024-09-24T21:57:38+00:00</lastmod>
-       <changefreq>weekly</changefreq>
-       <priority>0.8000</priority>
-  </url>
-  <url>
-       <loc>https://pepelum.site/?p=getpepecoin</loc>
-       <lastmod>2024-09-24T21:57:38+00:00</lastmod>
-       <changefreq>weekly</changefreq>
-       <priority>0.8000</priority>
-  </url>
-  <url>
-       <loc>https://pepelum.site/?p=bots</loc>
-       <lastmod>2024-09-24T21:57:38+00:00</lastmod>
-       <changefreq>weekly</changefreq>
-       <priority>0.8000</priority>
-  </url>
-  <url>
-       <loc>https://pepelum.site/floppypep/</loc>
-       <lastmod>2024-09-24T21:57:38+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.8000</priority>
-  </url>
-  <url>
-       <loc>https://pepelum.site/?p=roadmap</loc>
-       <lastmod>2024-09-24T21:57:38+00:00</lastmod>
-       <changefreq>weekly</changefreq>
-       <priority>0.8000</priority>
-  </url>
-  <url>
        <loc>https://pepelum.site/?p=electrumX</loc>
        <lastmod>2024-09-24T21:57:38+00:00</lastmod>
        <changefreq>weekly</changefreq>
        <priority>0.8000</priority>
-  </url>
-  <url>
-       <loc>https://pepelum.site/?p=about</loc>
-       <lastmod>2024-09-24T21:57:38+00:00</lastmod>
-       <changefreq>weekly</changefreq>
-       <priority>0.8000</priority>
-  </url>
-  <url>
-       <loc>https://pepelum.site/floppypep/?p=game</loc>
-       <lastmod>2024-09-24T21:57:38+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.6400</priority>
-  </url>
-  <url>
-       <loc>https://pepelum.site/floppypep/?p=rewards</loc>
-       <lastmod>2024-09-24T21:57:38+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.6400</priority>
-  </url>
-  <url>
-       <loc>https://pepelum.site/servers.txt</loc>
-       <lastmod>2024-08-29T11:36:24+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.6400</priority>
   </url>
 </urlset>
