@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pepelum - ElectrumX</title>
+    <title>Pepelum - ElectrumX Server</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,7 +15,7 @@
     <meta name="description"
         content="Pepecoin ElectrumX server, simple way to connect your wallet to blockchain.">
     <meta name="keywords" content="Pepecoin, Cryptocurrency, Dogecoin, Community, Blockchain, Layer 1, ElectrumX, Node">
-    <meta property="og:title" content="PEPELUM, Pepecoin ElectrumX server">
+    <meta property="og:title" content="PEPELUM - ElectrumX Server">
     <style>
         body {
             background-color: #212121;
