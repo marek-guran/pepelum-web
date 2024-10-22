@@ -11,22 +11,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <!-- Meta tags for Pepecoin -->
-    <meta name="author" content="Pepelum">
-    <meta name="description" content="Pepecoin ElectrumX server, simple way to connect your wallet to blockchain.">
-    <meta name="keywords"
-        content="Pepecoin, PEP, Pepelum, buy Pepecoin, store Pepecoin, sell Pepecoin, Pepecoin roadmap, cryptocurrency, blockchain, crypto wallet, Pepecoin investment, Pepecoin price">
-    <meta property="og:title" content="PEPELUM - ElectrumX Server">
-    <meta property="og:description"
-        content="Pepecoin ElectrumX server, simple way to connect your wallet to blockchain.">
-    <meta property="og:image" content="/android-chrome-512x512.png">
-    <meta property="og:url" content="https://pepelum.site/android-chrome-512x512.png">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="PEPELUM - ElectrumX Server">
-    <meta name="twitter:description"
-        content="Pepecoin ElectrumX server, simple way to connect your wallet to blockchain.">
-    <meta name="twitter:image" content="/android-chrome-512x512.png">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <style>
         body {
             background-color: #212121;
