@@ -161,7 +161,7 @@
                 rel="noopener noreferrer"><strong>modified ElectrumX</strong></a></p>
         <p>ElectrumX 1.16.0</p>
         <hr>
-        <p>List of known electrum servers <a href="https://pepelum.site/servers.txt" target="_blank">here</a></p>
+        <p>List of known electrum servers <a href="https://pepelum.site/servers.json" target="_blank">here</a></p>
     </div>
 
     <!-- QR Code Modal -->

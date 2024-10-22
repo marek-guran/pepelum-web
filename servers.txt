@@ -1,6 +1,0 @@
-tcp://electrum.pepelum.site:50001
-ssl://electrum.pepelum.site:50002
-wss://electrum.pepelum.site:50004
-tcp://electrum.pepeblocks.com:50001
-ssl://electrum.pepeblocks.com:50002
-wss://electrum.pepeblocks.com:50004
