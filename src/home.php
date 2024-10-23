@@ -23,6 +23,20 @@
         color: white;
     }
 
+    .links {
+        margin-left: 12px;
+        margin-right: 12px;
+        margin-bottom: 6px;
+        display: inline-block;
+        line-height: 1.1em;
+        font-size: 1.3em;
+        font-weight: bold;
+    }
+
+    .links a:hover {
+        text-decoration: underline !important;
+    }
+
     .mining,
     .wallet,
     .buy,
@@ -151,10 +165,12 @@
                     Pepecoin</span></a>
         </div>
         <div class="col-md-3">
-            <a href="?p=bots" class="btn btn-primary w-100 mb-4 bot"><span><i class="fa-solid fa-robot"></i> Tip Bots</span></a>
+            <a href="?p=bots" class="btn btn-primary w-100 mb-4 bot"><span><i class="fa-solid fa-robot"></i> Tip
+                    Bots</span></a>
         </div>
         <div class="col-md-3">
-            <a href="https://flappypepe.com/" class="btn btn-primary w-100 mb-4 game"><span><i class="fa-solid fa-gamepad"></i>
+            <a href="https://flappypepe.com/" class="btn btn-primary w-100 mb-4 game"><span><i
+                        class="fa-solid fa-gamepad"></i>
                     Flappy PEPE (GAME)</span></a>
         </div>
         <div class="col-md-3">
@@ -169,5 +185,13 @@
             <a href="?p=about" class="btn btn-primary w-100 mb-4 about"><span><i class="fa-solid fa-circle-info"></i>
                     About Pepecoin</span></a>
         </div>
+    </div>
+    <hr>
+    <div class="text-center">
+        <p class="links raleway">
+            <a href="https://pepecoin.org/" target="_blank" class="mx-2">Pepecoin.org</a>
+            <a href="https://pepelum.site/" target="_blank" class="mx-2">Pepelum.site</a>
+            <a href="https://pepeblocks.com/" target="_blank" class="mx-2">PepeBlocks.com</a>
+        </p>
     </div>
 </div>
