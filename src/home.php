@@ -190,7 +190,7 @@
     <div class="text-center">
         <p class="links raleway">
             <a href="https://pepecoin.org/" target="_blank" class="mx-2">Pepecoin.org</a>
-            <a href="https://pepelum.site/" target="_blank" class="mx-2">Pepelum.site</a>
+            <a href="https://flappypepe.com/" target="_blank" class="mx-2">Flappypepe.com</a>
             <a href="https://pepeblocks.com/" target="_blank" class="mx-2">PepeBlocks.com</a>
         </p>
     </div>
